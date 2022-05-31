@@ -44,7 +44,7 @@ Note: Some Requirements belong together from different perspectives but are form
 | # of Programmer Requirement | Programmer Requirement |
 |-----------------|--------------------|
 | P1 | As a Programmer i want to implement different Map-Types such that Leaflet works the same way with different Maps |
-| P2 | As a Programmer i want to include Animations with CSS |
+| P2 | As a Programmer i want to include Animations with or without  CSS |
 | P3 | As a Programmer i want to make Elements dragable/movable |
 | P4 | As a Programmer i want to Organize Elements in Layers |
 | P5 | As a Programmer i want to Overlap the Map with Images/Videos/SVG |
