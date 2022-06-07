@@ -6,7 +6,7 @@
    1. [User Requirements](#user-requirements)
    2. [Programmer Requirements](#programmer-requirements)
    3. [technical Requirements](#technical-requirements)
-3.
+3. [Stakeholder](#stakeholder)
 4. [View](#view)
 
 
@@ -70,12 +70,17 @@ Note: Some Requirements belong together from different perspectives but are form
 | T6 | The System should have simple, readable source code |
 | T7 | The System should support different Map-Distributors such as Google, OpenStreetMap, Bing etc. |
 | T8 | The System should be exportable as a single JS File |
-
 <!-- markdownlint-enable-->
 
-### View
+## Stakeholder
+<!-- markdownlint-disable-->
+Text
+<!-- markdownlint-enable-->
+
+## View
 <!-- markdownlint-disable-->
 
 The main goal of our work is to create the requirements with the right method, which is flexible enough and open to changes and complies with the standards chosen for software development and maintenance.
 Because the process of defining, documenting and maintaining requirements in this prject is missing.
+<!-- markdownlint-enable-->
 
