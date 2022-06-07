@@ -54,7 +54,7 @@ Note: Some Requirements belong together from different perspectives but are form
 ### Programmer Requirements
 <!-- markdownlint-disable-->
 | # of Programmer Requirement | Programmer Requirement | Tracing | Type | 
-|-----------------|--------------------|
+|-----------------|--------------------|--------------------|--------------------|
 | P1 | As a Programmer i want to implement different Map-Types such that Leaflet works the same way with different Maps | Functional | |
 | P2 | As a Programmer i want to include Animations with or without CSS | Functional | U5 & U6 |
 | P3 | As a Programmer i want to make Elements dragable/movable | Functional | |
@@ -70,7 +70,7 @@ Note: Some Requirements belong together from different perspectives but are form
 ### System Requirements
 <!-- markdownlint-disable-->
 | # of Technical Requirement | Technical Requirement | Tracing | Type |
-|-----------------|--------------------|
+|-----------------|--------------------|--------------------|--------------------|
 | T1 | The System should have 0 dependencies | Constraint | T3 & T6 |
 | T2 | The System should be lightweight and have only the absolute minimum of code needed for the requirements | | Constraint |
 | T3 | The System should support plugins such that additional features are easy to implement and keep the code small | Functional & Quality | P11 & T1 |
