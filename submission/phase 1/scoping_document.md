@@ -2,6 +2,8 @@
 # TABLE OF CONTENTS
 
 1. [INTRODUCTION](#introduction)
+   1. [Functionalities in a Nutshell](#leaflet-main-functionalities-in-a-nutshell)
+   2. [Goals in a Nutshell](#what-are-the-main-goals-of-leaflet-js)
 2. [STAKEHOLDERS](#stakeholders)
 3. [USER JOURNEY / PROGRAMMERS ASKS](#Requirements)
    1. [User Requirements](#user-requirements)
@@ -20,6 +22,26 @@ Developer so that they easily understand why certain design decisions were made.
 Leaflet sets its target 100% on simplicity and performance. This said we will always keep it in mind when making any decisions about refactoring code.
 Its is said that Leaflet is used by many large Corporations such as GitHub, Etsy, Facebook etc. Due to this fact that it is a widespread project it is needed to have 
 a flawless Documentation of every development step.
+
+### leaflet main functionalities in a nutshell.
+
+-	Creating lightweight maps in a simple readable code.
+-	customizability with different styles and themes
+-	responsiveness for all devices
+
+### What are the main goals of leaflet JS? 
+
+-	**Performance: **
+Leaflet JS focuses on becoming as light weight as possible while maintaining all map functionality. It does that by optimizing the algorithms and the graphics and even cutting as much unused or dead code as possible from the source code reaching about 39 KB of JS and 4 KB of CSS.
+-	**Completeness: **
+Even though Leaflet JS seeks to improve efficiency and reduce the size of the code required, it provides all the interactive mapping functionality that most developers would ever require.
+-	**Responsiveness and SEO optimization: **
+Leaflet shrinks and expands map elements to provide a variety of mobile-friendly displays. To get good readability results from the Google search engine, the library provides lightweight graphs and cutting edge loading time (SEO optimized).
+-	**Customizability: **
+Leaflet allows third-party themes to be applied to its maps in addition to adding custom stylesheets to all components (such as objects and viewing window).
+-	**Accessibility & Availability:  **
+Leaflet JS is and will continue to be an open-source project and avalible for the public.
+-	**Well documented for users and contributors.**
 
 ## Stakeholders
 
