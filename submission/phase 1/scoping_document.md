@@ -18,6 +18,34 @@ This Document defines severall Requirements that shall be satisfied by Leaflet.
 Those Requirements are created by Reengineering since Leaflet has no Requirement Table till Version 1.8.0 and only 
 provides Documentation about the API for Devs.
 
+----------
+###What is leaflet JS? 
+
+Leaflet is a well-known open-source JavaScript framework that allows developers to add lightweight, simple, and interactive geographic maps to any website or project in an elegant way.
+
+
+###leaflet main functionalities in a nutshell.
+
+-	Creating lightweight maps in a simple readable code.
+-	customizability with different styles and themes
+-	responsiveness for all devices
+
+###What are the main goals of leaflet JS? 
+
+-	**Performance: **
+Leaflet JS focuses on becoming as light weight as possible while maintaining all map functionality. It does that by optimizing the algorithms and the graphics and even cutting as much unused or dead code as possible from the source code reaching about 39 KB of JS and 4 KB of CSS.
+-	**Completeness: **
+Even though Leaflet JS seeks to improve efficiency and reduce the size of the code required, it provides all the interactive mapping functionality that most developers would ever require.
+-	**Responsiveness and SEO optimization: **
+Leaflet shrinks and expands map elements to provide a variety of mobile-friendly displays. To get good readability results from the Google search engine, the library provides lightweight graphs and cutting edge loading time (SEO optimized).
+-	**Customizability: **
+Leaflet allows third-party themes to be applied to its maps in addition to adding custom stylesheets to all components (such as objects and viewing window).
+-	**Accessibility & Availability:  **
+Leaflet JS is and will continue to be an open-source project and avalible for the public.
+-	**Well documented for users and contributors.**
+
+---
+
 ## Requirements
 
 Requirements are split in 3 Parts. Those reflect the different views on Leaflet. 
@@ -83,4 +111,3 @@ Text
 The main goal of our work is to create the requirements with the right method, which is flexible enough and open to changes and complies with the standards chosen for software development and maintenance.
 Because the process of defining, documenting and maintaining requirements in this prject is missing.
 <!-- markdownlint-enable-->
-
