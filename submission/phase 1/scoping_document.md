@@ -6,6 +6,8 @@
    1. [User Requirements](#user-requirements)
    2. [Programmer Requirements](#programmer-requirements)
    3. [technical Requirements](#technical-requirements)
+3.
+4. [View]
 
 
 ## INTRODUCTION
@@ -70,3 +72,10 @@ Note: Some Requirements belong together from different perspectives but are form
 | T8 | The System should be exportable as a single JS File |
 
 <!-- markdownlint-enable-->
+
+### View
+<!-- markdownlint-disable-->
+
+The main goal of our work is to create the requirements with the right method, which is flexible enough and open to changes and complies with the standards chosen for software development and maintenance.
+Because the process of defining, documenting and maintaining requirements in this prject is missing.
+
