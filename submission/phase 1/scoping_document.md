@@ -94,7 +94,7 @@ Note: Some Requirements belong together from different perspectives but are form
 | # of Technical Requirement | Technical Requirement | Tracing | Type |
 |-----------------|--------------------|--------------------|--------------------|
 | T1 | The System should have 0 dependencies | Constraint | T3 & T6 |
-| T2 | The System should be lightweight and have only the absolute minimum of code needed for the requirements | | Constraint |
+| T2 | The System should be lightweight and have only the absolute minimum of code needed for the requirements | Constraint | |
 | T3 | The System should support plugins such that additional features are easy to implement and keep the code small | Functional & Quality | P11 & T1 |
 | T4 | The System should work on any plattform that supports JS (Vanilla JS) | Quality | T5 & U2|
 | T5 | The System should work regardless of Browser | Quality | T4 & U2 & U3|
