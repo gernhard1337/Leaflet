@@ -67,5 +67,6 @@ Note: Some Requirements belong together from different perspectives but are form
 | T5 | The System should be deployable internal and external (JS-File or loaded from a CDN) |
 | T6 | The System should have simple, readable source code |
 | T7 | The System should support different Map-Distributors such as Google, OpenStreetMap, Bing etc. |
+| T8 | The System should be portable as a single JS File |
 
 <!-- markdownlint-enable-->
