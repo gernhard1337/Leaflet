@@ -23,7 +23,7 @@ Leaflet sets its target 100% on simplicity and performance. This said we will al
 Its is said that Leaflet is used by many large Corporations such as GitHub, Etsy, Facebook etc. Due to this fact that it is a widespread project it is needed to have 
 a flawless Documentation of every development step.
 
-### leaflet main functionalities in a nutshell.
+### Functionalities in a nutshell.
 
 -	Creating lightweight maps in a simple readable code.
 -	customizability with different styles and themes
