@@ -47,7 +47,7 @@ Leaflet JS is and will continue to be an open-source project and avalible for th
 
 Leaflet is strongly aimed to satisfy Developers needs. Nonetheless the Library defines two Stakeholders. Those are the Users who will see the Effects of Leaflet and the Developers who will
 use Leaflet for their projects. Users will see effects from Leaflet trough a Browser or any Project based on JavaScript. Users want Leaflet because it provides all the functions you would need on a map in your browser. Additionally it is lightweight so a User will enjoy the library without even noticing that extra libraries were loaded.
-Developers will use Leaflet in their Projects because it provides a easy Interface to use Maps in projets and is also independent from the runtime since it is written in JavaScript so the developers doesnt have to care about System-Dependencies. Leaflet is a standalone Library so that Leaflet will enhance the development process for developers.
+Developers will use Leaflet in their Projects because it provides a easy Interface to use Maps in projets and is also independent from the runtime since it is written in JavaScript so the developers doesn't have to care about System-Dependencies. Leaflet is a standalone Library so that Leaflet will enhance the development process for developers.
 
 
 ## Requirements
