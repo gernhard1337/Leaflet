@@ -126,3 +126,7 @@ Leaflet also has over 300 issues on its GitHub, we plan to support the team with
 | Requirement(s) | Wishes and Needs for the project |
 | Vanilla JS | JavaScript out-of-the-box without any dependencies |
 | Mod / Plugin | Code that improves Leaflet without belonging to the Core of Leaflet |
+| Layer | a theme or overlay of the map |
+| popup | an information window that opens in the viewing frame of the map |
+| marker | a pin or an image that marks geographical locations on the map |
+| Tooltip | a window the same as a popup but for the locations |
