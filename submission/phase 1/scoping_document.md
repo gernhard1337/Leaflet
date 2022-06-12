@@ -130,3 +130,4 @@ Leaflet also has over 300 issues on its GitHub, we plan to support the team with
 | popup | an information window that opens in the viewing frame of the map |
 | marker | a pin or an image that marks geographical locations on the map |
 | Tooltip | a window the same as a popup but for the locations |
+| Dependencie | Libraries or Plugins from third-party providers |
