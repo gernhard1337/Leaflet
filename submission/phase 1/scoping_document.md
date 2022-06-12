@@ -97,15 +97,16 @@ Note: Some Requirements belong together from different perspectives but are form
 <!-- markdownlint-disable-->
 | # of Technical Requirement | Technical Requirement | Type | Tracing |
 |-----------------|--------------------|--------------------|--------------------|
-| T1 | The System should have 0 dependencies | Constraint | T3 & T6 |
-| T2 | The System should be lightweight and have only the absolute minimum of code needed for the requirements | Constraint | |
-| T3 | The System should support plugins such that additional features are easy to implement and keep the code small | Functional & Quality | P11 & T1 |
-| T4 | The System should work on any platform that supports JS (Vanilla JS) | Quality | T5 & U2|
-| T5 | The System should work regardless of Browser | Quality | T4 & U2 & U3|
-| T6 | The System should be deployable internal and external (JS-File or loaded from a CDN) | Constraint | T1 |
-| T7 | The System should have simple, readable source code | Quality | |
-| T8 | The System should support different Map-Distributors such as Google, OpenStreetMap, Bing, etc. | Quality | |
-| T9 | The System should be exportable as a single JS File | Functional | |
+| T1 | The System must have 0 dependencies | Constraint | T3 & T6 |
+| T2 | The System must be lightweight | Constraint | |
+| T2 | The System must have a minimal code-base | Constraint | |
+| T3 | The System must support plugins (for additional features) | Functional & Quality | P11 & T1 |
+| T4 | The System must work on any platform that supports JS (Vanilla JS) | Quality | T5 & U2|
+| T5 | The System must work regardless of Browser | Quality | T4 & U2 & U3|
+| T6 | The System must be deployable internal and external (JS-File or loaded from a CDN) | Constraint | T1 |
+| T7 | The System must have simple, readable source code | Quality | |
+| T8 | The System must support different Map-Distributors such as Google, OpenStreetMap, Bing, etc. | Quality | |
+| T9 | The System must be exportable as a single JS File | Functional | |
 | T10 | The System must support automatic testing for several browsers | Quality | |
 
 <!-- markdownlint-enable-->
