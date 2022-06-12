@@ -36,10 +36,6 @@ a flawless Documentation of every development step.)
 
 ### Quality aspects (Main goals)
 
-Leaflet has main quality aspects that are  represented in the following quality tree: 
-
-![Figure 1: Quality - Tree](./qualityAspekts/quality-tree.png)
-
 -	**Performance:**
 Leaflet Js focuses mainly on performance and displaying the features in most apealing way with as less weight as possible.
 	-	**Light weight:** Leaflet JS runs as lightweight as possible while maintaining all map functionality. It does that by optimizing the algorithms and the graphics and even cutting as much unused or dead code as possible from the source code reaching about 39 KB of JS and 4 KB of CSS.
@@ -65,7 +61,11 @@ Leaflet JS have a great ability to work with other external help:
 -	**Documentation** 
 The project is well documented for users and contributors.
 
-#### Maping the requirment tree to the most important requirments:
+
+
+![Figure 1: Quality - Tree](./qualityAspekts/quality-tree.png)
+
+##### Maping the requirment tree to the most important requirments:
 - Lightweight:
 T1 / T2 / T3 / T4 / T6 / U4
 - Feature Completeness:
