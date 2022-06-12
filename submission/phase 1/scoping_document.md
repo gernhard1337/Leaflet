@@ -102,7 +102,7 @@ Leaflet allows developers without a GIS background to very easily display tiled 
 
  
 ![Figure 2: Enduser](./Use Case/Enduser.drawio.png)
-![Figure 2: developer](./Use Case/developer.drawio.png)
+![Figure 3: developer](./Use Case/developer.drawio.png)
 
 
 
