@@ -68,17 +68,17 @@ The First Layer frofm the tree define the bigger goals for leaflet and the leafs
 
 ![Figure 1: Quality - Tree](./qualityAspekts/quality-tree.png)
 
-- lightweight
+- lightweight:
 T1 / T2 / T3 / T4 / T6 / U4
-- feature Completeness
+- feature Completeness:
 U1 / U6 / U7 / U8
-- Elements modifiabilty
+- Elements modifiabilty:
 U1 / P3 / P4 / P5 / P6 / P7 / P8 / P9 / P10
-- Style Customization
+- Style Customization:
 P1 / P2 / P7 / U5
-- third party plugins
+- third party plugins:
 P11 / T3 / T8
-- Contribution
+- Contribution:
 T7 / T11
 
 
