@@ -33,19 +33,34 @@ a flawless Documentation of every development step.)
 -	customizability with different styles and themes
 -	responsiveness for all devices
 
-### Main goals
+
+### Quality aspects (Main goals)
 
 -	**Performance:**
-Leaflet JS focuses on becoming as lightweight as possible while maintaining all map functionality. It does that by optimizing the algorithms and the graphics and even cutting as much unused or dead code as possible from the source code reaching about 39 KB of JS and 4 KB of CSS.
--	**Completeness:**
+Leaflet Js focuses mainly on performance and displaying the features in most apealing way with as less weight as possible.
+	-	**Light weight:** Leaflet JS runs as lightweight as possible while maintaining all map functionality. It does that by optimizing the algorithms and the graphics and even cutting as much unused or dead code as possible from the source code reaching about 39 KB of JS and 4 KB of CSS.
+	-	**Completeness:**
 Even though Leaflet JS seeks to improve efficiency and reduce the size of the code required, it provides all the interactive mapping functionality that most developers would ever require.
--	**Responsiveness and SEO optimization:**
+-	**Responsiveness:**
 Leaflet shrinks and expands map elements to provide a variety of mobile-friendly displays. To get good readability results from the Google search engine, the library provides lightweight graphs and cutting-edge loading time (SEO optimized).
--	**Customizability:**
-Leaflet allows third-party themes to be applied to its maps in addition to adding custom stylesheets to all components (such as objects and viewing window).
--	**Accessibility & Availability:**
-Leaflet JS is and will continue to be an open-source project and is available for the public.
--	**Well documented for users and contributors.**
+-	**Modifiability:**
+Leaflet maps can be modified in many ways.
+	-	**Elements modifiability:**
+Even though Leaflet JS seeks to improve efficiency and reduce the size of the code required, it provides all the interactive mapping functionality that most developers would ever require.
+	-	**Style modifiability:**
+Even though Leaflet JS seeks to improve efficiency and reduce the size of the code required, it provides all the interactive mapping functionality that most developers would ever require.
+
+-	**Responsiveness:**
+Leaflet shrinks and expands map elements to provide a variety of mobile-friendly displays. To get good readability results from the Google search engine, the library provides lightweight graphs and cutting-edge loading time (SEO optimized).
+
+-	**Accessibility & compatibility**
+Leaflet JS have a great ability to work with other external help:
+	-	**third party plugins support.** 
+	-	**welcoming community for contributors and maintainers.**
+
+-	**Documentation** 
+The project is well documented for users and contributors.
+
 
 ## Stakeholders
 
