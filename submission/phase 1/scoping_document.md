@@ -64,7 +64,7 @@ System-Requirements include mostly Requirements needed by Developers but not in 
 Note: Some Requirements belong together from different perspectives but are formulated differently from each perspective, they are marked together in the Column Type.
 
 
-![Figure 1: Quality - Tree](./qualityAspekts/user_journey.png "User Journey")
+![Figure 1: Quality - Tree](./qualityAspekts/quality-tree.png)
 
 
 
