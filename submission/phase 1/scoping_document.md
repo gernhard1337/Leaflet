@@ -132,7 +132,7 @@ T7 / T11
 | T8 | The System must support different Map-Distributors such as Google, OpenStreetMap, Bing, etc. | Quality (Efficenfy) | |
 | T9 | The System must be exportable as a single JS File | Functional | |
 | T10 | The System must support automatic testing for several browsers | Quality (testability) | |
-| T11 | The System must have his Sourcecode avaiable with a Open-Source System in github.com | Quality (testability) | |
+| T11 | The System must have his Sourcecode avaiable with a Open-Source System in github.com | Quality (maintainability) | |
 
 <!-- markdownlint-enable-->
 ## Outlook
