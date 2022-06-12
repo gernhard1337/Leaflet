@@ -14,7 +14,7 @@
 
 ## Introduction
 
-Leaflet is a simple, performant, lightweight JavaScript Library to enable simple handling for interactive Maps.  It is used by many large Corporations such as GitHub, Etsy, Facebook, etc.
+Leaflet is a simple, lightweight JavaScript Library to enable simple handling for interactive Maps.  It is used by many large Corporations such as GitHub, Etsy, Facebook, etc.
 In Part 1 of our project, we roughly compiled and formulated the requirements of Leaflet.
 Since the requirements are not formulated in Leaflet, we have set ourselves the goal of making the requirements understandable as our contribution, so that certain design decisions are more comprehensible and lead to be incorporated into a uniform architecture. 
 
@@ -30,14 +30,14 @@ a flawless Documentation of every development step.)
 ### Functionalities
 
 -	Creating lightweight maps in simple readable code.
--	customizability with different styles and themes
+-	customizable with different styles and themes
 -	responsiveness for all devices
 
 
 ### Quality aspects (Main goals)
 
 -	**Performance:**
-Leaflet Js focuses mainly on performance and displaying the features in most apealing way with as less weight as possible.
+Leaflet Js focuses mainly on performance and displaying the features in most appealing way with as less weight as possible.
 	-	**Light weight:** Leaflet JS runs as lightweight as possible while maintaining all map functionality. It does that by optimizing the algorithms and the graphics and even cutting as much unused or dead code as possible from the source code reaching about 39 KB of JS and 4 KB of CSS.
 	-	**Completeness:**
 Even though Leaflet JS seeks to improve efficiency and reduce the size of the code required, it provides all the interactive mapping functionality that most developers would ever require.
@@ -62,15 +62,16 @@ Leaflet JS have a great ability to work with other external help:
 The project is well documented for users and contributors.
 
 
+Various Quality Aspects are defined in the following Quality - Tree. The First Layer frofm the tree define the bigger goals for leaflet and the leafs of the tree are a bit more precise. The leafs get even more precise in the Requirements. 
 
 ![Figure 1: Quality - Tree](./qualityAspekts/tree.drawio.png)
 
-##### Maping the requirment tree to the most important requirments:
+##### Mapping the requirement tree to the most important requirements:
 - Lightweight:
 T1 / T2 / T3 / T4 / T6 / U4
 - Feature Completeness:
 U1 / U6 / U7 / U8
-- Elements modifiabilty:
+- Elements modifiability:
 U1 / P3 / P4 / P5 / P6 / P7 / P8 / P9 / P10
 - Style Customization:
 P1 / P2 / P7 / U5
@@ -79,7 +80,7 @@ P11 / T3 / T8
 - Contribution:
 T7 / T11
 
-> NOTE: to learn more about each requirment code please visit the requirments section.
+> NOTE: to learn more about each requirement code please visit the requirements section.
 
 ## Stakeholders
 
@@ -95,9 +96,8 @@ The first two Parts are based on User Requirements. Users are split into two gro
 Starting with User-Requirements we cover the needs from the User's perspective. It is said that User means here the real user
 such as those who will see the results of this library. Followed by the Programmer-Requirements, here are all needs a developer would love to have in the project. Divided from this we have the third Category, technical-Requirements. 
 System-Requirements include mostly Requirements needed by Developers but not in a way they will be affected by it directly. 
-Note: Some Requirements belong together from different perspectives but are formulated differently from each perspective, they are marked together in the Column Tracing.
-Various Quality Aspects are defined in the following Quality - Tree. However this tree shall serve a first overview for the following requirements. 
-The First Layer frofm the tree define the bigger goals for leaflet and the leafs of the tree are a bit more precise. The leafs get even more precise in the Requirements. 
+> Note: Some Requirements belong together from different perspectives but are formulated differently from each perspective, they are marked together in the Column Tracing.
+
 
 
 ### User Requirements
@@ -141,7 +141,7 @@ The First Layer frofm the tree define the bigger goals for leaflet and the leafs
 | T4 | The System must work on any platform that supports JS (Vanilla JS) | Quality  (Reliability) | T5 & U2|
 | T5 | The System must work regardless of Browser | Quality (Reliability) | T4 & U2 & U3|
 | T6 | The System must be deployable internal and external (JS-File or loaded from a CDN) | Constraint | T1 |
-| T7 | The System must have simple, readable source code | Quality (Maintainabilty) | |
+| T7 | The System must have simple, readable source code | Quality (Maintainability) | |
 | T8 | The System must support different Map-Distributors such as Google, OpenStreetMap, Bing, etc. | Quality (Efficenfy) | |
 | T9 | The System must be exportable as a single JS File | Functional | |
 | T10 | The System must support automatic testing for several browsers | Quality (testability) | |
@@ -169,4 +169,4 @@ Leaflet also has over 300 issues on its GitHub, we plan to support the team with
 | popup | an information window that opens in the viewing frame of the map |
 | marker | a pin or an image that marks geographical locations on the map |
 | Tooltip | a window the same as a popup but for the locations |
-| Dependencie | Libraries or Plugins from third-party providers |
+| Dependence | Libraries or Plugins from third-party providers |
