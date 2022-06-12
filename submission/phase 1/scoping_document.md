@@ -97,8 +97,7 @@ such as those who will see the results of this library. Followed by the Programm
 System-Requirements include mostly Requirements needed by Developers but not in a way they will be affected by it directly. 
 Note: Some Requirements belong together from different perspectives but are formulated differently from each perspective, they are marked together in the Column Tracing.
 Various Quality Aspects are defined in the following Quality - Tree. However this tree shall serve a first overview for the following requirements. 
-The First Layer frofm the tree define the bigger goals for leaflet and the leafs of the tree are a bit more precise. The leafs get even more precise in the Requirements. The Leafs are mapped too the Requirements which satisfy the goals. 
-
+The First Layer frofm the tree define the bigger goals for leaflet and the leafs of the tree are a bit more precise. The leafs get even more precise in the Requirements. 
 
 
 ### User Requirements
