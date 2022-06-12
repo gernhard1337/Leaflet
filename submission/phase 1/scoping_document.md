@@ -61,12 +61,25 @@ The first two Parts are based on User Requirements. Users are split into two gro
 Starting with User-Requirements we cover the needs from the User's perspective. It is said that User means here the real user
 such as those who will see the results of this library. Followed by the Programmer-Requirements, here are all needs a developer would love to have in the project. Divided from this we have the third Category, technical-Requirements. 
 System-Requirements include mostly Requirements needed by Developers but not in a way they will be affected by it directly. 
-Note: Some Requirements belong together from different perspectives but are formulated differently from each perspective, they are marked together in the Column Type.
+Note: Some Requirements belong together from different perspectives but are formulated differently from each perspective, they are marked together in the Column Tracing.
+Various Quality Aspects are defined in the following Quality - Tree. However this tree shall serve a first overview for the following requirements. 
+The First Layer frofm the tree define the bigger goals for leaflet and the leafs of the tree are a bit more precise. The leafs get even more precise in the Requirements. The Leafs are mapped too the Requirements which satisfy the goals. 
 
 
 ![Figure 1: Quality - Tree](./qualityAspekts/quality-tree.png)
 
-
+- lightweight
+T1 / T2 / T3 / T4 / T6 / U4
+- feature Completeness
+U1 / U6 / U7 / U8
+- Elements modifiabilty
+U1 / P3 / P4 / P5 / P6 / P7 / P8 / P9 / P10
+- Style Customization
+P1 / P2 / P7 / U5
+- third party plugins
+P11 / T3 / T8
+- Contribution
+T7 / T11
 
 
 
@@ -85,7 +98,7 @@ Note: Some Requirements belong together from different perspectives but are form
 | U5 | As a User, I want to have responsive design | Quality (Usability) | P2 |
 | U6 | As a User, I want to have responsive controls (touchscreen/mouse differ in the way of use) | Quality (Usability) | P2 |
 | U7 | As a User, I want to have a fast reset to original map settings | Functional (Usability) | |
-| U7 | As a User, I want to switch between metrical and imperial scale | Functional (Portability)| |
+| U8 | As a User, I want to switch between metrical and imperial scale | Functional (Portability)| |
 
 <!-- markdownlint-enable-->
 ### Programmer Requirements
@@ -119,6 +132,7 @@ Note: Some Requirements belong together from different perspectives but are form
 | T8 | The System must support different Map-Distributors such as Google, OpenStreetMap, Bing, etc. | Quality (Efficenfy) | |
 | T9 | The System must be exportable as a single JS File | Functional | |
 | T10 | The System must support automatic testing for several browsers | Quality (testability) | |
+| T11 | The System must have his Sourcecode avaiable with a Open-Source System in github.com | Quality (testability) | |
 
 <!-- markdownlint-enable-->
 ## Outlook
