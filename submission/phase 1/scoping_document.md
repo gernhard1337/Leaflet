@@ -65,7 +65,7 @@ Note: Some Requirements belong together from different perspectives but are form
 
 ### User Requirements
 <!-- markdownlint-disable-->
-| # of user Requirement | User Requirement | Tracing | Type |
+| # of user Requirement | User Requirement | Type | Tracing |
 |-----------------|--------------------|--------------------|--------------------|
 | U1 | As a User, I want to Zoom in/out of the map, and Elements should hold their relative Position | Functional  |  |
 | U2 | As a User, I want to use Maps with Leaflet independent of my browser | Quality  | T4 & T5 |
@@ -79,7 +79,7 @@ Note: Some Requirements belong together from different perspectives but are form
 <!-- markdownlint-enable-->
 ### Programmer Requirements
 <!-- markdownlint-disable-->
-| # of Programmer Requirement | Programmer Requirement | Tracing | Type | 
+| # of Programmer Requirement | Programmer Requirement | Type | Tracing |
 |-----------------|--------------------|--------------------|--------------------|
 | P1 | As a Programmer, I want to implement different Map-Types such that Leaflet works the same way with different Maps | Functional | |
 | P2 | As a Programmer, I want to include Animations with or without CSS | Functional | U5 & U6 |
@@ -95,7 +95,7 @@ Note: Some Requirements belong together from different perspectives but are form
 <!-- markdownlint-enable-->
 ### System Requirements
 <!-- markdownlint-disable-->
-| # of Technical Requirement | Technical Requirement | Tracing | Type |
+| # of Technical Requirement | Technical Requirement | Type | Tracing |
 |-----------------|--------------------|--------------------|--------------------|
 | T1 | The System should have 0 dependencies | Constraint | T3 & T6 |
 | T2 | The System should be lightweight and have only the absolute minimum of code needed for the requirements | Constraint | |
