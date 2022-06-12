@@ -100,11 +100,7 @@ A developer is also known as a software developer, computer programmer, programm
 A developer  may be a company or person that creates software - either completely, or with other companies or people. 
 Leaflet allows developers without a GIS background to very easily display tiled web maps hosted on a public server, with optional tiled overlays. 
 
- 
-![Figure 2: Enduser](./Use Case/Enduser.drawio.png)
-![Figure 3: developer](./Use Case/developer.drawio.png)
-
-
+![Figure 2: Enduser]("./Use Case/Enduser.drawio.png")
 
 
 ## Requirements
