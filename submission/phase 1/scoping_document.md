@@ -67,14 +67,14 @@ Note: Some Requirements belong together from different perspectives but are form
 <!-- markdownlint-disable-->
 | # of user Requirement | User Requirement | Type | Tracing |
 |-----------------|--------------------|--------------------|--------------------|
-| U1 | As a User, I want to Zoom in/out of the map, and Elements should hold their relative Position | Functional  |  |
-| U2 | As a User, I want to use Maps with Leaflet independent of my browser | Quality  | T4 & T5 |
-| U3 | As a User, I want to see no differences between Elements from Leaflet in different Browsers | Quality  | T5 |
+| U1 | As a User, I want to Zoom in/out of the map, and Elements should hold their relative Position | Functional (Usability) |  |
+| U2 | As a User, I want to use Maps with Leaflet independent of my browser | Quality (Usability & Portability)  | T4 & T5 |
+| U3 | As a User, I want to see no differences between Elements from Leaflet in different Browsers | Quality (Dependability) | T5 |
 | U4 | As a User, I want to have no extra loading/initialization times (no big computation times) | Performance  | |
-| U5 | As a User, I want to have responsive design | Quality | P2 |
-| U6 | As a User, I want to have responsive controls (touchscreen/mouse differ in the way of use) | Quality | P2 |
-| U7 | As a User, I want to have a fast reset to original map settings | Functional | |
-| U7 | As a User, I want to switch between metrical and imperial scale | Functional | |
+| U5 | As a User, I want to have responsive design | Quality (Usability) | P2 |
+| U6 | As a User, I want to have responsive controls (touchscreen/mouse differ in the way of use) | Quality (Usability) | P2 |
+| U7 | As a User, I want to have a fast reset to original map settings | Functional (Usability) | |
+| U7 | As a User, I want to switch between metrical and imperial scale | Functional (Portability)| |
 
 <!-- markdownlint-enable-->
 ### Programmer Requirements
@@ -100,14 +100,14 @@ Note: Some Requirements belong together from different perspectives but are form
 | T1 | The System must have 0 dependencies | Constraint | T3 & T6 |
 | T2 | The System must be lightweight | Constraint | |
 | T2 | The System must have a minimal code-base | Constraint | |
-| T3 | The System must support plugins (for additional features) | Functional & Quality | P11 & T1 |
-| T4 | The System must work on any platform that supports JS (Vanilla JS) | Quality | T5 & U2|
-| T5 | The System must work regardless of Browser | Quality | T4 & U2 & U3|
+| T3 | The System must support plugins (for additional features) | Functional & Quality (maintainability) | P11 & T1 |
+| T4 | The System must work on any platform that supports JS (Vanilla JS) | Quality  (Reliability) | T5 & U2|
+| T5 | The System must work regardless of Browser | Quality (Reliability) | T4 & U2 & U3|
 | T6 | The System must be deployable internal and external (JS-File or loaded from a CDN) | Constraint | T1 |
-| T7 | The System must have simple, readable source code | Quality | |
-| T8 | The System must support different Map-Distributors such as Google, OpenStreetMap, Bing, etc. | Quality | |
+| T7 | The System must have simple, readable source code | Quality (Maintainabilty) | |
+| T8 | The System must support different Map-Distributors such as Google, OpenStreetMap, Bing, etc. | Quality (Efficenfy) | |
 | T9 | The System must be exportable as a single JS File | Functional | |
-| T10 | The System must support automatic testing for several browsers | Quality | |
+| T10 | The System must support automatic testing for several browsers | Quality (testability) | |
 
 <!-- markdownlint-enable-->
 ## Outlook
