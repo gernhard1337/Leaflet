@@ -101,9 +101,9 @@ A developer  may be a company or person that creates software - either completel
 Leaflet allows developers without a GIS background to very easily display tiled web maps hosted on a public server, with optional tiled overlays. 
 
  
+![Figure 2: Enduser](./Use Case/Enduser.drawio.png)
+![Figure 2: developer](./Use Case/developer.drawio.png)
 
-
-![image](https://user-images.githubusercontent.com/44380401/173251656-456c7a5d-9408-4979-ae8b-8516a8348dd8.png)
 
 
 
