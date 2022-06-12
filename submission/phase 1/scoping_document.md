@@ -36,6 +36,10 @@ a flawless Documentation of every development step.)
 
 ### Quality aspects (Main goals)
 
+Leaflet has main quality aspects that are  represented in the following quality tree: 
+
+![Figure 1: Quality - Tree](./qualityAspekts/quality-tree.png)
+
 -	**Performance:**
 Leaflet Js focuses mainly on performance and displaying the features in most apealing way with as less weight as possible.
 	-	**Light weight:** Leaflet JS runs as lightweight as possible while maintaining all map functionality. It does that by optimizing the algorithms and the graphics and even cutting as much unused or dead code as possible from the source code reaching about 39 KB of JS and 4 KB of CSS.
@@ -61,6 +65,21 @@ Leaflet JS have a great ability to work with other external help:
 -	**Documentation** 
 The project is well documented for users and contributors.
 
+#### Maping the requirment tree to the most important requirments:
+- Lightweight:
+T1 / T2 / T3 / T4 / T6 / U4
+- Feature Completeness:
+U1 / U6 / U7 / U8
+- Elements modifiabilty:
+U1 / P3 / P4 / P5 / P6 / P7 / P8 / P9 / P10
+- Style Customization:
+P1 / P2 / P7 / U5
+- third party plugins:
+P11 / T3 / T8
+- Contribution:
+T7 / T11
+
+> NOTE: to learn more about each requirment code please visit the requirments section.
 
 ## Stakeholders
 
@@ -79,26 +98,6 @@ System-Requirements include mostly Requirements needed by Developers but not in 
 Note: Some Requirements belong together from different perspectives but are formulated differently from each perspective, they are marked together in the Column Tracing.
 Various Quality Aspects are defined in the following Quality - Tree. However this tree shall serve a first overview for the following requirements. 
 The First Layer frofm the tree define the bigger goals for leaflet and the leafs of the tree are a bit more precise. The leafs get even more precise in the Requirements. The Leafs are mapped too the Requirements which satisfy the goals. 
-
-
-![Figure 1: Quality - Tree](./qualityAspekts/quality-tree.png)
-
-- lightweight:
-T1 / T2 / T3 / T4 / T6 / U4
-- feature Completeness:
-U1 / U6 / U7 / U8
-- Elements modifiabilty:
-U1 / P3 / P4 / P5 / P6 / P7 / P8 / P9 / P10
-- Style Customization:
-P1 / P2 / P7 / U5
-- third party plugins:
-P11 / T3 / T8
-- Contribution:
-T7 / T11
-
-
-
-
 
 
 
