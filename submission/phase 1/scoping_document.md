@@ -63,7 +63,7 @@ The project is well documented for users and contributors.
 
 
 
-![Figure 1: Quality - Tree](./qualityAspekts/quality-tree.png)
+![Figure 1: Quality - Tree](./qualityAspekts/tree.drawio.png)
 
 ##### Maping the requirment tree to the most important requirments:
 - Lightweight:
