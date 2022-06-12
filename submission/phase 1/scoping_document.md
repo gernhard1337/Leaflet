@@ -63,6 +63,17 @@ such as those who will see the results of this library. Followed by the Programm
 System-Requirements include mostly Requirements needed by Developers but not in a way they will be affected by it directly. 
 Note: Some Requirements belong together from different perspectives but are formulated differently from each perspective, they are marked together in the Column Type.
 
+
+![Figure 1: Quality - Tree](./qualityAspekts/user_journey.png "User Journey")
+
+
+
+
+
+
+
+
+
 ### User Requirements
 <!-- markdownlint-disable-->
 | # of user Requirement | User Requirement | Type | Tracing |
