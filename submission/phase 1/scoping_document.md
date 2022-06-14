@@ -155,7 +155,7 @@ System-Requirements include mostly Requirements needed by Developers but not in 
 | T5 | The System must work regardless of Browser | Quality (Dependability) | T4 & U2 & U3|
 | T6 | The System must be deployable internal and external (JS-File or loaded from a CDN) | Constraint | T1 |
 | T7 | The System must have simple, readable source code | Quality (Maintainability) | |
-| T8 | The System must support different Map-Distributors such as Google, OpenStreetMap, Bing, etc. | Quality (Efficenfy) | |
+| T8 | The System must support different Map-Distributors such as Google, OpenStreetMap, Bing, etc. | Quality (Compatibility) | |
 | T9 | The System must be exportable as a single JS File | Functional | |
 | T10 | The System must support automatic testing for several browsers | Quality (testability) | |
 | T11 | The System must have his Sourcecode avaiable with a Open-Source System in github.com | Quality (maintainability) | |
