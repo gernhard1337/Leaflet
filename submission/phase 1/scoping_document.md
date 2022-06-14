@@ -151,8 +151,8 @@ System-Requirements include mostly Requirements needed by Developers but not in 
 | T2 | The System must be lightweight | Constraint | |
 | T2 | The System must have a minimal code-base | Constraint | |
 | T3 | The System must support plugins (for additional features) | Functional & Quality (maintainability) | P11 & T1 |
-| T4 | The System must work on any platform that supports JS (Vanilla JS) | Quality  (Reliability) | T5 & U2|
-| T5 | The System must work regardless of Browser | Quality (Reliability) | T4 & U2 & U3|
+| T4 | The System must work on any platform that supports JS (Vanilla JS) | Quality  (Dependability) | T5 & U2|
+| T5 | The System must work regardless of Browser | Quality (Dependability) | T4 & U2 & U3|
 | T6 | The System must be deployable internal and external (JS-File or loaded from a CDN) | Constraint | T1 |
 | T7 | The System must have simple, readable source code | Quality (Maintainability) | |
 | T8 | The System must support different Map-Distributors such as Google, OpenStreetMap, Bing, etc. | Quality (Efficenfy) | |
