@@ -64,7 +64,7 @@ The project is well documented for users and contributors.
 
 Various Quality Aspects are defined in the following Quality - Tree. The First Layer frofm the tree define the bigger goals for leaflet and the leafs of the tree are a bit more precise. The leafs get even more precise in the Requirements. 
 
-![Figure 1: Quality - Tree](./qualityAspekts/tree.drawio.png)
+![Figure 1: Quality - Tree](./qualityAspekts/qualityTree_v2.png)
 
 ##### Mapping the requirement tree to the most important requirements:
 - Lightweight:
@@ -80,7 +80,7 @@ P11 / T3 / T8
 - Contribution:
 T7 / T11
 
-> NOTE: to learn more about each requirement code please visit the requirements section.
+> NOTE: Mapping the requirement tree to the requirements is directly in the requirment tables.
 
 ## Stakeholders
 
