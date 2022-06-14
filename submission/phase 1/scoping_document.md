@@ -66,21 +66,9 @@ Various Quality Aspects are defined in the following Quality - Tree. The First L
 
 ![Figure 1: Quality - Tree](./qualityAspekts/qualityTree_v2.png)
 
-##### Mapping the requirement tree to the most important requirements:
-- Lightweight:
-T1 / T2 / T3 / T4 / T6 / U4
-- Feature Completeness:
-U1 / U6 / U7 / U8
-- Elements modifiability:
-U1 / P3 / P4 / P5 / P6 / P7 / P8 / P9 / P10
-- Style Customization:
-P1 / P2 / P7 / U5
-- third party plugins:
-P11 / T3 / T8
-- Contribution:
-T7 / T11
 
-> NOTE: Mapping the requirement tree to the requirements is directly in the requirment tables.
+
+> NOTE: Mapping the leafs of the quality-tree to the requirements is directly mentioned in the requirement-tables.
 
 ## Stakeholders
 
