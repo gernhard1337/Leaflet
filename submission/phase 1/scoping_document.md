@@ -120,7 +120,7 @@ System-Requirements include mostly Requirements needed by Developers but not in 
 | U1 | As a User, I want to Zoom in/out of the map, and Elements should hold their relative Position | Functional (Usability) |  |
 | U2 | As a User, I want to use Maps with Leaflet independent of my browser | Quality (Usability & Portability)  | T4 & T5 |
 | U3 | As a User, I want to see no differences between Elements from Leaflet in different Browsers | Quality (Dependability) | T5 |
-| U4 | As a User, I want to have no extra loading/initialization times (no big computation times) | Performance  | |
+| U4 | As a User, I want to have no extra loading/initialization times (no big computation times) | Quality (Performance)  | |
 | U5 | As a User, I want to have responsive design | Quality (Usability) | P2 |
 | U6 | As a User, I want to have responsive controls (touchscreen/mouse differ in the way of use) | Quality (Usability) | P2 |
 | U7 | As a User, I want to have a fast reset to original map settings | Functional (Usability) | |
