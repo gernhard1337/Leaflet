@@ -34,7 +34,7 @@ a flawless Documentation of every development step.)
 -	responsiveness for all devices
 
 
-### Quality aspects (Main goals)
+### Main goals (Quality aspects)
 
 -	**Performance:**
 Leaflet Js focuses mainly on performance and displaying the features in most appealing way with as less weight as possible.
