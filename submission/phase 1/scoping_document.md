@@ -48,6 +48,8 @@ Leaflet Js focuses mainly on performance and displaying the features in most app
 	-	**Responsiveness:** Leaflet shrinks and expands map elements to provide a variety of mobile-friendly displays. To get good readability results from the Google search engine, the library provides lightweight graphs and cutting-edge loading time (SEO optimized).
 	-	**compatibility:**
 Leaflet JS have a great ability to work with third party plugins support and have a welcoming community for contributors and maintainers.
+	-	**Dependability:**
+Leaflet JS can work with different browsers with different JS frameworks.
 -	**Modifiability:**
 Leaflet maps can be modified in many ways.
 	-	**Elements modifiability:**
