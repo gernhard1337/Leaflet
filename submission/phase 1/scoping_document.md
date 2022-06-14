@@ -30,8 +30,8 @@ a flawless Documentation of every development step.)
 ### Functionalities
 
 -	Creating lightweight maps in simple readable code.
--	customizable with different styles and themes
--	responsiveness for all devices
+-	customizable with different styles and themes.
+-	responsiveness for all devices.
 
 
 ### Main goals (Quality aspects)
