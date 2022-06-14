@@ -57,9 +57,9 @@ Even though Leaflet JS seeks to improve efficiency and reduce the size of the co
 -	**Reliability:**
 Leaflet stays reliable under usage pressure. It does that by:
 	-	**Maintainablity:**
-TEXT TEXT
+Since it is an open source project and has a scalable architecture, it has a high level of adaptation to any new issue in the project.
 	-	**Testability:**
-TEXT TEXT
+Leaflet can be tested automatically from browsers thanks to its modularity and scalable architecture.
 
 Various Quality Aspects are defined in the following Quality - Tree. The First Layer frofm the tree define the bigger goals for leaflet and the leafs of the tree are a bit more precise. The leafs get even more precise in the Requirements. 
 
