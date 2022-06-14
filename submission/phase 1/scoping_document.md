@@ -183,3 +183,5 @@ Leaflet also has over 300 issues on its GitHub, we plan to support the team with
 | marker | a pin or an image that marks geographical locations on the map |
 | Tooltip | a window the same as a popup but for the locations |
 | Dependence | Libraries or Plugins from third-party providers |
+| End user | A person who interacts with the product with the intention of only using the product for his needs |
+| Developer | A person who interacts with the product with the intention of using the product for his needs and contribution to the development of the product |
