@@ -49,10 +49,6 @@ Leaflet maps can be modified in many ways.
 Even though Leaflet JS seeks to improve efficiency and reduce the size of the code required, it provides all the interactive mapping functionality that most developers would ever require.
 	-	**Style modifiability:**
 Even though Leaflet JS seeks to improve efficiency and reduce the size of the code required, it provides all the interactive mapping functionality that most developers would ever require.
-
--	**Responsiveness:**
-Leaflet shrinks and expands map elements to provide a variety of mobile-friendly displays. To get good readability results from the Google search engine, the library provides lightweight graphs and cutting-edge loading time (SEO optimized).
-
 -	**Accessibility & compatibility**
 Leaflet JS have a great ability to work with other external help:
 	-	**third party plugins support.** 
