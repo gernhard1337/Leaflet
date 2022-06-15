@@ -127,9 +127,9 @@ System-Requirements include mostly Requirements needed by Developers but not in 
 | P5 | As a Programmer, I want to Overlap the Map with Images/Videos/SVG | Functional | |
 | P6 | As a Programmer, I want to have build-in functionality for different geometric objects (Lines, Polygons, Squares) | Functional | |
 | P7 | As a Programmer, I want to Control the Opacity, Thickness, Color, etc for geometric Objects | Functional | |
-| P8 | As a Programmer I want to merge those geometric objects into bigger ones | Functional | |
-| P9 | As a Programmer I want to define Points with Koordinates in the Map | Functional | |
-| P10 | As a Programmer I want to add EventListeners to Elements and the Map itself | Functional | |
+| P8 | As a Programmer, I want to merge those geometric objects into bigger ones | Functional | |
+| P9 | As a Programmer, I want to define Points with Koordinates in the Map | Functional | |
+| P10 | As a Programmer, I want to add EventListeners to Elements and the Map itself | Functional | |
 | P11 | As a Programmer, I want to have Mod/Plugin Support for Leaflet Library | Functional | T3 |
 <!-- markdownlint-enable-->
 ### System Requirements
