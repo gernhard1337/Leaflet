@@ -836,7 +836,7 @@ Es werden keine Domänenbausteine benötigt, da Leaflet eine Open-Source-UI-Bibl
 
 ## *User Experience (UX)* {#__emphasis_konzept_3_emphasis}
 
-*\<Erklärung>*
+Leaflet setzt auf gängige Benutzeroberflächen für eine für den Benutzer erlernbare und vereinfachte Karte.
 
 ## *Sicherheitskonzepte* {#__emphasis_konzept_4_emphasis}
 
@@ -844,9 +844,9 @@ Da alle Leaflet-Services öffentlich zugänglich sind, muss kein Schutz gegen Da
 
 ## *Entwicklungskonzepte* {#__emphasis_konzept_5_emphasis}
 
--   **Build, Test, Deploy:** leaflet uses CI/CD concepts to ensure that all features are testable and functional before any release.
--   **Configurability:** the project and the maps are customizable and can be always configured to match the user needs.
--   **Migration:** the project has a high level of flexibility, since it can run on many platforms, which enables the migration of the code from one environment to another.
+-   **Erstellen, Testen, Bereitstellen:** Leaflet verwendet CI/CD-Konzepte, um sicherzustellen, dass alle Funktionen vor jeder Veröffentlichung testbar und funktionsfähig sind.
+-   **Konfigurierbarkeit:** Das Projekt und die Karten sind anpassbar und können immer an die Bedürfnisse des Benutzers angepasst werden.
+-   **Migration:** Das Projekt hat ein hohes Maß an Flexibilität, da es auf vielen Plattformen ausgeführt werden kann, was die Migration des Codes von einer Umgebung in eine andere ermöglicht.
 
 ## *Unter-der-Haube* {#__emphasis_konzept_6_emphasis}
 
