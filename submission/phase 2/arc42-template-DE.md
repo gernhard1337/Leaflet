@@ -849,7 +849,7 @@ wir finden folgendes:
 Hier kann eine Ebene Pfad, Marker oder ein "Composite" sein.
 
 -   Die Projektmodularität ist ebenfalls logisch und leicht zu erkennen, wobei jede Klasse ein Modul darstellt, insbesondere für Schlüsselbausteine wie Controller, Handler, Layer, Zoom oder die geometrischen Module.
--   
+
 ## *User Experience (UX)* {#__emphasis_konzept_3_emphasis}
 
 Leaflet setzt auf gängige Benutzeroberflächen für eine für den Benutzer erlernbare und vereinfachte Karte.
