@@ -828,7 +828,7 @@ der online-Dokumentation (auf Englisch).
 
 ## *Fachliche Konzepte* {#__emphasis_konzept_1_emphasis}
 
-*\<Erklärung>*
+Es werden keine Domänenbausteine benötigt, da Leaflet eine Open-Source-UI-Bibliothek für Karten ist, für die sich der Endbenutzer oder Entwickler nicht registrieren muss.
 
 ## *Architektur-und Entwurfsmuster* {#__emphasis_konzept_2_emphasis}
 
@@ -840,20 +840,21 @@ der online-Dokumentation (auf Englisch).
 
 ## *Sicherheitskonzepte* {#__emphasis_konzept_4_emphasis}
 
-*\<Erklärung>*
+Da alle Leaflet-Services öffentlich zugänglich sind, muss kein Schutz gegen Datenschutzangriffe eingerichtet werden. Der Code kann jedoch nur geändert werden, nachdem er von vertrauenswürdigen Betreuern überprüft wurde.
 
 ## *Entwicklungskonzepte* {#__emphasis_konzept_5_emphasis}
 
-*\<Erklärung>*
+-   **Build, Test, Deploy:** leaflet uses CI/CD concepts to ensure that all features are testable and functional before any release.
+-   **Configurability:** the project and the maps are customizable and can be always configured to match the user needs.
+-   **Migration:** the project has a high level of flexibility, since it can run on many platforms, which enables the migration of the code from one environment to another.
 
 ## *Unter-der-Haube* {#__emphasis_konzept_6_emphasis}
 
-*\<Erklärung>*
+Der Leaflet-Verbesserungsprozess beginnt mit der Erstellung von Issue-Ticks von den Endnutzern | Entwickler an die Betreuer. Batches werden als neue Version mit einem Bericht erstellt, der die Verbesserungen in diesem Batch erläutert.
 
 ## *Betriebskonzepte* {#__emphasis_konzept_7_emphasis}
 
-*\<Erklärung>*
-
+Die Popularität des Projekts verschafft Leaflet eine Armee gut ausgebildeter Betreuer und Benutzer, die Probleme schnell erkennen und darauf reagieren können, und das ist der Grund für die vertrauenswürdige Verfügbarkeit von Leaflet.
 
 
 # Architekturentscheidungen {#section-design-decisions}
