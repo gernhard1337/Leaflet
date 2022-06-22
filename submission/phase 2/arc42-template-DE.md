@@ -836,14 +836,14 @@ Im Blick auf das von Leaflet bereitgestellte Architekturdiagramm ..
 
 ![Leaflet arch](images/leaflet-arc.png)
 
-https://leafletjs.com/examples/extending/class-diagram.html
-
+Siehe [Leaflet Struktur](https://leafletjs.com/examples/extending/class-diagram.html) in
+der Dokumentation von Leaflet (auf Englisch).
 
 wir finden folgendes:
 -   Das Leaflet-Team entscheidet sich für die einfache Vererbung (erweitern und einschließen) für fast alle Relationen der Projektklassen in einer zusammenhängenden Angelegenheit (z. B. "hat eine" oder "enthält" Relationen).
 -   Da die Entwickler das Composite-Konzept noch nicht ausgeschöpft haben, schlagen wir vor, mehrere Composites in der Architektur für mehr Modularität hinzuzufügen.
 -   Zum Beispiel erben die Module Marker (L.Marker), Path (L.Path), Layer Group (L.LayerGroup) und andere von der Muttermodul-Layer (L.Layer). Da eine Ebene eine andere Ebene erben kann, die eine Ebenengruppe bildet (das Stapeln mehrerer Ebenen ist möglich), können wir stattdessen eine zusammengesetzte Vorlage (composite template) verwenden:  
-![Leaflet arch](images/7-design-imporvments.png)
+![Leaflet arch](images/7-design-imporvments.png).
 Hier kann eine Ebene Pfad, Marker oder ein "Composite" sein
 -   Die Projektmodularität ist ebenfalls logisch und leicht zu erkennen, wobei jede Klasse ein Modul darstellt, insbesondere für Schlüsselbausteine wie Controller, Handler, Layer, Zoom oder die geometrischen Module.
 -   
