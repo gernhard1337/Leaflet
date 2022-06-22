@@ -826,19 +826,35 @@ concepts](images/08-Crosscutting-Concepts-Structure-DE.png)
 Siehe [Querschnittliche Konzepte](https://docs.arc42.org/section-8/) in
 der online-Dokumentation (auf Englisch).
 
-## *\Fachliche Konzepte* {#__emphasis_konzept_1_emphasis}
+## *Fachliche Konzepte* {#__emphasis_konzept_1_emphasis}
 
 *\<Erklärung>*
 
-## *\<Konzept 2>* {#__emphasis_konzept_2_emphasis}
+## *Architektur-und Entwurfsmuster* {#__emphasis_konzept_2_emphasis}
 
 *\<Erklärung>*
 
-...
-
-## *\<Konzept n>* {#__emphasis_konzept_n_emphasis}
+## *User Experience (UX)* {#__emphasis_konzept_3_emphasis}
 
 *\<Erklärung>*
+
+## *Sicherheitskonzepte* {#__emphasis_konzept_4_emphasis}
+
+*\<Erklärung>*
+
+## *Entwicklungskonzepte* {#__emphasis_konzept_5_emphasis}
+
+*\<Erklärung>*
+
+## *Unter-der-Haube* {#__emphasis_konzept_6_emphasis}
+
+*\<Erklärung>*
+
+## *Betriebskonzepte* {#__emphasis_konzept_7_emphasis}
+
+*\<Erklärung>*
+
+
 
 # Architekturentscheidungen {#section-design-decisions}
 
