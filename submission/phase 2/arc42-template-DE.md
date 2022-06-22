@@ -836,6 +836,9 @@ Im Blick auf das von Leaflet bereitgestellte Architekturdiagramm
 
 ![Leaflet arch](images/leaflet-arc.png)
 
+![Sehe die Struktur in Vollbild](https://leafletjs.com/examples/extending/class-diagram.html)
+
+
 wir finden folgendes:
 -   Das Leaflet-Team entscheidet sich für die einfache Vererbung (erweitern und einschließen) für fast alle Relationen der Projektklassen in einer zusammenhängenden Angelegenheit (z. B. "hat eine" oder "enthält" Relationen).
 -   Da die Entwickler das Composite-Konzept noch nicht ausgeschöpft haben, schlagen wir vor, mehrere Composites in der Architektur für mehr Modularität hinzuzufügen.
