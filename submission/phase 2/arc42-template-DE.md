@@ -826,7 +826,7 @@ concepts](images/08-Crosscutting-Concepts-Structure-DE.png)
 Siehe [Querschnittliche Konzepte](https://docs.arc42.org/section-8/) in
 der online-Dokumentation (auf Englisch).
 
-## *\<Konzept 1>* {#__emphasis_konzept_1_emphasis}
+## *\Fachliche Konzepte* {#__emphasis_konzept_1_emphasis}
 
 *\<Erklärung>*
 
