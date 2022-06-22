@@ -832,7 +832,7 @@ Es werden keine Domänenbausteine benötigt, da Leaflet eine Open-Source-UI-Bibl
 
 ## *Architektur-und Entwurfsmuster* {#__emphasis_konzept_2_emphasis}
 
-Im Blick auf das von Leaflet bereitgestellte Architekturdiagramm
+Im Blick auf das von Leaflet bereitgestellte Architekturdiagramm ..
 
 ![Leaflet arch](images/leaflet-arc.png)
 
@@ -842,10 +842,11 @@ https://leafletjs.com/examples/extending/class-diagram.html
 wir finden folgendes:
 -   Das Leaflet-Team entscheidet sich für die einfache Vererbung (erweitern und einschließen) für fast alle Relationen der Projektklassen in einer zusammenhängenden Angelegenheit (z. B. "hat eine" oder "enthält" Relationen).
 -   Da die Entwickler das Composite-Konzept noch nicht ausgeschöpft haben, schlagen wir vor, mehrere Composites in der Architektur für mehr Modularität hinzuzufügen.
--   Zum Beispiel erben die Module Marker (L.Marker), Path (L.Path), Layer Group (L.LayerGroup) und andere von der Muttermodul-Layer (L.Layer). Da eine Ebene eine andere Ebene erben kann, die eine Ebenengruppe bildet (das Stapeln mehrerer Ebenen ist möglich), können wir stattdessen eine zusammengesetzte Vorlage (composite template) verwenden:
--   
+-   Zum Beispiel erben die Module Marker (L.Marker), Path (L.Path), Layer Group (L.LayerGroup) und andere von der Muttermodul-Layer (L.Layer). Da eine Ebene eine andere Ebene erben kann, die eine Ebenengruppe bildet (das Stapeln mehrerer Ebenen ist möglich), können wir stattdessen eine zusammengesetzte Vorlage (composite template) verwenden:  
 ![Leaflet arch](images/7-design-imporvments.png)
-
+Hier kann eine Ebene Pfad, Marker oder ein "Composite" sein
+-   Die Projektmodularität ist ebenfalls logisch und leicht zu erkennen, wobei jede Klasse ein Modul darstellt, insbesondere für Schlüsselbausteine wie Controller, Handler, Layer, Zoom oder die geometrischen Module.
+-   
 ## *User Experience (UX)* {#__emphasis_konzept_3_emphasis}
 
 Leaflet setzt auf gängige Benutzeroberflächen für eine für den Benutzer erlernbare und vereinfachte Karte.
