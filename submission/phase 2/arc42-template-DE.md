@@ -746,11 +746,12 @@ Für jedes Infrastrukturelement kopieren Sie die Struktur aus Ebene 1.
 
 *\<Diagramm + Erläuterungen>*
 
-# Querschnittliche Konzepte {#section-concepts}
 
-::: formalpara-title
+
+
+<!--- ab hier Toms Part -->
+# Querschnittliche Konzepte
 **Inhalt**
-:::
 
 Dieser Abschnitt beschreibt übergreifende, prinzipielle Regelungen und
 Lösungsansätze, die an mehreren Stellen (=*querschnittlich*) relevant
@@ -826,11 +827,11 @@ concepts](images/08-Crosscutting-Concepts-Structure-DE.png)
 Siehe [Querschnittliche Konzepte](https://docs.arc42.org/section-8/) in
 der online-Dokumentation (auf Englisch).
 
-## *Fachliche Konzepte* {#__emphasis_konzept_1_emphasis}
+## *Fachliche Konzepte*
 
 Es werden keine Domänenbausteine benötigt, da Leaflet eine Open-Source-UI-Bibliothek für Karten ist, für die sich der Endbenutzer oder Entwickler nicht registrieren muss.
 
-## *Architektur-und Entwurfsmuster* {#__emphasis_konzept_2_emphasis}
+## *Architektur-und Entwurfsmuster* 
 
 Im Blick auf das von Leaflet bereitgestellte Architekturdiagramm ..
 
@@ -850,34 +851,36 @@ Hier kann eine Ebene Pfad, Marker oder ein "Composite" sein.
 
 -   Die Projektmodularität ist ebenfalls logisch und leicht zu erkennen, wobei jede Klasse ein Modul darstellt, insbesondere für Schlüsselbausteine wie Controller, Handler, Layer, Zoom oder die geometrischen Module.
 
-## *User Experience (UX)* {#__emphasis_konzept_3_emphasis}
+## *User Experience (UX)* 
 
 Leaflet setzt auf gängige Benutzeroberflächen für eine für den Benutzer erlernbare und vereinfachte Karte.
 
-## *Sicherheitskonzepte* {#__emphasis_konzept_4_emphasis}
+## *Sicherheitskonzepte* 
 
 Da alle Leaflet-Services öffentlich zugänglich sind, muss kein Schutz gegen Datenschutzangriffe eingerichtet werden. Der Code kann jedoch nur geändert werden, nachdem er von vertrauenswürdigen Betreuern überprüft wurde.
 
-## *Entwicklungskonzepte* {#__emphasis_konzept_5_emphasis}
+## *Entwicklungskonzepte* 
 
 -   **Erstellen, Testen, Bereitstellen:** Leaflet verwendet CI/CD-Konzepte, um sicherzustellen, dass alle Funktionen vor jeder Veröffentlichung testbar und funktionsfähig sind.
 -   **Konfigurierbarkeit:** Das Projekt und die Karten sind anpassbar und können immer an die Bedürfnisse des Benutzers angepasst werden.
 -   **Migration:** Das Projekt hat ein hohes Maß an Flexibilität, da es auf vielen Plattformen ausgeführt werden kann, was die Migration des Codes von einer Umgebung in eine andere ermöglicht.
 
-## *Unter-der-Haube* {#__emphasis_konzept_6_emphasis}
+## *Unter-der-Haube* 
 
 Der Leaflet-Verbesserungsprozess beginnt mit der Erstellung von Issue-Ticks von den Endnutzern | Entwickler an die Betreuer. Batches werden als neue Version mit einem Bericht erstellt, der die Verbesserungen in diesem Batch erläutert.
 
-## *Betriebskonzepte* {#__emphasis_konzept_7_emphasis}
+## *Betriebskonzepte*
 
 Die Popularität des Projekts verschafft Leaflet eine Armee gut ausgebildeter Betreuer und Benutzer, die Probleme schnell erkennen und darauf reagieren können, und das ist der Grund für die vertrauenswürdige Verfügbarkeit von Leaflet.
 
 
-# Architekturentscheidungen {#section-design-decisions}
 
-::: formalpara-title
+<!-- Toms Part -->
+# Architekturentscheidungen 
+
+
 **Inhalt**
-:::
+
 
 Wichtige, teure, große oder riskante Architektur- oder
 Entwurfsentscheidungen inklusive der jeweiligen Begründungen. Mit
@@ -916,56 +919,67 @@ Siehe [Architekturentscheidungen](https://docs.arc42.org/section-9/) in
 der arc42 Dokumentation (auf Englisch!). Dort finden Sie Links und
 Beispiele zum Thema ADR.
 
-# Qualitätsanforderungen {#section-quality-scenarios}
+# Qualitätsanforderungen
 
-::: formalpara-title
-**Inhalt**
-:::
+### Inhalt
 
-Dieser Abschnitt enthält möglichst alle Qualitätsanforderungen als
-Qualitätsbaum mit Szenarien. Die wichtigsten davon haben Sie bereits in
-Abschnitt 1.2 (Qualitätsziele) hervorgehoben.
+Im folgenden werden die Qualitätsanforderungen an Leaflet konkretisiert. Hierfür dient ein Qualitätsbaum als Grundlage
+um dann im weiteren die einzelnen herausgearbeiteten Aspekte näher zu definieren. 
 
-Nehmen Sie hier auch Qualitätsanforderungen geringerer Priorität auf,
-deren Nichteinhaltung oder -erreichung geringe Risiken birgt.
+## Qualitätsbaum 
 
-::: formalpara-title
-**Motivation**
-:::
+![Figure 1: Quality - Tree](images/qualityTree_v2.png)
 
-Weil Qualitätsanforderungen die Architekturentscheidungen oft maßgeblich
-beeinflussen, sollten Sie die für Ihre Stakeholder relevanten
-Qualitätsanforderungen kennen, möglichst konkret und operationalisiert.
+### Inhalt
 
-::: formalpara-title
-**Weiterführende Informationen**
-:::
+Der Qualitätsbaum für Leaflet besteht aus 2 Schichten. Hierbei sind ausgehend von der Wurzel 5 verschiedene 
+Qualitätsaspekte definiert. Einige dieser Qualitätsaspekte definieren weitere, speziellere Qualitätskriterien welche 
+nochmals genauer definiert sind. Diese werden im folgenden genauer erläutert und erklärt.
 
-Siehe [Qualitätsanforderungen](https://docs.arc42.org/section-10/) in
-der online-Dokumentation (auf Englisch!).
+#### Disclaimer
+Sämtliche hier genau spezifizierte Requirements finden sich nicht in der originalen Dokumentation von Leaflet und sind 
+komplett eigens erstellt worden
 
-## Qualitätsbaum {#_qualit_tsbaum}
+### Performance 
 
-::: formalpara-title
-**Inhalt**
-:::
+Der Qualitätsaspekt **Performance** soll sicherstellen, dass Leaflet angenehm zu benutzen ist. Eine Softwarebibliothek die
+Prozesse unnötig verlangsamt ist ineffizient und wird nicht genutzt da sich meist schnell bessere alternativen bieten.
+Damit unsere Arbeit hier nicht umsonst ist soll sichergestellt werden, dass Leaflet eine hohe Performance aufweist. 
+Dies wird durch zwei näher definierte Kriterien erreicht
 
-Der Qualitätsbaum (à la ATAM) mit Qualitätsszenarien an den Blättern.
+##### light-weight
 
-::: formalpara-title
-**Motivation**
-:::
+Leaflet sollte in seiner Größe so klein wie möglich sein. Hiermit ist gemeint, dass die komplette Standard-Bibliothek 
+möglichst klein sein soll. Leaflet kann erweitert werden, dies soll jedoch den Core nicht interessieren. 
 
-Die mit Prioritäten versehene Baumstruktur gibt Überblick über
-die --- oftmals zahlreichen --- Qualitätsanforderungen.
+| ID | Szenario |
+|-----------------|--------------------|
+| P1 | Die komplette Core-Bibliothek soll nicht mehr als 50kb umfassen |
+| P2 | In der Core-Bibliothek sind nur notwendige Funktionen implementiert (Notwendigkeit definiert in Bausteinsicht) |
 
--   Baumartige Verfeinerung des Begriffes „Qualität", mit „Qualität"
-    oder „Nützlichkeit" als Wurzel.
+##### feature Completeness
 
--   Mindmap mit Qualitätsoberbegriffen als Hauptzweige
+Leaflet soll alle notwendigen Funktionen enthalten die für eine Karten-Bibliothek notwendig sind. Weitere Features sind 
+über Plugins zu lösen
 
-In jedem Fall sollten Sie hier Verweise auf die Qualitätsszenarien des
-folgenden Abschnittes aufnehmen.
+| ID | Szenario |
+|-----------------|--------------------|
+| P3 | Ein Nutzer kann in eine Karte hinein/hinaus-zoomen |
+| P4 | Ein Nutzer kann eine Karte bewegen (mittels Maus & Touch) |
+| P5 | Ein Nutzer kann die Starteinstellung schnell wiederherstellen |
+
+### Documentation
+
+Der Zugang zu Leaflet soll für neue Entwickler, Mitarbeiter oder Nutzer einfach und zugänglich sein. Hierfür
+muss gewährleistet werden, dass Leaflet eine saubere und fehlerfreie Dokumentation bietet die umfassend über sämtliche
+Strukturen, insbesondere der Architektur, informiert.
+
+### Usability
+
+### Modifiabilty
+
+### Reliability
+
 
 ## Qualitätsszenarien {#_qualit_tsszenarien}
 
@@ -1039,42 +1053,25 @@ Siehe [Risiken und technische
 Schulden](https://docs.arc42.org/section-11/) in der
 online-Dokumentation (auf Englisch!).
 
-# Glossar {#section-glossary}
+# Glossar
 
-::: formalpara-title
-**Inhalt**
-:::
+Hier sind wesentliche, wichtige Begriffe aus fachlicher und technischer Sicht 
+dokumentiert und erklärt. Hierbei werden vor allem die Sichten aller Stakeholder betrachtet, so dass
+diese hier eine einfache Übersicht finden falls Begriffe unklar sind.
 
-Die wesentlichen fachlichen und technischen Begriffe, die Stakeholder im
-Zusammenhang mit dem System verwenden.
 
-Nutzen Sie das Glossar ebenfalls als Übersetzungsreferenz, falls Sie in
-mehrsprachigen Teams arbeiten.
-
-::: formalpara-title
-**Motivation**
-:::
-
-Sie sollten relevante Begriffe klar definieren, so dass alle Beteiligten
-
--   diese Begriffe identisch verstehen, und
-
--   vermeiden, mehrere Begriffe für die gleiche Sache zu haben.
-
-```{=html}
-<!-- -->
-```
--   Zweispaltige Tabelle mit \<Begriff> und \<Definition>
-
--   Eventuell weitere Spalten mit Übersetzungen, falls notwendig.
-
-Siehe [Glossar](https://docs.arc42.org/section-12/) in der
-online-Dokumentation (auf Englisch!).
-
-+-----------------------+-----------------------------------------------+
-| Begriff               | Definition                                    |
-+=======================+===============================================+
-| *\<Begriff-1>*        | *\<Definition-1>*                             |
-+-----------------------+-----------------------------------------------+
-| *\<Begriff-2*         | *\<Definition-2>*                             |
-+-----------------------+-----------------------------------------------+
+| Term | Meaning |
+|-----------------|--------------------|
+| JavaScript | The Programming Language Leaflet uses |
+| Stakeholder | Person or Group involved in the usage of Leaflet |
+| CDN | Content Delivery Network - deliver Code or Text fast from a Network of Servers |
+| Requirement(s) | Wishes and Needs for the project |
+| Vanilla JS | JavaScript out-of-the-box without any dependencies |
+| Mod / Plugin | Code that improves Leaflet without belonging to the Core of Leaflet |
+| Layer | a theme or overlay of the map |
+| popup | an information window that opens in the viewing frame of the map |
+| marker | a pin or an image that marks geographical locations on the map |
+| Tooltip | a window the same as a popup but for the locations |
+| Dependence | Libraries or Plugins from third-party providers |
+| End user | A person who interacts with the product with the intention of only using the product for his needs |
+| Developer | A person who interacts with the product with the intention of using the product for his needs and contributing to the development of the product |
