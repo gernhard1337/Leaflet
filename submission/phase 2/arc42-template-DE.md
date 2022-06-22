@@ -836,7 +836,7 @@ Im Blick auf das von Leaflet bereitgestellte Architekturdiagramm
 
 ![Leaflet arch](images/leaflet-arc.png)
 
-![Sehe die Struktur in Vollbild](https://leafletjs.com/examples/extending/class-diagram.html)
+https://leafletjs.com/examples/extending/class-diagram.html
 
 
 wir finden folgendes:
