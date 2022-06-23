@@ -934,7 +934,10 @@ um dann im weiteren die einzelnen herausgearbeiteten Aspekte näher zu definiere
 
 Der Qualitätsbaum für Leaflet besteht aus 2 Schichten. Hierbei sind ausgehend von der Wurzel 5 verschiedene 
 Qualitätsaspekte definiert. Einige dieser Qualitätsaspekte definieren weitere, speziellere Qualitätskriterien welche 
-nochmals genauer definiert sind. Diese werden im folgenden genauer erläutert und erklärt.
+nochmals genauer definiert sind. Alle Kriterien bekommen eine Tabelle mit Qualitätsszenarios. Hierdurch soll sichergestellt
+werden, dass die Qualitätsaspekte nachprüfbar und an reale Kriterien gebunden sind. Da Leaflet eine Bilbiothek für 
+Entwickler ist, kann es vorkommen, dass sich Qualitätsszenarien in verschiedenen Kategorien doppeln da verschiedene 
+Sichten ähnliches verlangen aber eine leicht andere Formulierung haben.
 
 #### Disclaimer
 Sämtliche hier genau spezifizierte Requirements finden sich nicht in der originalen Dokumentation von Leaflet und sind 
@@ -956,17 +959,18 @@ möglichst klein sein soll. Leaflet kann erweitert werden, dies soll jedoch den 
 |-----------------|--------------------|
 | P1 | Die komplette Core-Bibliothek soll nicht mehr als 50kb umfassen |
 | P2 | In der Core-Bibliothek sind nur notwendige Funktionen implementiert (Notwendigkeit definiert in Bausteinsicht) |
+| P3 | Die Core-Bibliothek soll keine Abhängigkeiten von anderer Software haben (keine imports von außerhalb) |
 
 ##### feature Completeness
 
 Leaflet soll alle notwendigen Funktionen enthalten die für eine Karten-Bibliothek notwendig sind. Weitere Features sind 
-über Plugins zu lösen
+über Plugins zu lösen. Die Szenarien hier können sich überdecken mit Szenarien aus dem Usability-Teil
 
 | ID | Szenario |
 |-----------------|--------------------|
-| P3 | Ein Nutzer kann in eine Karte hinein/hinaus-zoomen |
-| P4 | Ein Nutzer kann eine Karte bewegen (mittels Maus & Touch) |
-| P5 | Ein Nutzer kann die Starteinstellung schnell wiederherstellen |
+| P4 | Ein Nutzer kann in eine Karte hinein/hinaus-zoomen |
+| P5 | Ein Nutzer kann eine Karte bewegen (mittels Maus & Touch) |
+| P6 | Ein Nutzer kann die Starteinstellung schnell wiederherstellen |
 
 ### Documentation
 
@@ -974,55 +978,97 @@ Der Zugang zu Leaflet soll für neue Entwickler, Mitarbeiter oder Nutzer einfach
 muss gewährleistet werden, dass Leaflet eine saubere und fehlerfreie Dokumentation bietet die umfassend über sämtliche
 Strukturen, insbesondere der Architektur, informiert.
 
+| ID | Szenario |
+|-----------------|--------------------|
+| D1 | Jemand möchte Leaflet schnell überblicken können, hierfür findet er ein Klassendiagramm vor |
+| D2 | Ein neuer Entwickler möchte Leaflet schnell nutzen können, hierzu findet er eine Dokumentation mit allen verfügbaren Funktionen vor und einer kurzen Beschreibung |
+| D3 | Ein Entwickler findet schnell umfangreiche Beispielprojekte mit Leaflet an denen er die Anwendung erlernen kann |
+
 ### Usability
 
+Damit Leaflet seinen Zweck erfüllt müssen die wichtigsten, grundlegenden Funktionen, die eine Kartensoftware haben 
+muss implementiert sein. Welche Funktionen als wichtig und grundlegen zählen wurden vorher schon festgelegt (hinweis wo festgelegt einfügen)
+Hier sollen jetzt genauere Szenarien folgen welche die Usability überprüfbar machen.
+
+| ID | Szenario |
+|-----------------|--------------------|
+| U1 | Ein Nutzer kann in eine Karte hinein/hinaus-zoomen und von Leaflet gesetzte Elemente behalten ihre relative Position |
+| U2 | Ein Nutzer kann Elemente auf der Karte bewegen wenn dies vom Entwickler gewollt ist |
+| U3 | Ein Nutzer kann mit Leaflet auf verschiedene Arten agieren (Touch/Maus)  |
+| U4 | Ein Entwickler kann Layer auf der Map verteilen und in diesen Elemente zuordnen |
+| U5 | In Leaflet sind diverse geometrische Elemente vordefiniert und einfach zu nutzen (Rechtecke, Dreiecke, Kreise etc.) |
+| U6 | Die Funktionsweise von Leaflet unterscheidet sich nicht zwischen verschiedenen Kartenanbietern |
+
+#### Responsive
+Da Leaflet eine Javascript Bibliothek ist, kann davon ausgegangen werden, dass sie sowohl auf mobilen als auch 
+Desktop Geräten benutzt wird. Damit die User Experience durchgängig konstant gut ist, muss Leaflet responsiv 
+sein und sich an diverse Oberflächen anpassen.
+
+| ID | Szenario |
+|-----------------|--------------------|
+| U |  |
+
+
+#### Dependability
+Wie in **Responsive** schon erläutert ist Leaflet auf diversen Geräten/Oberflächen genutzt. Da verschiedene Geräte
+nicht nur unterschiedliche optische Darstellungen haben sondern auch andere technische Gegegebenheiten muss genau darauf
+geachtet werden, dass Leaflet unabhängig vom System lauffähig ist. Hier sei insbesondere darauf geachtet, dass Unterschiede
+zwischen verschiedenen Browsern beachtet werden und alles Browser nutzbar sind.
+
+| ID | Szenario |
+|-----------------|--------------------|
+| U |  |
+
+#### Compatibility
+Leaflet gibt nur Basisfunktionen für die Behandlung von Karten. Es lassen sich jedoch wesentlich weiter gefächerte Aufgaben
+an Kartenbibliotheken definieren. Diese sollen aber kein Bestand in dem Kern von Leaflet haben da wir hierdurch das 
+Projekt unnötig aufblähen würden und wir so unseren großen Vorteil, die Geschwindigkeit und Kompaktheit, verlieren würden.
+Hierzu soll Leaflet eine Unterstützung für Plugins / Mods bieten. Hier sind überprüfbare Szenarien gelistet die 
+sicherstellen, dass Leaflet einen sinnvollen und praktischen Ansatz für Plugin-Entwicklung und Deployment liefert. 
+
+| ID | Szenario |
+|-----------------|--------------------|
+| U |  |
+
+
 ### Modifiabilty
+Leaflet ist in anderen Projekten eingebettet, da dies hauptsächlich Webprojekte sind, haben diese
+einen eigenen Styleguide. Leaflet soll sich diesem so anpassen, dass der Komplette Stil aller
+Elemente veränderbar ist.
+
+| ID | Szenario |
+|-----------------|--------------------|
+| U |  |
 
 ### Reliability
+Da, wie in **Modifiability** schon erwähnt, Leaflet in anderen Projekten eingebettet ist, müssen sich
+die Nutzer von Leaflet darauf verlassen können, dass die Funktion und Weiterentwicklung besteht
+und außerdem immer erreichbar ist. Es muss sich außerdem darauf verlassen werden können, das
+die Software richtig und zuverlässig arbeitet.
+
+| ID | Szenario |
+|-----------------|--------------------|
+| U |  |
+
+#### Maintainability
+Um die Codebasis von Leaflet stetig weiter zu entwickeln wird das Projekt auf Open-Source Basis
+betrieben, sodass jeder die Möglichkeit hat hieran zu arbeiten.
+
+| ID | Szenario |
+|-----------------|--------------------|
+| U |  |
+
+#### Testability
+Da Leaflet Open-Source ist und somit jeder Code beisteuern kann, muss sichergestellt werden, dass
+genügend Tests verfügbar sind damit das Projekt auf Herz und Nieren getestet werden kann
+und jeder seinen geschriebenen Code validieren kann.
+
+| ID | Szenario |
+|-----------------|--------------------|
+| U |  |
 
 
-## Qualitätsszenarien {#_qualit_tsszenarien}
 
-::: formalpara-title
-**Inhalt**
-:::
-
-Konkretisierung der (in der Praxis oftmals vagen oder impliziten)
-Qualitätsanforderungen durch (Qualitäts-)Szenarien.
-
-Diese Szenarien beschreiben, was beim Eintreffen eines Stimulus auf ein
-System in bestimmten Situationen geschieht.
-
-Wesentlich sind zwei Arten von Szenarien:
-
--   Nutzungsszenarien (auch bekannt als Anwendungs- oder
-    Anwendungsfallszenarien) beschreiben, wie das System zur Laufzeit
-    auf einen bestimmten Auslöser reagieren soll. Hierunter fallen auch
-    Szenarien zur Beschreibung von Effizienz oder Performance. Beispiel:
-    Das System beantwortet eine Benutzeranfrage innerhalb einer Sekunde.
-
--   Änderungsszenarien beschreiben eine Modifikation des Systems oder
-    seiner unmittelbaren Umgebung. Beispiel: Eine zusätzliche
-    Funktionalität wird implementiert oder die Anforderung an ein
-    Qualitätsmerkmal ändert sich.
-
-::: formalpara-title
-**Motivation**
-:::
-
-Szenarien operationalisieren Qualitätsanforderungen und machen deren
-Erfüllung mess- oder entscheidbar.
-
-Insbesondere wenn Sie die Qualität Ihrer Architektur mit Methoden wie
-ATAM überprüfen wollen, bedürfen die in Abschnitt 1.2 genannten
-Qualitätsziele einer weiteren Präzisierung bis auf die Ebene von
-diskutierbaren und nachprüfbaren Szenarien.
-
-::: formalpara-title
-**Form**
-:::
-
-Entweder tabellarisch oder als Freitext.
 
 # Risiken und technische Schulden {#section-technical-risks}
 
