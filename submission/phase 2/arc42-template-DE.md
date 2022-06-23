@@ -1006,8 +1006,7 @@ sein und sich an diverse Oberflächen anpassen.
 
 | ID | Szenario |
 |-----------------|--------------------|
-| U |  |
-
+| U7 | Leaflet muss CSS unterstützen sodass Templates mit Regeln für diverse Layouts funktionieren (Responsives Problem wird an CSS ausgelagert)|
 
 #### Dependability
 Wie in **Responsive** schon erläutert ist Leaflet auf diversen Geräten/Oberflächen genutzt. Da verschiedene Geräte
@@ -1017,7 +1016,10 @@ zwischen verschiedenen Browsern beachtet werden und alles Browser nutzbar sind.
 
 | ID | Szenario |
 |-----------------|--------------------|
-| U |  |
+| U8 | Ein Nutzer kann unabhängig vom Browser Leaflet nutzen  |
+| U9 | Als zwingend funktionsfähige Browser sind Firefox, Chrome, Opera, Safari und Edge deklariert |
+| U10 | Die Funktionsweise von Leaflet muss in allen Browsern gleich sein (HTML-Elemente müssen immer von Browsern aus U8 unterstüzt sein)  |
+
 
 #### Compatibility
 Leaflet gibt nur Basisfunktionen für die Behandlung von Karten. Es lassen sich jedoch wesentlich weiter gefächerte Aufgaben
@@ -1028,8 +1030,10 @@ sicherstellen, dass Leaflet einen sinnvollen und praktischen Ansatz für Plugin-
 
 | ID | Szenario |
 |-----------------|--------------------|
-| U |  |
-
+| U11 | Ein Entwickler ist mit dem funktionsumfang von Leaflet noch nicht zufrieden, er findet schnell eine Liste von verfügbaren Plugins mit einer Anleitung wie diese zu installieren sind|
+| U12 | Ein Entwickler findet in der Liste kein Plugin für seine Anforderungen, er findet jedoch eine gute Anleitung wie ein Plugin einfach und Konform mittels Template zu erstellen ist |
+| U13 | Wenn ein Entwickler ein eigenes Plugin entwickelt hat, so findet er eine Anleitung wie er dieses allgemein verfügbar machen kann |
+| U14 | Ein Entwickler fragt sich, wieso sein angefragtes Feature nicht in der Bibliothek ist -> er findet einer Erklärung warum nur die ausgewählten Funktionen verfügbar sind |
 
 ### Modifiabilty
 Leaflet ist in anderen Projekten eingebettet, da dies hauptsächlich Webprojekte sind, haben diese
@@ -1038,7 +1042,9 @@ Elemente veränderbar ist.
 
 | ID | Szenario |
 |-----------------|--------------------|
-| U |  |
+| U15 | (ähnlich U7) Leaflet unterstüzt CSS |
+| U16 | Leaflet liefert standardmäßige Themes mit für einen schnellen Einstieg in das Design |
+| U17 | Elemente von Leaflet lassen sich eigene Klassennamen geben damit diese per CSS veränderbar sind (keine festen Klassennamen in Elementen) |
 
 ### Reliability
 Da, wie in **Modifiability** schon erwähnt, Leaflet in anderen Projekten eingebettet ist, müssen sich
@@ -1048,7 +1054,7 @@ die Software richtig und zuverlässig arbeitet.
 
 | ID | Szenario |
 |-----------------|--------------------|
-| U |  |
+| R1 | Leaflet ist und bleibt ein Open-Source Projekt  |
 
 #### Maintainability
 Um die Codebasis von Leaflet stetig weiter zu entwickeln wird das Projekt auf Open-Source Basis
@@ -1056,7 +1062,11 @@ betrieben, sodass jeder die Möglichkeit hat hieran zu arbeiten.
 
 | ID | Szenario |
 |-----------------|--------------------|
-| U |  |
+| R2 | Ein Entwickler entscheidet sich an Leaflet mitzuarbeiten, er findet einen ausführlichen Guideline-Artikel darüber wie man teilnehmen kann und welche Formalitäten zu beachten sind  |
+| R3 | Damit Leaflet eine Community an Entwicklern aufbauen kann, ist der komplette Lebenszyklus auf github.com basiert |
+| R4 | Ein Entwickler möchte sich einbringen, weiß jedoch nicht wie. Er findet hierfür eine gut sortiere Issue Seite bei github.com  |
+| R5 | Jemand entdeckt einen Fehler/Problem, er kann dies einfach bei Issues veröffentlichen |
+| R6 | Damit bei kritischen Fragen o.Ä. ein Ansprechpartner vorhanden ist, wird ein Maintainer ausgewählt der als Projektverantwortlicher gilt |
 
 #### Testability
 Da Leaflet Open-Source ist und somit jeder Code beisteuern kann, muss sichergestellt werden, dass
@@ -1065,10 +1075,9 @@ und jeder seinen geschriebenen Code validieren kann.
 
 | ID | Szenario |
 |-----------------|--------------------|
-| U |  |
-
-
-
+| R7 | Ein Entwickler hat ein neues Plugin entwickelt, dieses bereitet jedoch noch Probleme. Er findet diverse Skripte um Funktionen zu testen und so den Fehler zu lokalisieren |
+| R8 | Ein Entwickler möchte sein fertiges Plugin veröffentlichen, er muss hierfür eine Reihe von Test-Skripten erfolgreich absolvieren |
+| R9 | Ein Entwickler möchte sein fertiges Plugin veröffentlichen, er muss hierfür auch eine Dokumentation zur Verfügung stellen |
 
 # Risiken und technische Schulden {#section-technical-risks}
 
