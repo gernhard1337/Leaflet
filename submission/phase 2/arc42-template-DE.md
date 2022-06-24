@@ -430,17 +430,17 @@ Bei der Nutzung von Leaflet steht die API im Vordergrund, dadurch ist es nahelie
 |-----------------------|-----------------------------------------------|
 | *marker* | *Anzeige von beweglichen Icons auf der Karte* |
 | *tile* | *Laden und Anzeigen von Kachel-Ebenen auf der Karte* |
-| *vector* | ** |
-| *DivOverlay* | ** |
-| *FeatureGroup* | ** |
-| *GeoJSON* | ** |
-| *ImageOverlay* | ** |
-| *Layer* | ** |
-| *LayerGroup* | ** |
-| *Popup* | ** |
-| *SVGOverlay* | ** |
-| *Tooltip* | ** |
-| *VideoOverlay* | ** |
+| *vector* | *Anzeigen von Vektorebenen, erlaubt das Zeichnen von Vektor-Overlays* |
+| *DivOverlay* | *Basismodel für Overlays* |
+| *FeatureGroup* | *Features werden auf alle Layer einer Gruppe angewendet* |
+| *GeoJSON* | *Repräsentiert GeoJson Objekt und analysiert diese und zeigt sie auf der Karte an* |
+| *ImageOverlay* | *Lädt und zeigt einzelne Bilder an* |
+| *Layer* | *Methoden von der Layer-Basisklasse* |
+| *LayerGroup* | *Grupperen von Layern* |
+| *Popup* | *Zum Öffnen von Poups an bestimmten stellen auf der Karte* |
+| *SVGOverlay* | *Laden, Anzeigen und Bereitstellen vom DOM-Zugang zu SVG-Dateien* |
+| *Tooltip* | *Anzeigen von kleinen Texten über den Kartenebenen * |
+| *VideoOverlay* | *Laden und Anzeigen von Video-Playern* |
 
 ### Whitebox *\map*
 
@@ -453,16 +453,7 @@ Bei der Nutzung von Leaflet steht die API im Vordergrund, dadurch ist es nahelie
 
 # Laufzeitsicht
 
-## *Anzeigen einer einfachen Karte*
-
--   \<hier Laufzeitdiagramm oder Ablaufbeschreibung einfügen>
-
--   \<hier Besonderheiten bei dem Zusammenspiel der Bausteine in diesem
-    Szenario erläutern>
-
-## *\<Bezeichnung Laufzeitszenario 2>* {#__emphasis_bezeichnung_laufzeitszenario_2_emphasis}
-
-...
+Da es sich bei Leaflet um eine Bibliothek handelt gibt es keine Kaufzeitansicht.
 
 # Verteilungssicht
 
