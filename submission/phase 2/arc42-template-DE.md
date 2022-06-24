@@ -361,7 +361,7 @@ Bei der Nutzung von Leaflet steht die API im Vordergrund, dadurch ist es nahelie
 
 ## Ebene 2
 
-### Whitebox *\control*
+### Whitebox *\<control>*
 
 [Übersichtsdiagramm](ebene2_control_building_blocks.png)
 
