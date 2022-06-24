@@ -328,34 +328,24 @@ online-Dokumentation (auf Englisch!).
 
 ## Whitebox Gesamtsystem
 
-***\<Übersichtsdiagramm>***![Übersichtsdiagramm](gesamt_building_blocks.png)
+[Übersichtsdiagramm](ebene1_building_blocks.png)
 
 ### Begründung
 
-Bei der Nutzung von Leaflet steht die API im Vordergrund, dadurch ist es naheliegend diese als Whitebox für die Gesamtstruktur zu wählen. Für die Blackboxen wurde die interne Ordnerstruktur des Quellcodes gewählt, auf interne Schnittstellen jedoch verzichtet, zwecks Übersicht und mangelnder Wichtigkeit. Weiter wird die Möglichkeit der Plugin-Nutzung aufgezeigt, tatsächlicher Einfluss auf die einzelnen Komponenten hängt jedoch von den gewählten Plugins ab. Des Weiteren wir der Externe Zugriff von Websites, Software und Apps dargestellt. Auf eine weitere Abstraktion wurde verzichtet, da auf der nächst höheren Ebene nicht mehr Leaflet, sondern die externe Website, Software oder App im Vordergrund stünde.
+Bei der Nutzung von Leaflet steht die API im Vordergrund, dadurch ist es naheliegend diese als Whitebox für die Gesamtstruktur zu wählen. Für die Blackboxen wurde die interne Ordnerstruktur des Quellcodes gewählt, auf interne Schnittstellen jedoch verzichtet, zwecks Übersicht und mangelnder Wichtigkeit. Weiter wird die Möglichkeit der Plugin-Nutzung aufgezeigt, tatsächlicher Einfluss auf die einzelnen Komponenten hängt jedoch von den gewählten Plugins ab. Des Weiteren wird der Externe Zugriff von Websites, Software und Apps dargestellt. Auf eine weitere Abstraktion wurde verzichtet, da auf der nächst höheren Ebene nicht mehr Leaflet, sondern die externe Website, Software oder App im Vordergrund stünde.
 
-Enthaltene Bausteine
+| **Baustein** | **Beschreibung** |
+|-----------------------|-----------------------------------------------|
+| *Leaflet.js* | *Gewährt Zugriff auf Klassen und Funktionen von Leaflet* |
+| *control* | *Gewährleistet die Kartesteuerung* |
+| *core* | *Basisklassen, -funktionen und -methoden* |
+| *dom* | *DOM-Events und -Funktionen* |
+| *geo* | *Darstellung und Projektion geographischer Gegebenheiten * |
+| *geometry* | *Darstellung und Handhabung geometrischer Strukturen* |
+| *layer* | *Bereitstellung von Funktionen, die die Darstellung der Karte und Zusatzinformationen auf verschiedenen Ebenen gewährleistet* |
+| *map* | *Erstellung und Manipulation der Karte* |
 
-:   *\<Beschreibung der enthaltenen Bausteine (Blackboxen)>*
-
-Wichtige Schnittstellen
-
-:   *\<Beschreibung wichtiger Schnittstellen>*
-
-Hier folgen jetzt Erläuterungen zu Blackboxen der Ebene 1.
-
-Falls Sie die tabellarische Beschreibung wählen, so werden Blackboxen
-darin nur mit Name und Verantwortung nach folgendem Muster beschrieben:
-
-+-----------------------+-----------------------------------------------+
-| **Name**              | **Verantwortung**                             |
-+=======================+===============================================+
-| *\<Blackbox 1>*       |  *\<Text>*                                    |
-+-----------------------+-----------------------------------------------+
-| *\<Blackbox 2>*       |  *\<Text>*                                    |
-+-----------------------+-----------------------------------------------+
-
-### \<Name Blackbox 1> {#__name_blackbox_1}
+### \blackbox (optional)
 
 *\<Zweck/Verantwortung>*
 
@@ -369,47 +359,96 @@ darin nur mit Name und Verantwortung nach folgendem Muster beschrieben:
 
 *\<(optional) Offene Punkte/Probleme/Risiken>*
 
-### \<Name Blackbox 2> {#__name_blackbox_2}
-
-*\<Blackbox-Template>*
-
-### \<Name Blackbox n> {#__name_blackbox_n}
-
-*\<Blackbox-Template>*
-
-### \<Name Schnittstelle 1> {#__name_schnittstelle_1}
-
-...
-
-### \<Name Schnittstelle m> {#__name_schnittstelle_m}
-
 ## Ebene 2
 
-### Whitebox *\<Baustein 1>*
+### Whitebox *\control*
 
-*\<Whitebox-Template>*
+[Übersichtsdiagramm](ebene2_control_building_blocks.png)
 
-### Whitebox *\<Baustein 2>*
+| **Baustein** | **Beschreibung** |
+|-----------------------|-----------------------------------------------|
+| *Attribution* | *Anzeige von Attributionsdaten in kleinen Textboxen * |
+| *Layers* | *Wechsel zwischen verschiedenen Basisebenen sowie das An- und Ausschalten von Overlays* |
+| *Scale* | *Steuerung der Skalierung* |
+| *Zoom* | *Steuerung der Zoofunktions* |
+| *Control* | *Basisklasse für die Kartensteuerung, handhabt Positionierung* |
 
-*\<Whitebox-Template>*
+### Whitebox *\core*
 
-### Whitebox *\<Baustein m>*
+[Übersichtsdiagramm](ebene2_core_building_blocks.png)
 
-*\<Whitebox-Template>*
+| **Baustein** | **Beschreibung** |
+|-----------------------|-----------------------------------------------|
+| *Browser* | ** |
+| *Class* | ** |
+| *Events* | ** |
+| *Handler* | ** |
+| *Util* | ** |
 
-## Ebene 3
+### Whitebox *\dom*
 
-### Whitebox \<\_Baustein x.1\_\>
+[Übersichtsdiagramm](ebene2_dom_building_blocks.png)
 
-*\<Whitebox-Template>*
+| **Baustein** | **Beschreibung** |
+|-----------------------|-----------------------------------------------|
+| *DomEvent.DoubleTap* | ** |
+| *DomEvent.Pointer* | ** |
+| *DomEvent* | ** |
+| *DomUtil* | ** |
+| *Draggable* | ** |
+| *PosAnimation* | ** |
 
-### Whitebox \<\_Baustein x.2\_\>
+### Whitebox *\geo*
 
-*\<Whitebox-Template>*
+[Übersichtsdiagramm](ebene2_geo_building_blocks.png)
 
-### Whitebox \<\_Baustein y.1\_\>
+| **Baustein** | **Beschreibung** |
+|-----------------------|-----------------------------------------------|
+| *crs* | ** |
+| *projection* | ** |
+| *LatLng* | ** |
+| *LatLngBounds* | ** |
 
-*\<Whitebox-Template>*
+### Whitebox *\geometry*
+
+[Übersichtsdiagramm](ebene2_geometry_building_blocks.png)
+
+| **Baustein** | **Beschreibung** |
+|-----------------------|-----------------------------------------------|
+| *Bounds* | ** |
+| *LineUtil* | ** |
+| *Point* | ** |
+| *PolyUtil* | ** |
+| *Transformation* | ** |
+
+### Whitebox *\layer*
+
+[Übersichtsdiagramm](ebene2_layer_building_blocks.png)
+
+| **Baustein** | **Beschreibung** |
+|-----------------------|-----------------------------------------------|
+| *marker* | ** |
+| *tile* | ** |
+| *vector* | ** |
+| *DivOverlay* | ** |
+| *FeatureGroup* | ** |
+| *GeoJSON* | ** |
+| *ImageOverlay* | ** |
+| *Layer* | ** |
+| *LayerGroup* | ** |
+| *Popup* | ** |
+| *SVGOverlay* | ** |
+| *Tooltip* | ** |
+| *VideoOverlay* | ** |
+
+### Whitebox *\map*
+
+[Übersichtsdiagramm](ebene2_map_building_blocks.png)
+
+| **Baustein** | **Beschreibung** |
+|-----------------------|-----------------------------------------------|
+| *handler* | ** |
+| *map* | ** |
 
 # Laufzeitsicht {#section-runtime-view}
 
