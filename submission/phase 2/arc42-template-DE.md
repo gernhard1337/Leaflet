@@ -878,7 +878,6 @@ Die Popularität des Projekts verschafft Leaflet eine Armee gut ausgebildeter Be
 <!-- Toms Part -->
 # Architekturentscheidungen 
 
-
 **Inhalt**
 
 
@@ -1077,9 +1076,38 @@ und jeder seinen geschriebenen Code validieren kann.
 |-----------------|--------------------|
 | R7 | Ein Entwickler hat ein neues Plugin entwickelt, dieses bereitet jedoch noch Probleme. Er findet diverse Skripte um Funktionen zu testen und so den Fehler zu lokalisieren |
 | R8 | Ein Entwickler möchte sein fertiges Plugin veröffentlichen, er muss hierfür eine Reihe von Test-Skripten erfolgreich absolvieren |
-| R9 | Ein Entwickler möchte sein fertiges Plugin veröffentlichen, er muss hierfür auch eine Dokumentation zur Verfügung stellen |
+| R9 | Ein Entwickler möchte sein fertiges Plugin veröffentlichen, er muss hierfür eine Dokumentation zur Verfügung stellen |
 
-# Risiken und technische Schulden {#section-technical-risks}
+# Risiken und technische Schulden
+
+## Open - Source als Risiko
+
+Leaflet wird als Open-Source-Projekt veröffentlicht, dies birgt Risiken. Denn durch Open-Source entsteht das Risiko,
+dass das Projekt nicht genügend Aufmerksamkeit in der Zukunft bekommt und somit die Weiterentwicklung 
+stehen bleibt. Außerdem entwickeln an einem Open-Source-Projekt diverse Entwickler mit unterschiedlichem
+Verständnis der Requirements und auch unterschiedlichster Programmiererfahrung.
+
+#### Risikominderung
+
+Damit Leaflet aktiv weiterentwickelt wird soll sich eine aktive Community um dieses Projekt bilden. Dies soll durch die Qualitätsszenarien
+sichergestellt werden. Um eine sinnvolle Weiterentwicklung zu garantieren ist ein Maintainer definiert der 
+persönlich für das Projekt einsteht und vor allem auch durch persönliche Begeisterung für dieses Projekt glänzt. 
+Damit Code diverser Entwickler gut kombiniert werden kann, ist der Maintainer ein erfahrener Entwickler.
+
+## Gratwanderung zwischen Inhalt und Performance 
+
+Die Ziele Performance und Inhalt stehen in einem Kontrast. Einerseits soll Leaflet eine Komplettlösung liefern, andererseits
+soll es auch sehr schnell sein. Hierdurch entsteht eine Gratwanderung da mehr Funktionen Leaflet langsamer machen. Weniger Funktionen sind zwar schneller doch, wenn Leaflet zu wenige Funktionen bietet so hat ein Entwickler weniger Anreize 
+Leaflet zu nutzen. Leaflet bietet zwar Plugin-Support doch, wenn man es auf die Spitze treibt, so würde Leaflet 
+jegliche richtige Funktionalität an Plugins auslagern und selbst nur als Aggregator der Plugins fungieren.
+
+#### Risikominderung
+
+Damit diese Gratwanderung gelingt wird Leaflet unter einem bestimmten Paradigma entwickelt: So schnell und leichtgewichtig
+wie möglich unter Beachtung der Requirements. Dies bedeutet, dass der volle Funktionsumfang von Leaflet in der Architektur 
+dokumentiert ist. Dieser Funktionsumfang ist dann so optimal wie möglich zu implementieren und nichts weiter. 
+Über die Definition des Funktionsumfangs und mögliche Erweiterungen dieses kümmert sich die Community.
+
 
 ::: formalpara-title
 **Inhalt**
