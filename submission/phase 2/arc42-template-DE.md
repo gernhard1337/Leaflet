@@ -324,120 +324,15 @@ auf weitere Ausführungen in Folgeabschnitten.
 Siehe [Lösungsstrategie](https://docs.arc42.org/section-4/) in der
 online-Dokumentation (auf Englisch!).
 
-# Bausteinsicht {#section-building-block-view}
+# Bausteinsicht
 
-::: formalpara-title
-**Inhalt**
-:::
+## Whitebox Gesamtsystem
 
-Diese Sicht zeigt die statische Zerlegung des Systems in Bausteine sowie
-deren Beziehungen. Beispiele für Bausteine sind unter anderem:
+***\<Übersichtsdiagramm>***![Übersichtsdiagramm](gesamt_building_blocks.png)
 
--   Module
+### Begründung
 
--   Komponenten
-
--   Subsysteme
-
--   Klassen
-
--   Interfaces
-
--   Pakete
-
--   Bibliotheken
-
--   Frameworks
-
--   Schichten
-
--   Partitionen
-
--   Tiers
-
--   Funktionen
-
--   Makros
-
--   Operationen
-
--   Datenstrukturen
-
--   ...
-
-Diese Sicht sollte in jeder Architekturdokumentation vorhanden sein. In
-der Analogie zum Hausbau bildet die Bausteinsicht den *Grundrissplan*.
-
-::: formalpara-title
-**Motivation**
-:::
-
-Behalten Sie den Überblick über den Quellcode, indem Sie die statische
-Struktur des Systems durch Abstraktion verständlich machen.
-
-Damit ermöglichen Sie Kommunikation auf abstrakterer Ebene, ohne zu
-viele Implementierungsdetails offenlegen zu müssen.
-
-::: formalpara-title
-**Form**
-:::
-
-Die Bausteinsicht ist eine hierarchische Sammlung von Blackboxen und
-Whiteboxen (siehe Abbildung unten) und deren Beschreibungen.
-
-![Hierarchie in der Bausteinsicht](images/05_building_blocks-DE.png)
-
-**Ebene 1** ist die Whitebox-Beschreibung des Gesamtsystems, zusammen
-mit Blackbox-Beschreibungen der darin enthaltenen Bausteine.
-
-**Ebene 2** zoomt in einige Bausteine der Ebene 1 hinein. Sie enthält
-somit die Whitebox-Beschreibungen ausgewählter Bausteine der Ebene 1,
-jeweils zusammen mit Blackbox-Beschreibungen darin enthaltener
-Bausteine.
-
-**Ebene 3** zoomt in einige Bausteine der Ebene 2 hinein, usw.
-
-Siehe [Bausteinsicht](https://docs.arc42.org/section-5/) in der
-online-Dokumentation (auf Englisch!).
-
-## Whitebox Gesamtsystem {#_whitebox_gesamtsystem}
-
-An dieser Stelle beschreiben Sie die Zerlegung des Gesamtsystems anhand
-des nachfolgenden Whitebox-Templates. Dieses enthält:
-
--   Ein Übersichtsdiagramm
-
--   die Begründung dieser Zerlegung
-
--   Blackbox-Beschreibungen der hier enthaltenen Bausteine. Dafür haben
-    Sie verschiedene Optionen:
-
-    -   in *einer* Tabelle, gibt einen kurzen und pragmatischen
-        Überblick über die enthaltenen Bausteine sowie deren
-        Schnittstellen.
-
-    -   als Liste von Blackbox-Beschreibungen der Bausteine, gemäß dem
-        Blackbox-Template (siehe unten). Diese Liste können Sie, je nach
-        Werkzeug, etwa in Form von Unterkapiteln (Text), Unter-Seiten
-        (Wiki) oder geschachtelten Elementen (Modellierungswerkzeug)
-        darstellen.
-
--   (optional:) wichtige Schnittstellen, die nicht bereits im
-    Blackbox-Template eines der Bausteine erläutert werden, aber für das
-    Verständnis der Whitebox von zentraler Bedeutung sind. Aufgrund der
-    vielfältigen Möglichkeiten oder Ausprägungen von Schnittstellen
-    geben wir hierzu kein weiteres Template vor. Im schlimmsten Fall
-    müssen Sie Syntax, Semantik, Protokolle, Fehlerverhalten,
-    Restriktionen, Versionen, Qualitätseigenschaften, notwendige
-    Kompatibilitäten und vieles mehr spezifizieren oder beschreiben. Im
-    besten Fall kommen Sie mit Beispielen oder einfachen Signaturen
-    zurecht.
-
-***\<Übersichtsdiagramm>***
-
-Begründung
-
-:   *\<Erläuternder Text>*
+Bei der Nutzung von Leaflet steht die API im Vordergrund, dadurch ist es naheliegend diese als Whitebox für die Gesamtstruktur zu wählen. Für die Blackboxen wurde die interne Ordnerstruktur des Quellcodes gewählt, auf interne Schnittstellen jedoch verzichtet, zwecks Übersicht und mangelnder Wichtigkeit. Weiter wird die Möglichkeit der Plugin-Nutzung aufgezeigt, tatsächlicher Einfluss auf die einzelnen Komponenten hängt jedoch von den gewählten Plugins ab. Des Weiteren wir der Externe Zugriff von Websites, Software und Apps dargestellt. Auf eine weitere Abstraktion wurde verzichtet, da auf der nächst höheren Ebene nicht mehr Leaflet, sondern die externe Website, Software oder App im Vordergrund stünde.
 
 Enthaltene Bausteine
 
@@ -460,31 +355,7 @@ darin nur mit Name und Verantwortung nach folgendem Muster beschrieben:
 | *\<Blackbox 2>*       |  *\<Text>*                                    |
 +-----------------------+-----------------------------------------------+
 
-Falls Sie die ausführliche Liste von Blackbox-Beschreibungen wählen,
-beschreiben Sie jede wichtige Blackbox in einem eigenen
-Blackbox-Template. Dessen Überschrift ist jeweils der Namen dieser
-Blackbox.
-
 ### \<Name Blackbox 1> {#__name_blackbox_1}
-
-Beschreiben Sie die \<Blackbox 1> anhand des folgenden
-Blackbox-Templates:
-
--   Zweck/Verantwortung
-
--   Schnittstelle(n), sofern diese nicht als eigenständige
-    Beschreibungen herausgezogen sind. Hierzu gehören eventuell auch
-    Qualitäts- und Leistungsmerkmale dieser Schnittstelle.
-
--   (Optional) Qualitäts-/Leistungsmerkmale der Blackbox, beispielsweise
-    Verfügbarkeit, Laufzeitverhalten o. Ä.
-
--   (Optional) Ablageort/Datei(en)
-
--   (Optional) Erfüllte Anforderungen, falls Sie Traceability zu
-    Anforderungen benötigen.
-
--   (Optional) Offene Punkte/Probleme/Risiken
 
 *\<Zweck/Verantwortung>*
 
@@ -512,52 +383,31 @@ Blackbox-Templates:
 
 ### \<Name Schnittstelle m> {#__name_schnittstelle_m}
 
-## Ebene 2 {#_ebene_2}
+## Ebene 2
 
-Beschreiben Sie den inneren Aufbau (einiger) Bausteine aus Ebene 1 als
-Whitebox.
-
-Welche Bausteine Ihres Systems Sie hier beschreiben, müssen Sie selbst
-entscheiden. Bitte stellen Sie dabei Relevanz vor Vollständigkeit.
-Skizzieren Sie wichtige, überraschende, riskante, komplexe oder
-besonders volatile Bausteine. Normale, einfache oder standardisierte
-Teile sollten Sie weglassen.
-
-### Whitebox *\<Baustein 1>* {#_whitebox_emphasis_baustein_1_emphasis}
-
-...zeigt das Innenleben von *Baustein 1*.
+### Whitebox *\<Baustein 1>*
 
 *\<Whitebox-Template>*
 
-### Whitebox *\<Baustein 2>* {#_whitebox_emphasis_baustein_2_emphasis}
+### Whitebox *\<Baustein 2>*
 
 *\<Whitebox-Template>*
 
-...
-
-### Whitebox *\<Baustein m>* {#_whitebox_emphasis_baustein_m_emphasis}
+### Whitebox *\<Baustein m>*
 
 *\<Whitebox-Template>*
 
-## Ebene 3 {#_ebene_3}
+## Ebene 3
 
-Beschreiben Sie den inneren Aufbau (einiger) Bausteine aus Ebene 2 als
-Whitebox.
-
-Bei tieferen Gliederungen der Architektur kopieren Sie diesen Teil von
-arc42 für die weiteren Ebenen.
-
-### Whitebox \<\_Baustein x.1\_\> {#_whitebox_baustein_x_1}
-
-...zeigt das Innenleben von *Baustein x.1*.
+### Whitebox \<\_Baustein x.1\_\>
 
 *\<Whitebox-Template>*
 
-### Whitebox \<\_Baustein x.2\_\> {#_whitebox_baustein_x_2}
+### Whitebox \<\_Baustein x.2\_\>
 
 *\<Whitebox-Template>*
 
-### Whitebox \<\_Baustein y.1\_\> {#_whitebox_baustein_y_1}
+### Whitebox \<\_Baustein y.1\_\>
 
 *\<Whitebox-Template>*
 
