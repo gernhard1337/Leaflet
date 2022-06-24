@@ -324,6 +324,7 @@ auf weitere Ausführungen in Folgeabschnitten.
 Siehe [Lösungsstrategie](https://docs.arc42.org/section-4/) in der
 online-Dokumentation (auf Englisch!).
 
+<!--- ab hier Franziskas Part -->
 # Bausteinsicht
 
 ## Whitebox Gesamtsystem
@@ -379,11 +380,11 @@ Bei der Nutzung von Leaflet steht die API im Vordergrund, dadurch ist es nahelie
 
 | **Baustein** | **Beschreibung** |
 |-----------------------|-----------------------------------------------|
-| *Browser* | ** |
-| *Class* | ** |
-| *Events* | ** |
-| *Handler* | ** |
-| *Util* | ** |
+| *Browser* | *Browser- und Featureerkennung * |
+| *Class* | *Basisklasse* |
+| *Events* | *Sammlung von Methoden für eventbasierte Klassen* |
+| *Handler* | *Basisklasse für Handler* |
+| *Util* | *Samlung von Utility-Funktionen* |
 
 ### Whitebox *\dom*
 
@@ -391,12 +392,12 @@ Bei der Nutzung von Leaflet steht die API im Vordergrund, dadurch ist es nahelie
 
 | **Baustein** | **Beschreibung** |
 |-----------------------|-----------------------------------------------|
-| *DomEvent.DoubleTap* | ** |
-| *DomEvent.Pointer* | ** |
-| *DomEvent* | ** |
-| *DomUtil* | ** |
-| *Draggable* | ** |
-| *PosAnimation* | ** |
+| *DomEvent.DoubleTap* | *Doppelklick-Spport für mobile Browser* |
+| *DomEvent.Pointer* | *Touch-Support für Internet Explorer und Windowsbasierte Geräte* |
+| *DomEvent* | * Sammlung von Utility-Funktionen, die mit DOM-Events arbeiten* |
+| *DomUtil* | *Sammlung von Utility-Funktionen, die mit DOM arbeiten* |
+| *Draggable* | *Klasse, die Dom-Elemente verschiebbar macht* |
+| *PosAnimation* | *Interne Nutzung für Schwenkanimationen * |
 
 ### Whitebox *\geo*
 
@@ -404,10 +405,10 @@ Bei der Nutzung von Leaflet steht die API im Vordergrund, dadurch ist es nahelie
 
 | **Baustein** | **Beschreibung** |
 |-----------------------|-----------------------------------------------|
-| *crs* | ** |
-| *projection* | ** |
-| *LatLng* | ** |
-| *LatLngBounds* | ** |
+| *crs* | *Koordinaten-Referenz-System: Projektion von geographischen Punkten zu Pixel-Koordinaten und zurück* |
+| *projection* | *Projektion von Längen- und Breitengraden auf der Karte* |
+| *LatLng* | *Repräsentation eines geographischen Punktes mit einem bestimmten Längen- und Breitengrad* |
+| *LatLngBounds* | *Repräsentation eines rechteckigen geographischen Gebietes auf der Karte* |
 
 ### Whitebox *\geometry*
 
@@ -415,11 +416,11 @@ Bei der Nutzung von Leaflet steht die API im Vordergrund, dadurch ist es nahelie
 
 | **Baustein** | **Beschreibung** |
 |-----------------------|-----------------------------------------------|
-| *Bounds* | ** |
-| *LineUtil* | ** |
-| *Point* | ** |
-| *PolyUtil* | ** |
-| *Transformation* | ** |
+| *Bounds* | *Repräsentiert rechteckiges Gebiet in Pixel-Koordinaten* |
+| *LineUtil* | *Verschiedene Untility-Funktionen zur Verarbeitung von Polylinienpunkten* |
+| *Point* | *Repräsentiert Punkt mit Pixel-Koordinaten* |
+| *PolyUtil* | *Verschiedene Utility-Kunktionen für polygonale Geometrien * |
+| *Transformation* | *affine Transformation (x,y) <--> (a*x + b, c*y + d)* |
 
 ### Whitebox *\layer*
 
@@ -427,8 +428,8 @@ Bei der Nutzung von Leaflet steht die API im Vordergrund, dadurch ist es nahelie
 
 | **Baustein** | **Beschreibung** |
 |-----------------------|-----------------------------------------------|
-| *marker* | ** |
-| *tile* | ** |
+| *marker* | *Anzeige von beweglichen Icons auf der Karte* |
+| *tile* | *Laden und Anzeigen von Kachel-Ebenen auf der Karte* |
 | *vector* | ** |
 | *DivOverlay* | ** |
 | *FeatureGroup* | ** |
@@ -447,70 +448,12 @@ Bei der Nutzung von Leaflet steht die API im Vordergrund, dadurch ist es nahelie
 
 | **Baustein** | **Beschreibung** |
 |-----------------------|-----------------------------------------------|
-| *handler* | ** |
-| *map* | ** |
+| *handler* | *Handhabt Umgang mit Eingaben* |
+| *map* | *Erstellen und manipulieren der Karte* |
 
-# Laufzeitsicht {#section-runtime-view}
+# Laufzeitsicht
 
-::: formalpara-title
-**Inhalt**
-:::
-
-Diese Sicht erklärt konkrete Abläufe und Beziehungen zwischen Bausteinen
-in Form von Szenarien aus den folgenden Bereichen:
-
--   Wichtige Abläufe oder *Features*: Wie führen die Bausteine der
-    Architektur die wichtigsten Abläufe durch?
-
--   Interaktionen an kritischen externen Schnittstellen: Wie arbeiten
-    Bausteine mit Nutzern und Nachbarsystemen zusammen?
-
--   Betrieb und Administration: Inbetriebnahme, Start, Stop.
-
--   Fehler- und Ausnahmeszenarien
-
-Anmerkung: Das Kriterium für die Auswahl der möglichen Szenarien (d.h.
-Abläufe) des Systems ist deren Architekturrelevanz. Es geht nicht darum,
-möglichst viele Abläufe darzustellen, sondern eine angemessene Auswahl
-zu dokumentieren.
-
-::: formalpara-title
-**Motivation**
-:::
-
-Sie sollten verstehen, wie (Instanzen von) Bausteine(n) Ihres Systems
-ihre jeweiligen Aufgaben erfüllen und zur Laufzeit miteinander
-kommunizieren.
-
-Nutzen Sie diese Szenarien in der Dokumentation hauptsächlich für eine
-verständlichere Kommunikation mit denjenigen Stakeholdern, die die
-statischen Modelle (z.B. Bausteinsicht, Verteilungssicht) weniger
-verständlich finden.
-
-::: formalpara-title
-**Form**
-:::
-
-Für die Beschreibung von Szenarien gibt es zahlreiche
-Ausdrucksmöglichkeiten. Nutzen Sie beispielsweise:
-
--   Nummerierte Schrittfolgen oder Aufzählungen in Umgangssprache
-
--   Aktivitäts- oder Flussdiagramme
-
--   Sequenzdiagramme
-
--   BPMN (Geschäftsprozessmodell und -notation) oder EPKs
-    (Ereignis-Prozessketten)
-
--   Zustandsautomaten
-
--   ...
-
-Siehe [Laufzeitsicht](https://docs.arc42.org/section-6/) in der
-online-Dokumentation (auf Englisch!).
-
-## *\<Bezeichnung Laufzeitszenario 1>* {#__emphasis_bezeichnung_laufzeitszenario_1_emphasis}
+## *Anzeigen einer einfachen Karte*
 
 -   \<hier Laufzeitdiagramm oder Ablaufbeschreibung einfügen>
 
@@ -521,122 +464,11 @@ online-Dokumentation (auf Englisch!).
 
 ...
 
-## *\<Bezeichnung Laufzeitszenario n>* {#__emphasis_bezeichnung_laufzeitszenario_n_emphasis}
+# Verteilungssicht
 
-...
+## Infrastruktur
 
-# Verteilungssicht {#section-deployment-view}
-
-::: formalpara-title
-**Inhalt**
-:::
-
-Die Verteilungssicht beschreibt:
-
-1.  die technische Infrastruktur, auf der Ihr System ausgeführt wird,
-    mit Infrastrukturelementen wie Standorten, Umgebungen, Rechnern,
-    Prozessoren, Kanälen und Netztopologien sowie sonstigen
-    Bestandteilen, und
-
-2.  die Abbildung von (Software-)Bausteinen auf diese Infrastruktur.
-
-Häufig laufen Systeme in unterschiedlichen Umgebungen, beispielsweise
-Entwicklung-/Test- oder Produktionsumgebungen. In solchen Fällen sollten
-Sie alle relevanten Umgebungen aufzeigen.
-
-Nutzen Sie die Verteilungssicht insbesondere dann, wenn Ihre Software
-auf mehr als einem Rechner, Prozessor, Server oder Container abläuft
-oder Sie Ihre Hardware sogar selbst konstruieren.
-
-Aus Softwaresicht genügt es, auf die Aspekte zu achten, die für die
-Softwareverteilung relevant sind. Insbesondere bei der
-Hardwareentwicklung kann es notwendig sein, die Infrastruktur mit
-beliebigen Details zu beschreiben.
-
-::: formalpara-title
-**Motivation**
-:::
-
-Software läuft nicht ohne Infrastruktur. Diese zugrundeliegende
-Infrastruktur beeinflusst Ihr System und/oder querschnittliche
-Lösungskonzepte, daher müssen Sie diese Infrastruktur kennen.
-
-::: formalpara-title
-**Form**
-:::
-
-Das oberste Verteilungsdiagramm könnte bereits in Ihrem technischen
-Kontext enthalten sein, mit Ihrer Infrastruktur als EINE Blackbox. Jetzt
-zoomen Sie in diese Infrastruktur mit weiteren Verteilungsdiagrammen
-hinein:
-
--   Die UML stellt mit Verteilungsdiagrammen (Deployment diagrams) eine
-    Diagrammart zur Verfügung, um diese Sicht auszudrücken. Nutzen Sie
-    diese, evtl. auch geschachtelt, wenn Ihre Verteilungsstruktur es
-    verlangt.
-
--   Falls Ihre Infrastruktur-Stakeholder andere Diagrammarten
-    bevorzugen, die beispielsweise Prozessoren und Kanäle zeigen, sind
-    diese hier ebenfalls einsetzbar.
-
-Siehe [Verteilungssicht](https://docs.arc42.org/section-7/) in der
-online-Dokumentation (auf Englisch!).
-
-## Infrastruktur Ebene 1 {#_infrastruktur_ebene_1}
-
-An dieser Stelle beschreiben Sie (als Kombination von Diagrammen mit
-Tabellen oder Texten):
-
--   die Verteilung des Gesamtsystems auf mehrere Standorte, Umgebungen,
-    Rechner, Prozessoren o. Ä., sowie die physischen Verbindungskanäle
-    zwischen diesen,
-
--   wichtige Begründungen für diese Verteilungsstruktur,
-
--   Qualitäts- und/oder Leistungsmerkmale dieser Infrastruktur,
-
--   Zuordnung von Softwareartefakten zu Bestandteilen der Infrastruktur
-
-Für mehrere Umgebungen oder alternative Deployments kopieren Sie diesen
-Teil von arc42 für alle wichtigen Umgebungen/Varianten.
-
-***\<Übersichtsdiagramm>***
-
-Begründung
-
-:   *\<Erläuternder Text>*
-
-Qualitäts- und/oder Leistungsmerkmale
-
-:   *\<Erläuternder Text>*
-
-Zuordnung von Bausteinen zu Infrastruktur
-
-:   *\<Beschreibung der Zuordnung>*
-
-## Infrastruktur Ebene 2 {#_infrastruktur_ebene_2}
-
-An dieser Stelle können Sie den inneren Aufbau (einiger)
-Infrastrukturelemente aus Ebene 1 beschreiben.
-
-Für jedes Infrastrukturelement kopieren Sie die Struktur aus Ebene 1.
-
-### *\<Infrastrukturelement 1>* {#__emphasis_infrastrukturelement_1_emphasis}
-
-*\<Diagramm + Erläuterungen>*
-
-### *\<Infrastrukturelement 2>* {#__emphasis_infrastrukturelement_2_emphasis}
-
-*\<Diagramm + Erläuterungen>*
-
-...
-
-### *\<Infrastrukturelement n>* {#__emphasis_infrastrukturelement_n_emphasis}
-
-*\<Diagramm + Erläuterungen>*
-
-
-
+Als Bibliothek vermeidet es Leaflet Anforderungen an Soft- und Hardware zu stellen. Leaflet unterstützt durch die Verwendung von HTML5 und CSS3 die meisten Desktop- und Mobil-Browser. Demenstprechend strebt Leaflet danach, auf möglichst jedem System zu funktionieren.
 
 <!--- ab hier Toms Part -->
 # Querschnittliche Konzepte
