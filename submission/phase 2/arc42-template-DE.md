@@ -148,9 +148,9 @@ bezüglich der Architektur und deren Dokumentation.
 
 # Randbedingungen {#section-architecture-constraints}
 
-Technical constraints
+## Technical constraints
 
-Leaflet muss sein:
+### Leaflet muss sein:
 
 •	plattformunabhängig und auf allen wichtigsten Betriebssystemen und Browsern laufen.
 
@@ -169,9 +169,9 @@ Leaflet muss sein:
 •	Handelt es sich um Drittsoftware (z. B. ein grafisches Frontend), sollte diese idealerweise frei verfügbar und kostenlos sein.
 
 
-Organizational constraints
+## Organizational constraints
 
-Es muss:
+### Es muss:
 
 •	Die Beiträge aus den Leaflet issues sein.
 
