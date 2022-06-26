@@ -181,6 +181,8 @@ online-Dokumentation (auf Englisch!).
 
 # Kontextabgrenzung {#section-system-scope-and-context}
 
+![Business_Context_Diagramm](images/BusinessContextDiagramm.png)
+
 ::: formalpara-title
 **Inhalt**
 :::
