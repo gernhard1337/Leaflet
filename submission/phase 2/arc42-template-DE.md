@@ -453,13 +453,13 @@ Bei der Nutzung von Leaflet steht die API im Vordergrund, dadurch ist es nahelie
 
 # Laufzeitsicht
 
-Da es sich bei Leaflet um eine Bibliothek handelt gibt es keine Kaufzeitansicht.
+Da es sich bei Leaflet um eine Bibliothek handelt, deren implementierung inline erfolgt, gibt es keine Laufzeitansicht. Zumindest keine in erwähnenswerter Komplexität.
 
 # Verteilungssicht
 
 ## Infrastruktur
 
-Als Bibliothek vermeidet es Leaflet Anforderungen an Soft- und Hardware zu stellen. Leaflet unterstützt durch die Verwendung von HTML5 und CSS3 die meisten Desktop- und Mobil-Browser. Demenstprechend strebt Leaflet danach, auf möglichst jedem System zu funktionieren.
+Als Bibliothek vermeidet es Leaflet Anforderungen an Soft- und Hardware zu stellen. Leaflet unterstützt durch die Verwendung von HTML5 und CSS3 die meisten Desktop- und Mobil-Browser. Demenstprechend strebt Leaflet danach, auf möglichst jedem System zu funktionieren. Kurz, Leaflet läuft auf jeder Hardware, die Javasript unterstützt.
 
 <!--- ab hier Toms Part -->
 # Querschnittliche Konzepte
