@@ -226,6 +226,65 @@ bezüglich der Architektur und deren Dokumentation.
 | *Leaflet Pulings databdase* | *Repo, wo alle Pulings gespeichert sind.* |
 
 
+# Lösungsstrategie {#section-solution-strategy}
+
+### Algemeine Ausblick 
+
+Wir arbeiten in kleiner Gruppe aus 4 Entwickler, durch Reverse Engineering haben wir die  Requirements herausgefunden. 
+Wir haben möglichst versucht, unsere Architektur auf den Funktionsanforderungen zu basieren und sie gut zu dokumentieren.
+In diesem Dokument haben wir präzisier und ausführlich erklärt, wie unsere gefolgte Politik aussieht.
+
+
+| **Qualitätsziel** | **Lösungsansatz** |**Details** |
+|-----------------------|-----------------------------------------------|---------------------------|
+| *Performance* | *Anzeige von beweglichen Icons auf der Karte* |*Qualitätsbaum -> Performance*|
+| *light-weight* | *der Code sollte so klein wie möglich sein* |*Qualitätsbaum -> Performance -> light-weight*|
+| *feature Completeness* | *sollte alle notwendigen Funktionen enthalten* |*Qualitätsbaum -> Performance ->feature Completeness*|
+| *Documentation* | *•	Klassendiagramm <br /> •  Geschäftsprozessdiagramm <br /> •	Kontextdiagramm<br />•	Verfügbare Dokumentation für alle Funktionen<br />•	Beispielprojekte*|*Qualitätsbaum -> Documentation*|
+| *Usability* | *•	Sichern, dass Benutzer Karte benutzen kann.<br />•	Sichern, dass Benutzer mit der Karte reagieren kann.* |*Qualitätsbaum -> Usability*|
+| *Responsive* | *Sollte durch JS und CSS auf allen Oberflächen anpassen* |*Qualitätsbaum -> Usability-> Responsive*|
+| *Dependability* | *kann unabhängig vom Browser Leaflet nutzen* |*Qualitätsbaum -> Usability-> Dependability*|
+| *Compatibility* | *•	zahlreiche Plugin ergeben neue Funktionen.<br/>•	Gut dokumentiert.* |*Qualitätsbaum -> Usability-> Compatibility*|
+| *Modifiabilty* | *•	Durch CSS kann die Elemente ändern.* |*Qualitätsbaum -> Modifiabilty*|
+| *Maintainability* | *•	Open Source, so jeder an der Bearbeitung teilnehmen kann<br/> •	Gut dokumentiert.* |*Qualitätsbaum -> Reliability-> Maintainability*|
+| *Testability* | *•	Sollte ausreichende Testen ausgeführt werden* |*Qualitätsbaum -> Reliability-> Testability*|
+
+
+
+-   Technologieentscheidungen
+
+-   Entscheidungen über die Top-Level-Zerlegung des Systems,
+    beispielsweise die Verwendung gesamthaft prägender Entwurfs- oder
+    Architekturmuster,
+
+-   Entscheidungen zur Erreichung der wichtigsten Qualitätsanforderungen
+    sowie
+
+-   relevante organisatorische Entscheidungen, beispielsweise für
+    bestimmte Entwicklungsprozesse oder Delegation bestimmter Aufgaben
+    an andere Stakeholder.
+
+::: formalpara-title
+**Motivation**
+:::
+
+Diese wichtigen Entscheidungen bilden wesentliche „Eckpfeiler" der
+Architektur. Von ihnen hängen viele weitere Entscheidungen oder
+Implementierungsregeln ab.
+
+::: formalpara-title
+**Form**
+:::
+
+Fassen Sie die zentralen Entwurfsentscheidungen **kurz** zusammen.
+Motivieren Sie, ausgehend von Aufgabenstellung, Qualitätszielen und
+Randbedingungen, was Sie entschieden haben und warum Sie so entschieden
+haben. Vermeiden Sie redundante Beschreibungen und verweisen Sie eher
+auf weitere Ausführungen in Folgeabschnitten.
+
+Siehe [Lösungsstrategie](https://docs.arc42.org/section-4/) in der
+online-Dokumentation (auf Englisch!).
+
 
 <!--- ab hier Franziskas Part -->
 # Bausteinsicht
@@ -344,6 +403,7 @@ Bei der Nutzung von Leaflet steht die API im Vordergrund, dadurch ist es nahelie
 | *SVGOverlay* | *Laden, Anzeigen und Bereitstellen vom DOM-Zugang zu SVG-Dateien* |
 | *Tooltip* | *Anzeigen von kleinen Texten über den Kartenebenen * |
 | *VideoOverlay* | *Laden und Anzeigen von Video-Playern* |
+
 
 ### Whitebox *\map*
 
