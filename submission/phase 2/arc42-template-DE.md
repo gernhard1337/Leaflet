@@ -153,26 +153,42 @@ Technical constraints
 Leaflet muss sein:
 
 •	plattformunabhängig und auf allen wichtigsten Betriebssystemen und Browsern laufen.
-•	Einheitliche Oberfläche
+
+•	Einheitliche Oberfläche.
+
 •	Entwicklung mit JavaScript. sollte auch in neueren Java-Versionen laufen, sofern verfügbar.
-•	intern und extern eingesetzt werden können (JS-Datei oder von einem CDN geladen)
+
+•	intern und extern eingesetzt werden können (JS-Datei oder von einem CDN geladen).
+
 •	eine minimale Codebasis haben.
+
 •	Das geschriebene Quellcode auskommentiert werden.
+
 •	Nach jedem Beitrag gut getestet.
+
 •	Handelt es sich um Drittsoftware (z. B. ein grafisches Frontend), sollte diese idealerweise frei verfügbar und kostenlos sein.
+
 
 Organizational constraints
 
 Es muss:
 
 •	Die Beiträge aus den Leaflet issues sein.
+
 •	Nach der team-entscheidung wird ausgewähltes issues bearbeitet.
-•	Die Entscheidung von der Anzahl der Entwickler für jeden Beitrag, durch team -Meeting getroffen  
+
+•	Die Entscheidung von der Anzahl der Entwickler für jeden Beitrag, durch team -Meeting getroffen.  
+
 •	Die Bearbeitungszeit, vom team gesetzt.  
+
 •	für Jeden Beitrag entsprechende Dokumentation – Berichte erstellen.
+
 •	Der Quellcode der Lösung, oder zumindest Teile davon, werden als Open Source zur Verfügung gestellt.
+
 •	Beginn der Entwicklung am Anfang Juli 2022. Fertigstellung des Beitrags am Ende Juli 2022.
+
 •	Es wird  an Leaflet 1.8.0 arbeitet, die aus GitHub von Leaflet stammt.
+
 
 
 
