@@ -196,37 +196,20 @@ Es muss:
 
 ![Business_Context_Diagramm](images/BusinessContextDiagramm.png)
 
-::: formalpara-title
-**Inhalt**
-:::
+| **Nachbaren** | **Beschreibung** |
+|-----------------------|-----------------------------------------------|
+| *Enduser* | *ist eine natürliche oder juristische Person, die Leaflet map letztendlich benutzt.* |
+| *Developer* | *,die Leaflet für ihre Projekte verwenden werden* |
+| *Leaflet API* | *JavaScript library* |
+| *Tile & image layers* | *Die folgenden Plugins ändern die Art und Weise, wie Kachel- oder Bildebenen in der Karte angezeigt werden.* |
+| *Overlay Display* | *Diese Plugins bieten neue Markierungen oder neue Möglichkeiten zur Umwandlung abstrakter Daten in Bilder auf Ihrem Bildschirm.* |
+| *Map interaction* | *Die folgenden Plugins verbessern oder erweitern die Interaktion (z. B. Zoom, Geolokalisierung, Benutzeroberfläche und Steuerelemente)* |
+| *Miscellaneous* | *Die folgenden Plugins führen verschiedene Arten von Geoprocessing durch (mathematische und topologische Operationen auf Punkten, Linien und Polygonen).* |
+| *Overlay data* | *Es dient dynamische Daten oder Overlay-Daten von Drittanbieter-Diensten zu laden, die in der Karte aktualisiert werden.  * |
+| *Overlay interaction* | *Ermöglicht dem Benutzer das Erstellen, Zeichnen, Bearbeiten und/oder Löschen von Punkten, Linien und Polygonen.* |
+| *Integration* | *Die folgenden Plugins integrieren Leaflet in Dienste oder Websites von Drittanbietern.* |
 
-Die Kontextabgrenzung grenzt das System von allen
-Kommunikationsbeziehungen (Nachbarsystemen und Benutzerrollen) ab. Sie
-legt damit die externen Schnittstellen fest.
-
-Differenzieren Sie fachliche (fachliche Ein- und Ausgaben) und
-technische Kontexte (Kanäle, Protokolle, Hardware), falls nötig.
-
-::: formalpara-title
-**Motivation**
-:::
-
-Die fachlichen und technischen Schnittstellen zur Kommunikation gehören
-zu den kritischsten Aspekten eines Systems. Stellen Sie sicher, dass Sie
-diese komplett verstanden haben.
-
-::: formalpara-title
-**Form**
-:::
-
-Verschiedene Optionen:
-
--   Diverse Kontextdiagramme
-
--   Listen von Kommunikationsbeziehungen mit deren Schnittstellen
-
-Siehe [Kontextabgrenzung](https://docs.arc42.org/section-3/) in der
-online-Dokumentation (auf Englisch!).
+![Technical_Context_Diagramm](images/TechnicalContextDiagramm.png)
 
 ## Fachlicher Kontext {#_fachlicher_kontext}
 
