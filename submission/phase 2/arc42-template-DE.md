@@ -173,7 +173,7 @@ Es muss:
 •	Der Quellcode der Lösung, oder zumindest Teile davon, werden als Open Source zur Verfügung gestellt.
 •	Beginn der Entwicklung am Anfang Juli 2022. Fertigstellung des Beitrags am Ende Juli 2022.
 •	Es wird  an Leaflet 1.8.0 arbeitet, die aus GitHub von Leaflet stammt.
-![image](https://user-images.githubusercontent.com/44380401/175807542-77818ea4-40ce-49f5-8148-46f6de53fe80.png)
+
 
 
 # Kontextabgrenzung {#section-system-scope-and-context}
