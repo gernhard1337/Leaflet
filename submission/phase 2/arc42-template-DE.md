@@ -148,147 +148,108 @@ bezüglich der Architektur und deren Dokumentation.
 
 # Randbedingungen {#section-architecture-constraints}
 
-::: formalpara-title
-**Inhalt**
-:::
+## Technical constraints
 
-Randbedingungen und Vorgaben, die ihre Freiheiten bezüglich Entwurf,
-Implementierung oder Ihres Entwicklungsprozesses einschränken. Diese
-Randbedingungen gelten manchmal organisations- oder firmenweit über die
-Grenzen einzelner Systeme hinweg.
+### Leaflet muss sein:
 
-::: formalpara-title
-**Motivation**
-:::
+•	plattformunabhängig und auf allen wichtigsten Betriebssystemen und Browsern laufen.
 
-Für eine tragfähige Architektur sollten Sie genau wissen, wo Ihre
-Freiheitsgrade bezüglich der Entwurfsentscheidungen liegen und wo Sie
-Randbedingungen beachten müssen. Sie können Randbedingungen vielleicht
-noch verhandeln, zunächst sind sie aber da.
+•	Einheitliche Oberfläche.
 
-::: formalpara-title
-**Form**
-:::
+•	Entwicklung mit JavaScript. sollte auch in neueren Java-Versionen laufen, sofern verfügbar.
 
-Einfache Tabellen der Randbedingungen mit Erläuterungen. Bei Bedarf
-unterscheiden Sie technische, organisatorische und politische
-Randbedingungen oder übergreifende Konventionen (beispielsweise
-Programmier- oder Versionierungsrichtlinien, Dokumentations- oder
-Namenskonvention).
+•	intern und extern eingesetzt werden können (JS-Datei oder von einem CDN geladen).
 
-Siehe [Randbedingungen](https://docs.arc42.org/section-2/) in der
-online-Dokumentation (auf Englisch!).
+•	eine minimale Codebasis haben.
+
+•	Das geschriebene Quellcode auskommentiert werden.
+
+•	Nach jedem Beitrag gut getestet.
+
+•	Handelt es sich um Drittsoftware (z. B. ein grafisches Frontend), sollte diese idealerweise frei verfügbar und kostenlos sein.
+
+
+## Organizational constraints
+
+### Es muss:
+
+•	Die Beiträge aus den Leaflet issues sein.
+
+•	Nach der team-entscheidung wird ausgewähltes issues bearbeitet.
+
+•	Die Entscheidung von der Anzahl der Entwickler für jeden Beitrag, durch team -Meeting getroffen.  
+
+•	Die Bearbeitungszeit, vom team gesetzt.  
+
+•	für Jeden Beitrag entsprechende Dokumentation – Berichte erstellen.
+
+•	Der Quellcode der Lösung, oder zumindest Teile davon, werden als Open Source zur Verfügung gestellt.
+
+•	Beginn der Entwicklung am Anfang Juli 2022. Fertigstellung des Beitrags am Ende Juli 2022.
+
+•	Es wird  an Leaflet 1.8.0 arbeitet, die aus GitHub von Leaflet stammt.
+
+
+
 
 # Kontextabgrenzung {#section-system-scope-and-context}
 
-::: formalpara-title
-**Inhalt**
-:::
+## Business Kontext
 
-Die Kontextabgrenzung grenzt das System von allen
-Kommunikationsbeziehungen (Nachbarsystemen und Benutzerrollen) ab. Sie
-legt damit die externen Schnittstellen fest.
+![Business_Context_Diagramm](images/BusinessContextDiagramm.png)
 
-Differenzieren Sie fachliche (fachliche Ein- und Ausgaben) und
-technische Kontexte (Kanäle, Protokolle, Hardware), falls nötig.
+| **Nachbaren** | **Beschreibung** |
+|-----------------------|-----------------------------------------------|
+| *Enduser* | *ist eine natürliche oder juristische Person, die Leaflet map letztendlich benutzt.* |
+| *Developer* | *,die Leaflet für ihre Projekte verwenden werden* |
+| *Leaflet API* | *JavaScript library* |
+| *Tile & image layers* | *Die folgenden Plugins ändern die Art und Weise, wie Kachel- oder Bildebenen in der Karte angezeigt werden.* |
+| *Overlay Display* | *Diese Plugins bieten neue Markierungen oder neue Möglichkeiten zur Umwandlung abstrakter Daten in Bilder auf Ihrem Bildschirm.* |
+| *Map interaction* | *Die folgenden Plugins verbessern oder erweitern die Interaktion (z. B. Zoom, Geolokalisierung, Benutzeroberfläche und Steuerelemente)* |
+| *Miscellaneous* | *Die folgenden Plugins führen verschiedene Arten von Geoprocessing durch (mathematische und topologische Operationen auf Punkten, Linien und Polygonen).* |
+| *Overlay data* | *Es dient dynamische Daten oder Overlay-Daten von Drittanbieter-Diensten zu laden, die in der Karte aktualisiert werden.* |
+| *Overlay interaction* | *Ermöglicht dem Benutzer das Erstellen, Zeichnen, Bearbeiten und/oder Löschen von Punkten, Linien und Polygonen.* |
+| *Integration* | *Die folgenden Plugins integrieren Leaflet in Dienste oder Websites von Drittanbietern.* |
 
-::: formalpara-title
-**Motivation**
-:::
+## Technischer Kontext
 
-Die fachlichen und technischen Schnittstellen zur Kommunikation gehören
-zu den kritischsten Aspekten eines Systems. Stellen Sie sicher, dass Sie
-diese komplett verstanden haben.
+![Technical_Context_Diagramm](images/TechnicalContextDiagramm.png)
 
-::: formalpara-title
-**Form**
-:::
+| **Aktor** | **Beschreibung** |
+|-----------------------|-----------------------------------------------|
+| *Enduser* | *ist eine natürliche oder juristische Person, die Leaflet map letztendlich benutzt.* |
+| *Developer* | *,die Leaflet für ihre Projekte verwenden werden* |
+| *Mobile* | *mobilephone* |
+| *Tablet/ipad* | *ist ein tragbarer, flacher Computer in besonders leichter Ausführung mit einem Touchscreen* |
+| *Computer** | *Hier werden alle Computersorte gemeint, wie Desktop, laptop, server ……* |
+| *Leaflet API server* | *Wo Quellecode gespeichert ist.* |
+| *Leaflet Pulings databdase* | *Repo, wo alle Pulings gespeichert sind.* |
 
-Verschiedene Optionen:
-
--   Diverse Kontextdiagramme
-
--   Listen von Kommunikationsbeziehungen mit deren Schnittstellen
-
-Siehe [Kontextabgrenzung](https://docs.arc42.org/section-3/) in der
-online-Dokumentation (auf Englisch!).
-
-## Fachlicher Kontext {#_fachlicher_kontext}
-
-::: formalpara-title
-**Inhalt**
-:::
-
-Festlegung **aller** Kommunikationsbeziehungen (Nutzer, IT-Systeme, ...)
-mit Erklärung der fachlichen Ein- und Ausgabedaten oder Schnittstellen.
-Zusätzlich (bei Bedarf) fachliche Datenformate oder Protokolle der
-Kommunikation mit den Nachbarsystemen.
-
-::: formalpara-title
-**Motivation**
-:::
-
-Alle Beteiligten müssen verstehen, welche fachlichen Informationen mit
-der Umwelt ausgetauscht werden.
-
-::: formalpara-title
-**Form**
-:::
-
-Alle Diagrammarten, die das System als Blackbox darstellen und die
-fachlichen Schnittstellen zu den Nachbarsystemen beschreiben.
-
-Alternativ oder ergänzend können Sie eine Tabelle verwenden. Der Titel
-gibt den Namen Ihres Systems wieder; die drei Spalten sind:
-Kommunikationsbeziehung, Eingabe, Ausgabe.
-
-**\<Diagramm und/oder Tabelle>**
-
-**\<optional: Erläuterung der externen fachlichen Schnittstellen>**
-
-## Technischer Kontext {#_technischer_kontext}
-
-::: formalpara-title
-**Inhalt**
-:::
-
-Technische Schnittstellen (Kanäle, Übertragungsmedien) zwischen dem
-System und seiner Umwelt. Zusätzlich eine Erklärung (*mapping*), welche
-fachlichen Ein- und Ausgaben über welche technischen Kanäle fließen.
-
-::: formalpara-title
-**Motivation**
-:::
-
-Viele Stakeholder treffen Architekturentscheidungen auf Basis der
-technischen Schnittstellen des Systems zu seinem Kontext.
-
-Insbesondere bei der Entwicklung von Infrastruktur oder Hardware sind
-diese technischen Schnittstellen durchaus entscheidend.
-
-::: formalpara-title
-**Form**
-:::
-
-Beispielsweise UML Deployment-Diagramme mit den Kanälen zu
-Nachbarsystemen, begleitet von einer Tabelle, die Kanäle auf
-Ein-/Ausgaben abbildet.
-
-**\<Diagramm oder Tabelle>**
-
-**\<optional: Erläuterung der externen technischen Schnittstellen>**
-
-**\<Mapping fachliche auf technische Schnittstellen>**
 
 # Lösungsstrategie {#section-solution-strategy}
 
-::: formalpara-title
-**Inhalt**
-:::
+### Algemeine Ausblick 
 
-Kurzer Überblick über die grundlegenden Entscheidungen und
-Lösungsansätze, die Entwurf und Implementierung des Systems prägen.
-Hierzu gehören:
+Wir arbeiten in kleiner Gruppe aus 4 Entwickler, durch Reverse Engineering haben wir die  Requirements herausgefunden. 
+Wir haben möglichst versucht, unsere Architektur auf den Funktionsanforderungen zu basieren und sie gut zu dokumentieren.
+In diesem Dokument haben wir präzisier und ausführlich erklärt, wie unsere gefolgte Politik aussieht.
+
+
+| **Qualitätsziel** | **Lösungsansatz** |**Details** |
+|-----------------------|-----------------------------------------------|---------------------------|
+| *Performance* | *Anzeige von beweglichen Icons auf der Karte* |*Qualitätsbaum -> Performance*|
+| *light-weight* | *der Code sollte so klein wie möglich sein* |*Qualitätsbaum -> Performance -> light-weight*|
+| *feature Completeness* | *sollte alle notwendigen Funktionen enthalten* |*Qualitätsbaum -> Performance ->feature Completeness*|
+| *Documentation* | *•	Klassendiagramm <br /> •  Geschäftsprozessdiagramm <br /> •	Kontextdiagramm<br />•	Verfügbare Dokumentation für alle Funktionen<br />•	Beispielprojekte*|*Qualitätsbaum -> Documentation*|
+| *Usability* | *•	Sichern, dass Benutzer Karte benutzen kann.<br />•	Sichern, dass Benutzer mit der Karte reagieren kann.* |*Qualitätsbaum -> Usability*|
+| *Responsive* | *Sollte durch JS und CSS auf allen Oberflächen anpassen* |*Qualitätsbaum -> Usability-> Responsive*|
+| *Dependability* | *kann unabhängig vom Browser Leaflet nutzen* |*Qualitätsbaum -> Usability-> Dependability*|
+| *Compatibility* | *•	zahlreiche Plugin ergeben neue Funktionen.<br/>•	Gut dokumentiert.* |*Qualitätsbaum -> Usability-> Compatibility*|
+| *Modifiabilty* | *•	Durch CSS kann die Elemente ändern.* |*Qualitätsbaum -> Modifiabilty*|
+| *Maintainability* | *•	Open Source, so jeder an der Bearbeitung teilnehmen kann<br/> •	Gut dokumentiert.* |*Qualitätsbaum -> Reliability-> Maintainability*|
+| *Testability* | *•	Sollte ausreichende Testen ausgeführt werden* |*Qualitätsbaum -> Reliability-> Testability*|
+
+
 
 -   Technologieentscheidungen
 
@@ -323,6 +284,7 @@ auf weitere Ausführungen in Folgeabschnitten.
 
 Siehe [Lösungsstrategie](https://docs.arc42.org/section-4/) in der
 online-Dokumentation (auf Englisch!).
+
 
 <!--- ab hier Franziskas Part -->
 # Bausteinsicht
@@ -441,6 +403,7 @@ Bei der Nutzung von Leaflet steht die API im Vordergrund, dadurch ist es nahelie
 | *SVGOverlay* | *Laden, Anzeigen und Bereitstellen vom DOM-Zugang zu SVG-Dateien* |
 | *Tooltip* | *Anzeigen von kleinen Texten über den Kartenebenen * |
 | *VideoOverlay* | *Laden und Anzeigen von Video-Playern* |
+
 
 ### Whitebox *\map*
 
