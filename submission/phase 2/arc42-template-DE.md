@@ -589,7 +589,7 @@ Der Leaflet-Verbesserungsprozess beginnt mit der Erstellung von Issue-Ticks von 
 
 ## *Betriebskonzepte*
 
-**Hochverfügbarkeit::** Die Popularität des Projekts verschafft *Leaflet* eine Armee gut ausgebildeter Betreuer und Benutzer, die Probleme schnell erkennen und darauf reagieren können, und dies ist der Grund für die zuverlässige Verfügbarkeit von *Leaflet*.
+**Hochverfügbarkeit:** Die Popularität des Projekts verschafft *Leaflet* eine Armee gut ausgebildeter Betreuer und Benutzer, die Probleme schnell erkennen und darauf reagieren können, und dies ist der Grund für die zuverlässige Verfügbarkeit von *Leaflet*.
 **Administration and Management:**  Maintainer überprüfen alle Pull-Requests und sie werden von den Hauptadministratoren von *Leaflet* eingebracht. Leaflet-Administratoren stehen dem Ersteller von *Leafletjs* am nächsten.
 **Disaster recovery** : ein Rollback auf eine alte Version.
 
