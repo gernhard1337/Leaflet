@@ -148,36 +148,33 @@ bezüglich der Architektur und deren Dokumentation.
 
 # Randbedingungen {#section-architecture-constraints}
 
-::: formalpara-title
-**Inhalt**
-:::
+Technical constraints
 
-Randbedingungen und Vorgaben, die ihre Freiheiten bezüglich Entwurf,
-Implementierung oder Ihres Entwicklungsprozesses einschränken. Diese
-Randbedingungen gelten manchmal organisations- oder firmenweit über die
-Grenzen einzelner Systeme hinweg.
+Leaflet muss sein:
 
-::: formalpara-title
-**Motivation**
-:::
+•	plattformunabhängig und auf allen wichtigsten Betriebssystemen und Browsern laufen.
+•	Einheitliche Oberfläche
+•	Entwicklung mit JavaScript. sollte auch in neueren Java-Versionen laufen, sofern verfügbar.
+•	intern und extern eingesetzt werden können (JS-Datei oder von einem CDN geladen)
+•	eine minimale Codebasis haben.
+•	Das geschriebene Quellcode auskommentiert werden.
+•	Nach jedem Beitrag gut getestet.
+•	Handelt es sich um Drittsoftware (z. B. ein grafisches Frontend), sollte diese idealerweise frei verfügbar und kostenlos sein.
 
-Für eine tragfähige Architektur sollten Sie genau wissen, wo Ihre
-Freiheitsgrade bezüglich der Entwurfsentscheidungen liegen und wo Sie
-Randbedingungen beachten müssen. Sie können Randbedingungen vielleicht
-noch verhandeln, zunächst sind sie aber da.
+Organizational constraints
 
-::: formalpara-title
-**Form**
-:::
+Es muss:
 
-Einfache Tabellen der Randbedingungen mit Erläuterungen. Bei Bedarf
-unterscheiden Sie technische, organisatorische und politische
-Randbedingungen oder übergreifende Konventionen (beispielsweise
-Programmier- oder Versionierungsrichtlinien, Dokumentations- oder
-Namenskonvention).
+•	Die Beiträge aus den Leaflet issues sein.
+•	Nach der team-entscheidung wird ausgewähltes issues bearbeitet.
+•	Die Entscheidung von der Anzahl der Entwickler für jeden Beitrag, durch team -Meeting getroffen  
+•	Die Bearbeitungszeit, vom team gesetzt.  
+•	für Jeden Beitrag entsprechende Dokumentation – Berichte erstellen.
+•	Der Quellcode der Lösung, oder zumindest Teile davon, werden als Open Source zur Verfügung gestellt.
+•	Beginn der Entwicklung am Anfang Juli 2022. Fertigstellung des Beitrags am Ende Juli 2022.
+•	Es wird  an Leaflet 1.8.0 arbeitet, die aus GitHub von Leaflet stammt.
+![image](https://user-images.githubusercontent.com/44380401/175807542-77818ea4-40ce-49f5-8148-46f6de53fe80.png)
 
-Siehe [Randbedingungen](https://docs.arc42.org/section-2/) in der
-online-Dokumentation (auf Englisch!).
 
 # Kontextabgrenzung {#section-system-scope-and-context}
 
