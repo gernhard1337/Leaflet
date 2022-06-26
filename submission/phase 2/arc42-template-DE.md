@@ -329,7 +329,7 @@ online-Dokumentation (auf Englisch!).
 
 ## Whitebox Gesamtsystem
 
-[Übersichtsdiagramm](images/ebene1_building_blocks.png)
+![Übersichtsdiagramm](images/ebene1_building_blocks.png)
 
 ### Begründung
 
