@@ -203,13 +203,12 @@ bezüglich der Architektur und deren Dokumentation.
 | *Enduser* | *ist eine natürliche oder juristische Person, die Leaflet map letztendlich benutzt.* |
 | *Developer* | *,die Leaflet für ihre Projekte verwenden werden* |
 | *Leaflet API* | *JavaScript library* |
-| *Tile & image layers* | *Die folgenden Plugins ändern die Art und Weise, wie Kachel- oder Bildebenen in der Karte angezeigt werden.* |
-| *Overlay Display* | *Diese Plugins bieten neue Markierungen oder neue Möglichkeiten zur Umwandlung abstrakter Daten in Bilder auf Ihrem Bildschirm.* |
-| *Map interaction* | *Die folgenden Plugins verbessern oder erweitern die Interaktion (z. B. Zoom, Geolokalisierung, Benutzeroberfläche und Steuerelemente)* |
-| *Miscellaneous* | *Die folgenden Plugins führen verschiedene Arten von Geoprocessing durch (mathematische und topologische Operationen auf Punkten, Linien und Polygonen).* |
-| *Overlay data* | *Es dient dynamische Daten oder Overlay-Daten von Drittanbieter-Diensten zu laden, die in der Karte aktualisiert werden.* |
-| *Overlay interaction* | *Ermöglicht dem Benutzer das Erstellen, Zeichnen, Bearbeiten und/oder Löschen von Punkten, Linien und Polygonen.* |
-| *Integration* | *Die folgenden Plugins integrieren Leaflet in Dienste oder Websites von Drittanbietern.* |
+| *Github* | *ist ein Anbieter von Internet-Hosting für Softwareentwicklung und Versionskontrolle mit Git.* |
+| *Social media* | *sind digitale Medien bzw. Plattformen wie Facebook* |
+| *Government* | *government  website. Wie data.gov* |
+| *Image hosting service* | *ist ein kommerzieller Onlinedienst mit Community-Elementen, der es Benutzern erlaubt, digitale und digitalisierte Bilder zu laden und zu teieln, wie 500px und Flickr* |
+| *e-commerce* | *Internethandel, Onlinehandel Website für den Kauf und Verkauf von Waren. wie etsy* |
+
 
 ## Technischer Kontext
 
