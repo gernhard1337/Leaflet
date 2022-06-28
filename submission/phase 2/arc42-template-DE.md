@@ -187,8 +187,6 @@ bezüglich der Architektur und deren Dokumentation.
 
 •	Beginn der Entwicklung am Anfang Juli 2022. Fertigstellung des Beitrags am Ende Juli 2022.
 
-•	Es wird  an Leaflet 1.8.0 arbeitet, die aus GitHub von Leaflet stammt.
-
 
 
 
