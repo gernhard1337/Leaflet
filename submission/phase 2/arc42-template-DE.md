@@ -1,23 +1,3 @@
-# 
-
-**Über arc42**
-
-arc42, das Template zur Dokumentation von Software- und
-Systemarchitekturen.
-
-Erstellt von Dr. Gernot Starke, Dr. Peter Hruschka und Mitwirkenden.
-
-Template Revision: 8.0 DE (asciidoc-based), Februar 2022
-
-© We acknowledge that this document uses material from the arc42
-architecture template, <https://arc42.org>.
-
-::: note
-Diese Version des Templates enthält Hilfen und Erläuterungen. Sie dient
-der Einarbeitung in arc42 sowie dem Verständnis der Konzepte. Für die
-Dokumentation eigener System verwenden Sie besser die *plain* Version.
-:::
-
 # Einführung und Ziele {#section-introduction-and-goals}
 
 Beschreibt die wesentlichen Anforderungen und treibenden Kräfte, die bei
@@ -27,13 +7,9 @@ berücksichtigt werden müssen.
 Dazu gehören:
 
 -   zugrunde liegende Geschäftsziele,
-
 -   wesentliche Aufgabenstellungen,
-
 -   wesentliche funktionale Anforderungen,
-
 -   Qualitätsziele für die Architektur und
-
 -   relevante Stakeholder und deren Erwartungshaltung.
 
 ## Aufgabenstellung {#_aufgabenstellung}
@@ -786,12 +762,6 @@ Wissen benötigt.
 #### Risikominderung 
 
 Ja gute Frage ( kommt noch)
-
-
-
-
-
-
 
 # Glossar
 
