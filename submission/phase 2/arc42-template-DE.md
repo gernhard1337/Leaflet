@@ -400,13 +400,12 @@ Als Bibliothek vermeidet es Leaflet Anforderungen an Soft- und Hardware zu stell
 <!--- ab hier Toms Part -->
 # Querschnittliche Konzepte
 
-In diesem Abschnitt handelt es sich um prinzipielle Regelungen und Lösungsansätze, die beim Aufbauf der Bausteine beachtet werden müssen, um die konzeptionelle Integrität der Architektur und die Qualität des Systems zu garantieren. Diese Regeln sind: 
+In diesem Abschnitt handelt es sich um prinzipielle Regelungen und Lösungsansätze, die beim Aufbau der Bausteine beachtet werden müssen, um die konzeptionelle Integrität der Architektur und die Qualität des Systems zu garantieren. Diese Regeln sind:
 
 -   Modelle, insbesondere fachliche Modelle.
 -   Architektur- oder Entwurfsmuster.
 -   Regeln für den konkreten Einsatz von Technologien.
--   prinzipielle -oder technische Festlegungen übergreifender.
-    Art.
+-   Prinzipielle - oder technische Festlegungen übergreifender Art.
 -   Implementierungsregeln
 
 Basierend auf dem, was in den vorherigen Kapiteln abgeglichen wurde, und unter Berücksichtigung der Architektur der Bausteine, werden wir diese Regelungen und Lösungsansätze betrachten.
