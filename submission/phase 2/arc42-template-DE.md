@@ -559,7 +559,7 @@ Der Leaflet-Verbesserungsprozess beginnt mit der Erstellung von Issue-Ticks von 
 <!-- Toms Part -->
 # Architekturentscheidungen 
 
-Zwei wichtige, weiter hervorzuhebende Entscheidungen die Leaflet betreffen wurden entschieden
+Drei wichtige, weiter hervorzuhebende Entscheidungen die Leaflet betreffen wurden entschieden
 und fanden bisher noch nicht ihre nötige Bergründung obwohl diese grundlegend sind. Daher findet dies
 hier statt.
 
@@ -582,6 +582,11 @@ eine Backend-basierte Lösung möglich gewesen. Die Backend-basierte Lösung fä
 da jede kleinste Interaktion eine neue Anfrage an Server mit entsprechender Antwort bedeuten würde und wir
 somit unser Ziel der Performance niemals einhalten könnten. TypeScript wurde nicht als Entwicklungssprache gewählt
 weil es erst 2012 veröffentlicht wurde, die Entwicklung an Leaflet jedoch schon 2011 began.
+
+## Verzicht auf jeglichen importierten Code aus anderen Projekten
+
+Hierdurch flogt blalbala beenden noch unbedingt. 
+
 
 # Qualitätsanforderungen
 
@@ -772,6 +777,21 @@ Damit diese Gratwanderung gelingt wird Leaflet unter einem bestimmten Paradigma 
 wie möglich unter Beachtung der Requirements. Dies bedeutet, dass der volle Funktionsumfang von Leaflet in der Architektur 
 dokumentiert ist. Dieser Funktionsumfang ist dann so optimal wie möglich zu implementieren und nichts weiter. 
 Über die Definition des Funktionsumfangs und mögliche Erweiterungen dieses kümmert sich die Community.
+
+## Keine Drittsoftware im Core 
+
+Dadurch ist Weiterentwicklung teilweise schwer da sämtliche Module selbst geschrieben werden müssen und man hier viel
+Wissen benötigt.
+
+#### Risikominderung 
+
+Ja gute Frage ( kommt noch)
+
+
+
+
+
+
 
 # Glossar
 
