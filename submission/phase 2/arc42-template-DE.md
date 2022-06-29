@@ -400,7 +400,6 @@ Als Bibliothek vermeidet es Leaflet Anforderungen an Soft- und Hardware zu stell
 <!--- ab hier Toms Part -->
 # Querschnittliche Konzepte
 
-**Einleitung**
 In diesem Abschnitt handelt es sich um prinzipielle Regelungen und Lösungsansätze, die beim Aufbauf der Bausteine beachtet werden müssen, um die konzeptionelle Integrität der Architektur und die Qualität des Systems zu garantieren. Diese Regeln sind: 
 
 -   Modelle, insbesondere fachliche Modelle.
@@ -410,9 +409,7 @@ In diesem Abschnitt handelt es sich um prinzipielle Regelungen und Lösungsansä
     Art.
 -   Implementierungsregeln
 
-Im Bezug auf den Bausteineinsicht von LeafletJs wird in diesem Abschnitt diese Regelungen und Lösungsansätze erläutert.  
-
-**Struktur**
+Basierend auf dem, was in den vorherigen Kapiteln abgeglichen wurde, und unter Berücksichtigung der Architektur der Bausteine, werden wir diese Regelungen und Lösungsansätze betrachten.
 
 ![Possible topics for crosscutting
 concepts](images/08-Crosscutting-Concepts-Structure-DE.png)
