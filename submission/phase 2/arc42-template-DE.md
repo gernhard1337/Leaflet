@@ -416,7 +416,7 @@ concepts](images/08-Crosscutting-Concepts-Structure-DE.png)
 Siehe [Querschnittliche Konzepte](https://docs.arc42.org/section-8/) in
 der online-Dokumentation (auf Englisch).
 
-## *Fachliche Konzepte*
+## Fachliche Konzepte
 
 Die fachliche- oder Domänenkonzepte sind eine Reihe von Modellen und Konzepten, die in den Benutzerverwaltungsbausteinen und Schnittstellen der Authentifizierung in der Architektur eingehalten werden müssen.
 
@@ -442,7 +442,7 @@ Hier kann ein *Layer* Pfad, Marker oder ein *Composite* sein.
 
 -   Die Projektmodularität ist ebenfalls logisch und leicht zu erkennen, wobei jede Klasse ein Modul darstellt, insbesondere für Schlüsselbausteine wie *Controller*, *Handler*, *Layer*, *Zoom* oder die Module für die geometrischen Formen.
 
-## *User Experience (UX)* 
+## User Experience (UX) 
 
 Leaflet verwendet eine intuitive Benutzeroberfläche, um dem Benutzer eine erlernbare und vereinfachte Karte bereitzustellen.
 
@@ -450,11 +450,11 @@ Leaflet verwendet eine intuitive Benutzeroberfläche, um dem Benutzer eine erler
 
 Die einzige unterstützte Sprache ist Englisch. Es gibt keinen Haken für die Internationalisierung im Frontend und es gibt keine Pläne, einen zu erstellen.
 
-## *Sicherheitskonzepte* 
+## Sicherheitskonzepte 
 
 Da alle Leaflet-Services öffentlich zugänglich sind und keine Authentifizierung enthalten, muss keine Sicherheitskonzepte eingerichtet werden. Der Code kann jedoch nur geändert werden, nachdem er von vertrauenswürdigen Betreuern überprüft wurde. 
 
-## *Entwicklungskonzepte* 
+## Entwicklungskonzepte 
 
 ###  Build & Deploy:
 
@@ -519,13 +519,17 @@ Konfiguration der verschiedenen Animationsoptionen:
 > Weitere konfigurierbar Optionen sind **events**, **Marker**, **location** und **zoom**. Unter [leaflet docs](http://leafletjs.com/reference.html "leaflet docs") sind alle Optionen gelistet.
 
 
-## *Unter-der-Haube* 
+## Unter-der-Haube 
 
 Der Leaflet-Verbesserungsprozess beginnt mit der Erstellung von Issue-Ticks von den Endnutzern bzw. Entwickler an die maintainers.
 
 ### Ausnahme-/Fehlerbehandlung:
 
 Die Fehlerbehandlung bei inkonsistenten Daten (in Bezug auf die Einschränkung des Datenmodells) sowie Fehler bei der Validierung werden HTTP-Fehlern zugeordnet (404 code). Diese Fehler werden vom Controller-Code des Frontends behandelt. Technische Fehler (Hardware, Datenbank etc.) werden nicht behandelt und können zu Anwendungsausfällen oder Datenverlust führen.
+
+### Sitzungsbehandlung:
+
+Leaflet.JS bietet nur eine zustandslose öffentliche API, es gibt keine Sitzungsbehandlung.
 
 ### Communication/Integration:
 
