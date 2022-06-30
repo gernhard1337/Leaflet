@@ -603,10 +603,10 @@ Die Hochverfügbarkeit ist der Schlüsselfaktor von Leaflet und dies hat folgend
 
 ### Administration and Management:
 
-Maintainer überprüfen alle Pull-Requests und sie werden von den Hauptadministratoren von *Leaflet* eingebracht. Leaflet-Administratoren stehen dem Ersteller von *Leafletjs* am nächsten.
+Es gibt keine Verwaltung von Benutzern oder Admins. Dennoch folgt die Verwaltung des Quellcodes und wer ihn ändern kann den Open-Source-Contribution Richtlinien von Leafletjs, wobei Maintainer überprüfen alle Pull-Requests und sie werden von den Hauptadministratoren von Leaflet eingebracht. Administratoren von Leaflet stehen dem Ersteller von *Leafletjs* am nächsten.
 
 ### Disaster recovery: 
-ein Rollback auf die alte Version, bis die Probleme mit der aktuellen Version behoben sind.
+Ein Rollback auf die alte Version, bis die Probleme mit der aktuellen Version behoben sind.
 
 
 >alle anderen nicht erwähnten Attribute von arc42 Querschnittliche Konzepte sind optional und entsprechen nicht der Projektidee von Leaflet JS.
