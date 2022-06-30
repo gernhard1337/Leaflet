@@ -593,9 +593,9 @@ Normalerweise wird ein *Batch* erstellt, um viele Probleme und Fehlerbehebungen 
 - Die Community oder die Admins melden eine Gruppe von Problemen mit unterschiedlichen Prioritäten und schlagen den Betreuern Lösungen vor.
 - Die alte Version des Projekts wird als Backup gespeichert.
 - Die neue Version der Bibliothek wird automatisch auf *NPM* veröffentlicht dank eines *CRON JOB*  mit *Git*.
-- Das neue Release mit seinem Bericht wird auf der Website sowie auf github dokumentiert
+- Das neue Release mit seinem Bericht wird auf der Website sowie auf github dokumentiert.
 
-Die Entwickler erhalten dann den neuen Batch, indem sie den Befehl `npm update` oder `npm upgrade` in ihren Projekten ausführen
+Die Entwickler erhalten dann den neuen Batch, indem sie den Befehl `npm update` oder `npm upgrade` in ihren Projekten ausführen.
 
 ## Betriebskonzepte
 
