@@ -418,7 +418,9 @@ der online-Dokumentation (auf Englisch).
 
 ## *Fachliche Konzepte*
 
-Es werden keine Domänenbausteine benötigt (u.a. Authentifizierung), da Leaflet eine Open-Source-UI-Bibliothek für Karten ist, für die sich der Endbenutzer oder Entwickler nicht registrieren muss.
+Die fachliche- oder Domänenkonzepte sind eine Reihe von Modellen und Konzepten, die in den Benutzerverwaltungsbausteinen und Schnittstellen der Authentifizierung in der Architektur eingehalten werden müssen.
+
+Alle Endbenutzer bzw. Entwickler von Leaflet JS brauchen sich nicht zu registrieren oder einzuloggen, um die verschiedene Services nutzen zu können. Das Projekt ist eine Open-Source-UI-Bibliothek für Karten und daher sind keine Bausteine zur Authentifikation oder Benutzerverwaltung benötigt. 
 
 ## *Architektur-und Entwurfsmuster* 
 
