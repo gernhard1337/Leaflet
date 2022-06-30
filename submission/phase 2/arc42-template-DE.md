@@ -559,7 +559,7 @@ Für Leaflet wird eine zusätzliche Plugin-API erstellt. Der Zugriff auf Element
     	optionThree: 5
     });
 
-Das Plugin sollte auf *NPM* (Node Package Modules Manager) mit spezifischen Metadaten veröffentlicht werden, damit das Plugin mit *Leaflet* kompatibel ist:
+Das Plugin sollte auf *NPM* (Node Package Modules Manager) mit spezifischen Metadaten veröffentlicht werden, damit das Plugin mit *Leaflet* kompatibel wird:
 
     {
       "name": "my-leaflet-plugin",
@@ -574,7 +574,7 @@ Das Plugin sollte auf *NPM* (Node Package Modules Manager) mit spezifischen Meta
     }
 	
 
-Das Plugin wird dann von den Maintainers überprüft und der Liste der Leaflet-Plugins hinzugefügt, damit es öffentlich zugänglich ist.
+Das Plugin wird dann von den Maintainers überprüft und der Liste der Leaflet-Plugins hinzugefügt, damit es öffentlich zugänglich wird.
 
 
 
