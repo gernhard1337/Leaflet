@@ -724,6 +724,9 @@ und jeder seinen geschriebenen Code validieren kann.
 
 # Risiken und technische Schulden
 
+Im folgenden sind diverse erkannte Risiken, denen Leaflet ausgesetzt ist, aufgelistet. Diese sind nach Relevanz sortiert, sodass
+mit dem größten Risiko gestartet wird und mit dem kleinsten geendet wird.
+
 ## Open - Source als Risiko
 
 Leaflet wird als Open-Source-Projekt veröffentlicht, dies birgt Risiken. Denn durch Open-Source entsteht das Risiko,
@@ -752,22 +755,39 @@ wie möglich unter Beachtung der Requirements. Dies bedeutet, dass der volle Fun
 dokumentiert ist. Dieser Funktionsumfang ist dann so optimal wie möglich zu implementieren und nichts weiter. 
 Über die Definition des Funktionsumfangs und mögliche Erweiterungen dieses kümmert sich die Community.
 
-## Keine Drittsoftware im Core 
-
-Dadurch ist Weiterentwicklung teilweise schwer da sämtliche Module selbst geschrieben werden müssen und man hier viel
-Wissen benötigt.
-
-#### Risikominderung 
-
-Ja gute Frage ( kommt noch)
-
 ## Offene Issues / Bugs
+
+Die Weiterentwicklung von Leaflet basiert hauptsächlich auf Issues und Requests im Github. Einerseits werden dort 
+Bugs gemeldet sowie neue Features angefragt. Für diese Weiterentwicklung müssen sich Entwickler verantwortlich fühlen und 
+diese Tickets dann bearbeiten. Hierbei besteht das Risiko, dass unangenehme Tickets liegen bleiben und somit Bugs bestehen bleiben obwohl 
+sie bekannt sind
 
 ####
 
-## Fehlende Dokumentation
- Devs in Open Sourve machen keine Doku
-#### 
+Eine aktive Entwicklercommunity und Firmen die diese Software nutzen sollen helfen, dass möglichst sämtliche Issues abgearbeitet werden.
+
+## Fehlende Dokumentation & diverser Programmierstil
+Neue Features und Plugins sind Entwicklungen von Entwicklern die nicht unbedingt den besten Coding-Stil haben. Es kann somit erschwert werden, 
+dass außenstehende den Code von bestimmten Features und Plugins verstehen. 
+
+#### Risikominderung
+
+Neue Plugins müssen bevor der Pull-Request akzeptiert wird eine Dokumentation ihres Codes schreiben. Andernfalls wird der Request nicht akzeptiert. 
+Damit der Code in einem einheitlichen Stil ist wird ein allgemeiner Stil festgelegt. 
+
+## Keine Drittsoftware im Core
+
+Die Entscheidung keine Abhängigkeiten von anderen Projekten einzubauen ist aus Performance-Sicht sinnvoll.
+Sie kann jedoch problematisch werden, denn sollten sich im Lebenslauf von Leaflet die Anforderungen so ändern, dass
+Anforderungen tiefergehende Entwicklungen benötigen so muss sämtlicher Code selbst geschrieben werden und dies kann
+sich insofern als schwierig gestalten, dass bestimmte Projekte von sich aus sehr umfangreich werden oder das benötigte Know-How
+bereits existiert (in externen Bibliotheken), jedoch nicht benutzt werden kann.
+
+#### Risikominderung
+
+Da Leaflet einen Support für Plugins anbietet ist dieses Risiko verhältnismäßig klein. Problematisch wird es wenn
+kein Plugin für die benötigte Aufgabe existiert oder die Aufgabe standardmäßig in anderen Kartensoftware verfügbar ist
+und somit unbedingt in den Leaflet-Core muss jedoch durch die Komplexität nicht so einfach implementiert werden kann.
 
 # Glossar
 
