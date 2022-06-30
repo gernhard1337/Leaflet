@@ -594,7 +594,12 @@ Eine Batch wird als neue Version der leaflet erstellt, mit einem Bericht, der di
 
 ### Hochverfügbarkeit:
 
-Die Popularität des Projekts verschafft *Leaflet* eine Armee gut ausgebildeter Betreuer und Benutzer, die Probleme schnell erkennen und darauf reagieren können, und dies ist der Grund für die zuverlässige Verfügbarkeit von *Leaflet*.
+Die hohe Verfügbarkeit ist der Schlüsselfaktor von Leaflet und dies hat folgende wichtige Gründe:
+
+- Das Projekt besteht aus modularen Bausteinen, die leicht zu warten und zu ersetzen sind (siehe Bausteinansicht).
+- leaflet ist nicht auf externe Abhängigkeiten angewiesen, was es robust und eigenständig macht.
+- Das Projekt lässt sich gut mit Plugins von Drittanbietern integrieren, wodurch es immer über die neuesten Trends auf dem Laufenden bleibt.
+- Die Popularität des Projekts verschafft *Leaflet* eine Armee gut ausgebildeter Betreuer und Benutzer Probleme, die schnell erkennen und darauf reagieren können, und dies ist der Grund für die Zuverlässigkeit von *Leaflet*.
 
 ### Administration and Management:
 
