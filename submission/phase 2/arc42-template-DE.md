@@ -460,7 +460,7 @@ Da alle Leaflet-Services öffentlich zugänglich sind und keine Authentifizierun
 
 *Leaflet* verwendet CI/CD-Konzepte und *Git* Pipelines, um sicherzustellen, dass alle Funktionen vor jeder Veröffentlichung testbar und funktionsfähig sind.
 
-### Testability
+### Testability:
 Das Projekt enthält JUnit-Tests am Standardspeicherort jeder Komponente des Projekts. Zum Zeitpunkt des Schreibens decken diese Tests fast den gesamten geschriebenen Code ab. Tests müssen während des Builds ausgeführt werden und sollten nicht übersprungen werden.
 
 ### Migration:
@@ -483,7 +483,7 @@ Allgemeine Konfiguration der Benutzerinteraktion mit dem System. Und das sind ha
 |  dragging  |  Boolean  |   true |  Ob die Karte per Maus/Berührung ziehbar ist oder nicht. |
 |  trackResize  | Boolean    |  true |  Ob die Karte automatisch die Größe des Browserfensters ändert, um sich selbst zu aktualisieren. |
 
-- **Keyboard Navigation Options**
+- **Keyboard Navigation Options:**
 Es konfiguriert, wie der Benutzer mit dem System über die Tastatur interagiert:
 
 | option  |  type | default  |  description |
@@ -531,11 +531,11 @@ Die Fehlerbehandlung bei inkonsistenten Daten (in Bezug auf die Einschränkung d
 
 Leaflet.JS bietet nur eine zustandslose öffentliche API, es gibt keine Sitzungsbehandlung.
 
-### Communication/Integration:
+### Kommunikation/Integration:
 
 Die Kommunikation zwischen den Endbenutzern, Entwicklern und Betreuern findet hauptsächlich im Issues bereich und in den Community-Kanälen statt.
 
-### Plugin Concept and Development
+### Plugin Konzept und Development:
 
 Leaflet-Dienste lassen sich mit Plugins von Drittanbietern integrieren. Das Erstellen und Implementieren eines Plugins ist auf der [Leaflet-Website](https://github.com/Leaflet/Leaflet/blob/main/PLUGIN-GUIDE.md "Leaflet-Website") gut dokumentiert . 
 
