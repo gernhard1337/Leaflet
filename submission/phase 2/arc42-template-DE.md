@@ -594,7 +594,7 @@ Eine Batch wird als neue Version der leaflet erstellt, mit einem Bericht, der di
 
 ### Hochverfügbarkeit:
 
-Die hohe Verfügbarkeit ist der Schlüsselfaktor von Leaflet und dies hat folgende wichtige Gründe:
+Die Hochverfügbarkeit ist der Schlüsselfaktor von Leaflet und dies hat folgende wichtige Gründe:
 
 - Das Projekt besteht aus modularen Bausteinen, die leicht zu warten und zu ersetzen sind (siehe Bausteinansicht).
 - leaflet ist nicht auf externe Abhängigkeiten angewiesen, was es robust und eigenständig macht.
