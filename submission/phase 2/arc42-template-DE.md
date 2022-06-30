@@ -453,7 +453,63 @@ Da alle Leaflet-Services öffentlich zugänglich sind und keine Authentifizierun
 ## *Entwicklungskonzepte* 
 
 -   **Build, Test, Deploy:** *Leaflet* verwendet CI/CD-Konzepte und *Git* Pipelines, um sicherzustellen, dass alle Funktionen vor jeder Veröffentlichung testbar und funktionsfähig sind.
--   **Konfigurierbarkeit:** Das Projekt und die Karten sind anpassbar und können immer an die Bedürfnisse des Benutzers angepasst werden (z.b. Positionen, *Marker*, *Styles*, Elemente).
+-   **Migration:** Das Projekt hat ein hohes Maß an Flexibilität, da es auf vielen Plattformen bzw. *Browsers* ausgeführt werden kann, was die Migration des Codes von einer Umgebung in eine andere ermöglicht.
+-   **Codegenerierung:** Der Quellcode des Projekts wird nicht durch die Architektur oder Metamodelle generiert. Es wird manuell von *Contributors* und Entwicklern erstellt.
+-   **Konfigurierbarkeit:** 
+Leaflet bietet eine Fülle von Konfigurationsoptionen, mit denen die Benutzererfahrung an die Bedürfnisse des Entwicklers angepasst werden kann. Die Standardkonfiguration ist bei der Initialisierung immer verfügbar unter `map.map.js` , und der Entwickler kann während oder nach der Initialisierung der Karte zusätzliche Eigenschaften hinzufügen.
+
+#### Die Konfigurationsoptionen sind kategorisiert in:
+
+**Interaktionsmöglichkeiten: **
+Allgemeine Konfiguration der Benutzerinteraktion mit dem System. Und das sind hauptsächlich die Optionen, die das Zoomen, das Ansichtsfenster und das Ziehen steuern. Am wichtigsten:
+
+| option  |  type | default  |  description | 
+| ------------ | ------------ | ------------ | ------------ |
+|  doubleclickzoom | Boolean-String  |  true  | Ob die Karte durch Doppelklick vergrößert und durch Doppelklick verkleinert werden kann |
+|  dragging  |  Boolean  |   true |  Ob die Karte per Maus/Berührung ziehbar ist oder nicht. |
+|  trackResize  | Boolean    |  true |  Ob die Karte automatisch die Größe des Browserfensters ändert, um sich selbst zu aktualisieren. |
+
+- **Keyboard Navigation Options**
+Es konfiguriert, wie der Benutzer mit dem System über die Tastatur interagiert:
+
+| option  |  type | default  |  description |
+| ------------ | ------------ | ------------ | ------------ |
+|  keyboard |  Boolean  |true | Macht die Karte fokussierbar und ermöglicht Benutzern das Navigieren auf der Karte mit Tastaturpfeilen und +/- Tasten.  |
+|  keyboardPanDelta  | Number   |  80 | Anzahl der zu verschiebenden Pixel beim Drücken einer Pfeiltaste.  |
+
+- **Mouse wheel options**
+Es konfiguriert, wie der Benutzer mit dem System über die *Mouse wheel* interagiert:
+
+| option  |  type | default  |  description |
+| ------------ | ------------ | ------------ | ------------ |
+|  scrollWheelZoom  |  Boolean-String | true    | Ob die Karte mit dem Mausrad gezoomt werden kann. Wenn 'center' übergeben wird, zoomt es auf die Mitte der Ansicht, unabhängig davon, wo sich die Maus befindet. | 
+
+
+**Map State Options:**
+Optionen, die steuern, was der Benutzer auf der Karte sieht und wie sich der Status der Karte ändert. Am wichtigsten sind die Optionen:
+
+| option  |  type | default  |  description 
+| ------------ | ------------ | ------------ | ------------ |
+| layers   | layer []  | []  | Array von Layern, die der Karte anfänglich hinzugefügt werden |
+|center | LatLng  |  undefined | Ursprünglicher geographischer Mittelpunkt der Karte |
+|  maxZoom  | Number   | *  |  Maximale Zoomstufe der Karte. Wenn nicht angegeben und mindestens ein GridLayer oder TileLayer in der Karte vorhanden ist, wird stattdessen die höchste ihrer maxZoom-Optionen verwendet. |
+
+**Animation Options:**
+Konfiguration der verschiedenen Animationsoptionen:
+
+| option  |  type | default  |  description | 
+| ------------ | ------------ | ------------ | ------------ |
+|  zoomAnimation | Boolean   |   true  | Ob die Karten-Zoom-Animation aktiviert ist. Standardmäßig ist es in allen Browsern aktiviert, die CSS3-Übergänge unterstützen, mit Ausnahme von Android. | 
+|  markerZoomAnimation  | Boolean   |  true   | Unabhängig davon, ob Markierungen ihren Zoom mit der Zoom-Animation animieren, verschwinden sie für die Dauer der Animation, wenn sie deaktiviert sind. Standardmäßig ist es in allen Browsern aktiviert, die CSS3-Übergänge unterstützen, mit Ausnahme von Android. | 
+
+> Weitere konfigurierbar Optionen sind **events**, **Marker**, **location** und **zoom**. Unter [leaflet docs](http://leafletjs.com/reference.html "leaflet docs") sind alle Optionen gelistet.
+
+
+
+
+
+
+
 -   **Migration:** Das Projekt hat ein hohes Maß an Flexibilität, da es auf vielen Plattformen bzw. *Browsers* ausgeführt werden kann, was die Migration des Codes von einer Umgebung in eine andere ermöglicht.
 -   **Codegenerierung:** Der Quellcode des Projekts wird nicht durch die Architektur oder Metamodelle generiert. Es wird manuell von *Contributors* und Entwicklern erstellt.
 
