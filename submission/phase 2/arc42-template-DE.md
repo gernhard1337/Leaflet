@@ -588,7 +588,14 @@ Da es sich um ein Open-Source-Projekt handelt, entspricht dieses Konzept dem con
 
 ### Batch & Reporting:
 
-Eine Batch wird als neue Version der leaflet erstellt, mit einem Bericht, der die Verbesserungen in dieser Batch erläutert.
+Normalerweise wird ein *Batch* erstellt, um viele Probleme und Fehlerbehebungen im Projekt zu schließen. Der Prozess folgt einem allgemeinen Konzept, bei dem:
+
+- Die Community oder die Admins melden eine Gruppe von Problemen mit unterschiedlichen Prioritäten und schlagen den Betreuern Lösungen vor.
+- Die alte Version des Projekts wird als alte Version gespeichert.
+- Die neue Version der Bibliothek wird automatisch auf NPM veröffentlicht dank eines *CRON JOB*  mit *Git*.
+- Das neue Release mit seinem Bericht wird auf der Website sowie auf github dokumentiert
+
+Die Entwickler erhalten dann den neuen Batch, indem sie den Befehl `npm update` oder `npm upgrade`in ihren Projekten ausführen
 
 ## Betriebskonzepte
 
