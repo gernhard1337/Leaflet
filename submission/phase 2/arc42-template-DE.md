@@ -452,15 +452,16 @@ Da alle Leaflet-Services öffentlich zugänglich sind und keine Authentifizierun
 
 ## *Entwicklungskonzepte* 
 
-##### Build, Test, Deploy:
+###  Build, Test, Deploy:
 
 *Leaflet* verwendet CI/CD-Konzepte und *Git* Pipelines, um sicherzustellen, dass alle Funktionen vor jeder Veröffentlichung testbar und funktionsfähig sind.
-##### Migration:
 
+### **Migration:** 
 Das Projekt hat ein hohes Maß an Flexibilität, da es auf vielen Plattformen bzw. *Browsers* ausgeführt werden kann, was die Migration des Codes von einer Umgebung in eine andere ermöglicht.
-##### Codegenerierung:
 
+### Codegenerierung:
 Der Quellcode des Projekts wird nicht durch die Architektur oder Metamodelle generiert. Es wird manuell von *Contributors* und Entwicklern erstellt.
+
 ### **Konfigurierbarkeit:** 
 Leaflet bietet eine Fülle von Konfigurationsoptionen, mit denen die Benutzererfahrung an die Bedürfnisse des Entwicklers angepasst werden kann. Die Standardkonfiguration ist bei der Initialisierung immer verfügbar unter `map.map.js` , und der Entwickler kann während oder nach der Initialisierung der Karte zusätzliche Eigenschaften hinzufügen. Die Konfigurationsoptionen sind kategorisiert in:
 
@@ -510,17 +511,6 @@ Konfiguration der verschiedenen Animationsoptionen:
 
 > Weitere konfigurierbar Optionen sind **events**, **Marker**, **location** und **zoom**. Unter [leaflet docs](http://leafletjs.com/reference.html "leaflet docs") sind alle Optionen gelistet.
 
-
-
-
-
-
-
-### **Migration:** 
-Das Projekt hat ein hohes Maß an Flexibilität, da es auf vielen Plattformen bzw. *Browsers* ausgeführt werden kann, was die Migration des Codes von einer Umgebung in eine andere ermöglicht.
-
-### Codegenerierung:
-Der Quellcode des Projekts wird nicht durch die Architektur oder Metamodelle generiert. Es wird manuell von *Contributors* und Entwicklern erstellt.
 
 ## *Unter-der-Haube* 
 
