@@ -761,6 +761,14 @@ Wissen benötigt.
 
 Ja gute Frage ( kommt noch)
 
+## Offene Issues / Bugs
+
+####
+
+## Fehlende Dokumentation
+ Devs in Open Sourve machen keine Doku
+#### 
+
 # Glossar
 
 Hier sind wesentliche, wichtige Begriffe aus fachlicher und technischer Sicht 
