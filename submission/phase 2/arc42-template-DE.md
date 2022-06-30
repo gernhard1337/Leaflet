@@ -465,7 +465,7 @@ Der Quellcode des Projekts wird nicht durch die Architektur oder Metamodelle gen
 Leaflet bietet eine Fülle von Konfigurationsoptionen, mit denen die Benutzererfahrung an die Bedürfnisse des Entwicklers angepasst werden kann. Die Standardkonfiguration ist bei der Initialisierung immer verfügbar unter `map.map.js` , und der Entwickler kann während oder nach der Initialisierung der Karte zusätzliche Eigenschaften hinzufügen. Die Konfigurationsoptionen sind kategorisiert in:
 
 
-##### Interaktionsmöglichkeiten: 
+#### Interaktionsmöglichkeiten: 
 
 Allgemeine Konfiguration der Benutzerinteraktion mit dem System. Und das sind hauptsächlich die Optionen, die das Zoomen, das Ansichtsfenster und das Ziehen steuern. Am wichtigsten:
 
@@ -491,7 +491,7 @@ Es konfiguriert, wie der Benutzer mit dem System über die *Mouse wheel* interag
 |  scrollWheelZoom  |  Boolean-String | true    | Ob die Karte mit dem Mausrad gezoomt werden kann. Wenn 'center' übergeben wird, zoomt es auf die Mitte der Ansicht, unabhängig davon, wo sich die Maus befindet. | 
 
 
-##### Map State Options:
+#### Map State Options:
 Optionen, die steuern, was der Benutzer auf der Karte sieht und wie sich der Status der Karte ändert. Am wichtigsten sind die Optionen:
 
 | option  |  type | default  |  description 
@@ -500,7 +500,7 @@ Optionen, die steuern, was der Benutzer auf der Karte sieht und wie sich der Sta
 |center | LatLng  |  undefined | Ursprünglicher geographischer Mittelpunkt der Karte |
 |  maxZoom  | Number   | *  |  Maximale Zoomstufe der Karte. Wenn nicht angegeben und mindestens ein GridLayer oder TileLayer in der Karte vorhanden ist, wird stattdessen die höchste ihrer maxZoom-Optionen verwendet. |
 
-##### Animation Options:
+#### Animation Options:
 Konfiguration der verschiedenen Animationsoptionen:
 
 | option  |  type | default  |  description | 
