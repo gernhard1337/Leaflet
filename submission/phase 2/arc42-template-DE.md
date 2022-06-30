@@ -469,7 +469,7 @@ Das Projekt hat ein hohes Maß an Flexibilität, da es auf vielen Plattformen bz
 ### Codegenerierung:
 Der Quellcode des Projekts wird nicht durch die Architektur oder Metamodelle generiert. Es wird manuell von *Contributors* und Entwicklern erstellt.
 
-### **Konfigurierbarkeit:** 
+### Konfigurierbarkeit:
 Leaflet bietet eine Fülle von Konfigurationsoptionen, mit denen die Benutzererfahrung an die Bedürfnisse des Entwicklers angepasst werden kann. Die Standardkonfiguration ist bei der Initialisierung immer verfügbar unter `map.map.js` , und der Entwickler kann während oder nach der Initialisierung der Karte zusätzliche Eigenschaften hinzufügen. Die Konfigurationsoptionen sind kategorisiert in:
 
 
@@ -523,10 +523,25 @@ Konfiguration der verschiedenen Animationsoptionen:
 
 Der Leaflet-Verbesserungsprozess beginnt mit der Erstellung von Issue-Ticks von den Endnutzern bzw. Entwickler an die maintainers.
 
--   **Communication/Integration:** Die Kommunikation zwischen den Endbenutzern, Entwicklern und Betreuern findet hauptsächlich im Issues bereich und in den Community-Kanälen statt.
--   **Parallellisierung/Threading:** kein solches Konzept im Projekt.
--   **Geschäftsregeln:** Da es sich um ein Open-Source-Projekt handelt, entspricht dieses Konzept dem contribution Richtlinien sowie die Gebrauchsanweisung.
--   **Batch & Reporting:** Eine Batch wird als neue Version der leaflet erstellt, mit einem Bericht, der die Verbesserungen in dieser Batch erläutert.
+### Ausnahme-/Fehlerbehandlung:
+
+Die Fehlerbehandlung bei inkonsistenten Daten (in Bezug auf die Einschränkung des Datenmodells) sowie Fehler bei der Validierung werden HTTP-Fehlern zugeordnet (404 code). Diese Fehler werden vom Controller-Code des Frontends behandelt. Technische Fehler (Hardware, Datenbank etc.) werden nicht behandelt und können zu Anwendungsausfällen oder Datenverlust führen.
+
+### Communication/Integration:
+
+Die Kommunikation zwischen den Endbenutzern, Entwicklern und Betreuern findet hauptsächlich im Issues bereich und in den Community-Kanälen statt.
+
+### Parallellisierung/Threading:
+
+Leaflet arbeitet mit einer Single-Thread-Nutzung. Multi-Threading wird nicht unterstützt.
+
+### Geschäftsregeln:
+
+Da es sich um ein Open-Source-Projekt handelt, entspricht dieses Konzept dem contribution Richtlinien sowie die Gebrauchsanweisung in der Dokumentationen.
+
+### Batch & Reporting:
+
+Eine Batch wird als neue Version der leaflet erstellt, mit einem Bericht, der die Verbesserungen in dieser Batch erläutert.
 
 ## *Betriebskonzepte*
 
