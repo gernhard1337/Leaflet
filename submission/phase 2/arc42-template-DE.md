@@ -542,7 +542,7 @@ Leaflet-Dienste lassen sich mit Plugins von Drittanbietern integrieren. Das Erst
 Jedes Leaflet-Plugin sollte die folgende Architektur haben, um sich gut in die Architektur zu integrieren:
 
     |-- L.MyPlugin
-    |--|--|  src  -  JS source files
+    |--|--| src  -  JS source files
     |--|--| dist  - minified plugin JS, CSS, images
     |--|--| spec  - test files
     |--|--| lib - any external libraries/plugins if necessary
@@ -552,7 +552,7 @@ Jedes Leaflet-Plugin sollte die folgende Architektur haben, um sich gut in die A
     |--|--| package.json
 
 
-Für Leaflet wird eine zusätzliche Plugin-API erstellt. Der Zugriff auf Elemente mit einem Plugin kann so einfach sein wie das Aufrufen einer Leaflet-Klasse` L.marker` mit den benutzerdefinierten Funktionen und Optionen des Plugins:
+Für Leaflet wird eine zusätzliche Plugin-API erstellt. Der Zugriff auf Elemente mit einem Plugin kann so einfach sein wie das Aufrufen einer Leaflet-Klasse `L.marker` mit den benutzerdefinierten Funktionen und Optionen des Plugins:
 
     marker.myPlugin('bla', {
     	optionOne: 'foo',
