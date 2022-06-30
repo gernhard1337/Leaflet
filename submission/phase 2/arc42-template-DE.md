@@ -535,6 +535,47 @@ Leaflet.JS bietet nur eine zustandslose öffentliche API, es gibt keine Sitzungs
 
 Die Kommunikation zwischen den Endbenutzern, Entwicklern und Betreuern findet hauptsächlich im Issues bereich und in den Community-Kanälen statt.
 
+### Plugin Concept and Development
+
+Leaflet-Dienste lassen sich mit Plugins von Drittanbietern integrieren. Das Erstellen und Implementieren eines Plugins ist auf der [Leaflet-Website](https://github.com/Leaflet/Leaflet/blob/main/PLUGIN-GUIDE.md "Leaflet-Website") gut dokumentiert . 
+
+Jedes Leaflet-Plugin sollte die folgende Architektur haben, um sich gut in die Architektur zu integrieren:
+|-- L.MyPlugin
+|--|--|  src  -  JS source files
+|--|--| dist  - minified plugin JS, CSS, images
+|--|--| spec  - test files
+|--|--| lib - any external libraries/plugins if necessary
+|--|--| examples   - HTML examples of plugin usage
+|--|--| README.md
+|--|--| LICENSE
+|--|--| package.json
+
+Für Leaflet wird eine zusätzliche Plugin-API erstellt. Der Zugriff auf Elemente mit einem Plugin kann so einfach sein wie das Aufrufen einer Leaflet-Klasse` L.marker` mit den benutzerdefinierten Funktionen und Optionen des Plugins:
+
+    marker.myPlugin('bla', {
+    	optionOne: 'foo',
+    	optionThree: 5
+    });
+
+Das Plugin sollte auf *NPM* (Node Package Modules Manager) mit spezifischen Metadaten veröffentlicht werden, damit das Plugin mit *Leaflet* kompatibel ist:
+
+    {
+      "name": "my-leaflet-plugin",
+      "version": "1.0.0",
+      "description": "A simple leaflet plugin.",
+      "main": "my-plugin.js",
+      "author": "You",
+      "license": "IST",
+      "peerDependencies": {
+        "leaflet": "^1.0.0"
+      }
+    }
+	
+
+Das Plugin wird dann von den Maintainers überprüft und der Liste der Leaflet-Plugins hinzugefügt, damit es öffentlich zugänglich ist.
+
+
+
 ### Parallellisierung/Threading:
 
 Leaflet arbeitet mit einer Single-Thread-Nutzung. Multi-Threading wird nicht unterstützt.
