@@ -543,11 +543,18 @@ Da es sich um ein Open-Source-Projekt handelt, entspricht dieses Konzept dem con
 
 Eine Batch wird als neue Version der leaflet erstellt, mit einem Bericht, der die Verbesserungen in dieser Batch erläutert.
 
-## *Betriebskonzepte*
+## Betriebskonzepte
 
--   **Hochverfügbarkeit:** Die Popularität des Projekts verschafft *Leaflet* eine Armee gut ausgebildeter Betreuer und Benutzer, die Probleme schnell erkennen und darauf reagieren können, und dies ist der Grund für die zuverlässige Verfügbarkeit von *Leaflet*.
--   **Administration and Management:**  Maintainer überprüfen alle Pull-Requests und sie werden von den Hauptadministratoren von *Leaflet* eingebracht. Leaflet-Administratoren stehen dem Ersteller von *Leafletjs* am nächsten.
--   **Disaster recovery** : ein Rollback auf eine alte Version.
+### Hochverfügbarkeit:
+
+Die Popularität des Projekts verschafft *Leaflet* eine Armee gut ausgebildeter Betreuer und Benutzer, die Probleme schnell erkennen und darauf reagieren können, und dies ist der Grund für die zuverlässige Verfügbarkeit von *Leaflet*.
+
+### Administration and Management:
+
+Maintainer überprüfen alle Pull-Requests und sie werden von den Hauptadministratoren von *Leaflet* eingebracht. Leaflet-Administratoren stehen dem Ersteller von *Leafletjs* am nächsten.
+
+### Disaster recovery: 
+ein Rollback auf die alte Version, bis die Probleme mit der aktuellen Version behoben sind.
 
 
 >alle anderen nicht erwähnten Attribute von arc42 Querschnittliche Konzepte sind optional und entsprechen nicht der Projektidee von Leaflet JS.
