@@ -456,11 +456,14 @@ Da alle Leaflet-Services öffentlich zugänglich sind und keine Authentifizierun
 
 ## *Entwicklungskonzepte* 
 
-###  Build, Test, Deploy:
+###  Build & Deploy:
 
 *Leaflet* verwendet CI/CD-Konzepte und *Git* Pipelines, um sicherzustellen, dass alle Funktionen vor jeder Veröffentlichung testbar und funktionsfähig sind.
 
-### **Migration:** 
+### Testability
+Das Projekt enthält JUnit-Tests am Standardspeicherort jeder Komponente des Projekts. Zum Zeitpunkt des Schreibens decken diese Tests fast den gesamten geschriebenen Code ab. Tests müssen während des Builds ausgeführt werden und sollten nicht übersprungen werden.
+
+### Migration:
 Das Projekt hat ein hohes Maß an Flexibilität, da es auf vielen Plattformen bzw. *Browsers* ausgeführt werden kann, was die Migration des Codes von einer Umgebung in eine andere ermöglicht.
 
 ### Codegenerierung:
