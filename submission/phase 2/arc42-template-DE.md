@@ -224,140 +224,74 @@ online-Dokumentation (auf Englisch!).
 <!--- ab hier Franziskas Part -->
 # Bausteinsicht
 
-## Whitebox Gesamtsystem
+## Ebene 1
+
+### Whitebox \<Leaflet>
 
 ![Übersichtsdiagramm](images/ebene1_building_blocks.png)
 
-### Begründung
+#### Begründung
 
-Bei der Nutzung von Leaflet steht die API im Vordergrund, dadurch ist es naheliegend diese als Whitebox für die Gesamtstruktur zu wählen. Für die Blackboxen wurde die interne Ordnerstruktur des Quellcodes gewählt, auf interne Schnittstellen jedoch verzichtet, zwecks Übersicht und mangelnder Wichtigkeit. Weiter wird die Möglichkeit der Plugin-Nutzung aufgezeigt, tatsächlicher Einfluss auf die einzelnen Komponenten hängt jedoch von den gewählten Plugins ab. Des Weiteren wird der Externe Zugriff von Websites, Software und Apps dargestellt. Auf eine weitere Abstraktion wurde verzichtet, da auf der nächst höheren Ebene nicht mehr Leaflet, sondern die externe Website, Software oder App im Vordergrund stünde.
+Es wurd eine funktionale Zerlegung zur Trennung der Verantwortlichkeiten gewählt:
+- Plugin steht stellvertretend für alle zu Leaflet kompatiblen Plugins
+- Aufteilung der Nutzer in Endtnutzer und Entwickler
+
+#### Enthaltene Bausteine
 
 | **Baustein** | **Beschreibung** |
 |-----------------------|-----------------------------------------------|
-| *Leaflet.js* | *Gewährt Zugriff auf Klassen und Funktionen von Leaflet* |
-| *control* | *Gewährleistet die Kartesteuerung* |
-| *core* | *Basisklassen, -funktionen und -methoden* |
-| *dom* | *DOM-Events und -Funktionen* |
-| *geo* | *Darstellung und Projektion geographischer Gegebenheiten * |
-| *geometry* | *Darstellung und Handhabung geometrischer Strukturen* |
-| *layer* | *Bereitstellung von Funktionen, die die Darstellung der Karte und Zusatzinformationen auf verschiedenen Ebenen gewährleistet* |
-| *map* | *Erstellung und Manipulation der Karte* |
+| *Leaflet Kern* | *Erstellung und Nutzung von Karten* |
+| *Plugin* | *Erweitert Leaflet um vom Entwickler ausgewählte Funktionalitäten* |
 
-### \blackbox (optional)
+#### Wichtige Schnittstellen
+
+| **Schnittstelle** | **Beschreibung** |
+|-----------------------|-----------------------------------------------|
+| *CDN* | *Inline Befehlszeile ermöglicht Zugriff auf die gehostete Version von Leaflet* |
+| *Build-System* | *npm kann für die lokale Implementierung von Leaflet genutzt werden* |
+| *Externe Webseiten* | *Nutzen Leaflet für die Erstellung und Nutzung von Karten* |
+
+#### Leaflet Kern (Blackbox)
 
 *\<Zweck/Verantwortung>*
+Leaflet Kern enthält die Kernfunktionen, Klassen und Methoden, die zur Erstellung und Nutzung von Karten benötigt werden.
 
 *\<Schnittstelle(n)>*
-
-*\<(Optional) Qualitäts-/Leistungsmerkmale>*
-
-*\<(Optional) Ablageort/Datei(en)>*
-
-*\<(Optional) Erfüllte Anforderungen>*
-
-*\<(optional) Offene Punkte/Probleme/Risiken>*
+| **Schnittstelle (Von-Bis)** | **Beschreibung** |
+|-----------------------|-----------------------------------------------|
+| ** | ** |
 
 ## Ebene 2
 
-### Whitebox *\<control>*
+### Whitebox *\<Leaflet Kern>*
 
-[Übersichtsdiagramm](ebene2_control_building_blocks.png)
+![Ebene2](images/ebene2_building_blocks.png)
 
-| **Baustein** | **Beschreibung** |
-|-----------------------|-----------------------------------------------|
-| *Attribution* | *Anzeige von Attributionsdaten in kleinen Textboxen * |
-| *Layers* | *Wechsel zwischen verschiedenen Basisebenen sowie das An- und Ausschalten von Overlays* |
-| *Scale* | *Steuerung der Skalierung* |
-| *Zoom* | *Steuerung der Zoofunktions* |
-| *Control* | *Basisklasse für die Kartensteuerung, handhabt Positionierung* |
+#### Begründung
 
-### Whitebox *\core*
 
-[Übersichtsdiagramm](ebene2_core_building_blocks.png)
+
+#### Enthaltene Blackboxes
 
 | **Baustein** | **Beschreibung** |
 |-----------------------|-----------------------------------------------|
-| *Browser* | *Browser- und Featureerkennung * |
-| *Class* | *Basisklasse* |
-| *Events* | *Sammlung von Methoden für eventbasierte Klassen* |
-| *Handler* | *Basisklasse für Handler* |
-| *Util* | *Samlung von Utility-Funktionen* |
-
-### Whitebox *\dom*
-
-[Übersichtsdiagramm](ebene2_dom_building_blocks.png)
-
-| **Baustein** | **Beschreibung** |
-|-----------------------|-----------------------------------------------|
-| *DomEvent.DoubleTap* | *Doppelklick-Spport für mobile Browser* |
-| *DomEvent.Pointer* | *Touch-Support für Internet Explorer und Windowsbasierte Geräte* |
-| *DomEvent* | * Sammlung von Utility-Funktionen, die mit DOM-Events arbeiten* |
-| *DomUtil* | *Sammlung von Utility-Funktionen, die mit DOM arbeiten* |
-| *Draggable* | *Klasse, die Dom-Elemente verschiebbar macht* |
-| *PosAnimation* | *Interne Nutzung für Schwenkanimationen * |
-
-### Whitebox *\geo*
-
-[Übersichtsdiagramm](ebene2_geo_building_blocks.png)
-
-| **Baustein** | **Beschreibung** |
-|-----------------------|-----------------------------------------------|
-| *crs* | *Koordinaten-Referenz-System: Projektion von geographischen Punkten zu Pixel-Koordinaten und zurück* |
-| *projection* | *Projektion von Längen- und Breitengraden auf der Karte* |
-| *LatLng* | *Repräsentation eines geographischen Punktes mit einem bestimmten Längen- und Breitengrad* |
-| *LatLngBounds* | *Repräsentation eines rechteckigen geographischen Gebietes auf der Karte* |
-
-### Whitebox *\geometry*
-
-[Übersichtsdiagramm](ebene2_geometry_building_blocks.png)
-
-| **Baustein** | **Beschreibung** |
-|-----------------------|-----------------------------------------------|
-| *Bounds* | *Repräsentiert rechteckiges Gebiet in Pixel-Koordinaten* |
-| *LineUtil* | *Verschiedene Untility-Funktionen zur Verarbeitung von Polylinienpunkten* |
-| *Point* | *Repräsentiert Punkt mit Pixel-Koordinaten* |
-| *PolyUtil* | *Verschiedene Utility-Kunktionen für polygonale Geometrien * |
-| *Transformation* | *affine Transformation (x,y) <--> (a*x + b, c*y + d)* |
-
-### Whitebox *\layer*
-
-[Übersichtsdiagramm](ebene2_layer_building_blocks.png)
-
-| **Baustein** | **Beschreibung** |
-|-----------------------|-----------------------------------------------|
-| *marker* | *Anzeige von beweglichen Icons auf der Karte* |
-| *tile* | *Laden und Anzeigen von Kachel-Ebenen auf der Karte* |
-| *vector* | *Anzeigen von Vektorebenen, erlaubt das Zeichnen von Vektor-Overlays* |
-| *DivOverlay* | *Basismodel für Overlays* |
-| *FeatureGroup* | *Features werden auf alle Layer einer Gruppe angewendet* |
-| *GeoJSON* | *Repräsentiert GeoJson Objekt und analysiert diese und zeigt sie auf der Karte an* |
-| *ImageOverlay* | *Lädt und zeigt einzelne Bilder an* |
-| *Layer* | *Methoden von der Layer-Basisklasse* |
-| *LayerGroup* | *Grupperen von Layern* |
-| *Popup* | *Zum Öffnen von Poups an bestimmten stellen auf der Karte* |
-| *SVGOverlay* | *Laden, Anzeigen und Bereitstellen vom DOM-Zugang zu SVG-Dateien* |
-| *Tooltip* | *Anzeigen von kleinen Texten über den Kartenebenen * |
-| *VideoOverlay* | *Laden und Anzeigen von Video-Playern* |
-
-
-### Whitebox *\map*
-
-[Übersichtsdiagramm](ebene2_map_building_blocks.png)
-
-| **Baustein** | **Beschreibung** |
-|-----------------------|-----------------------------------------------|
-| *handler* | *Handhabt Umgang mit Eingaben* |
-| *map* | *Erstellen und manipulieren der Karte* |
+| ** | ** |
+| ** | ** |
 
 # Laufzeitsicht
 
-Da es sich bei Leaflet um eine Bibliothek handelt, deren implementierung inline erfolgt, gibt es keine Laufzeitansicht. Zumindest keine in erwähnenswerter Komplexität.
+![Laufzeitsicht](images/runtime.png)
 
 # Verteilungssicht
 
+![Verteilungssicht](images/deployment.png)
+
 ## Infrastruktur
 
-Als Bibliothek vermeidet es Leaflet Anforderungen an Soft- und Hardware zu stellen. Leaflet unterstützt durch die Verwendung von HTML5 und CSS3 die meisten Desktop- und Mobil-Browser. Demenstprechend strebt Leaflet danach, auf möglichst jedem System zu funktionieren. Kurz, Leaflet läuft auf jeder Hardware, die Javasript unterstützt.
+| **Knoten / Artefakt** | **Beschreibung** |
+|-----------------------|-----------------------------------------------|
+| ** | ** |
+| ** | ** |
 
 <!--- ab hier Toms Part -->
 # Querschnittliche Konzepte
