@@ -1,126 +1,90 @@
-# Einführung und Ziele {#section-introduction-and-goals}
+# Leaflet - Architekturdokumentation
 
-Beschreibt die wesentlichen Anforderungen und treibenden Kräfte, die bei
-der Umsetzung der Softwarearchitektur und Entwicklung des Systems
-berücksichtigt werden müssen.
+Dieses Dokument stellt eine vollständige Architekturdokumentation für Leaflet dar. 
+Zur Erstellung dieser Dokumentation wurden sich diverser Reverse-Engineering Technicken angewendet
+da diese in der originalen Leaflet-Variante nicht vorhanden ist. 
 
-Dazu gehören:
+# Einführung und Ziele
 
--   zugrunde liegende Geschäftsziele,
--   wesentliche Aufgabenstellungen,
--   wesentliche funktionale Anforderungen,
--   Qualitätsziele für die Architektur und
--   relevante Stakeholder und deren Erwartungshaltung.
+Leaflet soll Entwicklern dabei helfen umfangreiche Funktionen in Karten zu implementieren und diese
+vor allem in verschiedenen Skalierungen immer zuverlässig darzustellen.
 
-## Aufgabenstellung {#_aufgabenstellung}
+## Aufgabenstellung 
 
-::: formalpara-title
-**Inhalt**
-:::
+Leaflet soll es einem Entwickler einfacher machen, Karten in einer interaktiven Art und Weise, zu implementieren.
+Hierfür kann er mit einer Recht einfachen JavaScript-Programmierung Elemente und vieles weitere auf einer Karte erstellen. 
+Eine einzelne Karte wie diese:
+![Aufgabe](images/goals.png)
 
-Kurzbeschreibung der fachlichen Aufgabenstellung, treibenden Kräfte,
-Extrakt (oder Abstract) der Anforderungen. Verweis auf (hoffentlich
-vorliegende) Anforderungsdokumente (mit Versionsbezeichnungen und
-Ablageorten).
+lässt sich durch einen minimalen Code erzeugen: 
 
-::: formalpara-title
-**Motivation**
-:::
+    var map = L.map('map').setView([51.505, -0.09], 13);
 
-Aus Sicht der späteren Nutzung ist die Unterstützung einer fachlichen
-Aufgabe oder Verbesserung der Qualität der eigentliche Beweggrund, ein
-neues System zu schaffen oder ein bestehendes zu modifizieren.
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
 
-::: formalpara-title
-**Form**
-:::
+    L.marker([51.5, -0.09]).addTo(map)
+    .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
+    .openPopup();
 
-Kurze textuelle Beschreibung, eventuell in tabellarischer Use-Case Form.
-Sofern vorhanden, sollte die Aufgabenstellung Verweise auf die
-entsprechenden Anforderungsdokumente enthalten.
+weitere simple Beispiele lassen sich [hier](https://leafletjs.com/examples.html) finden
 
-Halten Sie diese Auszüge so knapp wie möglich und wägen Sie Lesbarkeit
-und Redundanzfreiheit gegeneinander ab.
+Eine exakte Auflistung aller Aufgaben die Leaflet erfüllen soll lässt sich [hier](https://github.com/gernhard1337/Leaflet/blob/SE-GA/submission/phase%201/scoping_document.md#requirements)  finden.
 
-Siehe [Anforderungen und Ziele](https://docs.arc42.org/section-1/) in
-der online-Dokumentation (auf Englisch!).
+## Qualitätsziele
 
-## Qualitätsziele {#_qualit_tsziele}
+Da Leaflet eine Unterstüzung für diverse Webprojekte sein soll ergeben sich hierdurch einige besonders wichtige 
+Qualitäsziele. Eine Einhaltung dieser ist inhärent wichtig und darf unter keinen Umständen vernachlässigt werden. 
+Diese Ziele sind vor allem: Zuverlässigkeit, Leistungseffizienz, Betreibbarkeit und Übertragbarkeit. 
+Es ist wichtig hier diese Ziele näher zu erklären, da spätere Entscheidungen in der Architektur und Umsetzung immer 
+zugunsten dieser Ziele zu fällen sind. 
+Im folgenden wird näher definiert wieso genau diese Punkte von äußerster Wichtigkeit sind: 
 
-::: formalpara-title
-**Inhalt**
-:::
+#### Zuverlässigkeit
 
-Die Top-3 bis Top-5 der Qualitätsanforderungen für die Architektur,
-deren Erfüllung oder Einhaltung den maßgeblichen Stakeholdern besonders
-wichtig sind. Gemeint sind hier wirklich Qualitätsziele, die nicht
-unbedingt mit den Zielen des Projekts übereinstimmen. Beachten Sie den
-Unterschied.
+Da Leaflet in anderen Projekten verwendet wird und kein einzelnes Projekt ist, ist es wichtig, dass Leaflet zuverlässig funktioniert
+und keine Störungen hervorruft die andere Projekte stören. Denn andere Projekte verlassen sich darauf das deren importierten Abhängigkeiten 
+zuverlässig funktionieren. Dieses Vertrauen will und muss Leaflet bestätigen können.
 
-Hier ein Überblick möglicher Themen (basierend auf dem ISO 25010
-Standard):
+#### Leistungseffizienz
 
-![Kategorien von
-Qualitätsanforderungen](images/01_2_iso-25010-topics-DE.png)
+Leaflet wird vorrangig in Webprojekten verwandt. Um unnötigen Netzwerktraffic zu vermeiden, soll Leaflet effizient 
+arbeiten, um rücksicht auf andere zu nehmen, die dieses Netzwerk auch nutzen wollen. Außerdem sind heutzutage Seitenladezeiten
+wichtiger Bestandteil der User-Experience und der SEO-Optimierung (bevorzugung von schnellen Ladezeiten). Damit Leaflet kein Klotz
+ist der Webprojekte verlangsamt soll auf eine äußerst hohe Leistungseffizienz wert gelegt werden.
 
-::: formalpara-title
-**Motivation**
-:::
+#### Betreibbarkeit
 
-Weil Qualitätsziele grundlegende Architekturentscheidungen oft
-maßgeblich beeinflussen, sollten Sie die für Ihre Stakeholder relevanten
-Qualitätsziele kennen, möglichst konkret und operationalisierbar.
+Webprojekte haben immer kürzere Deployment-Zeiten und müssen auf schnelle Art und Weise entwickelt werden. Damit diese rasante Entwicklung weitergehen
+kann, soll Leaflet sicherstellen, dass es leicht zu erlernen ist und die gewünschten Funktionen bietet.
+Ein Entwickler wird hierfür dankbar sein, weil er dadurch ohne großen Aufwand eine vielzahl neuer Funktionen in sein Projekt bringen kann.
 
-::: formalpara-title
-**Form**
-:::
+#### Übertragbarkeit
 
-Tabellarische Darstellung der Qualitätsziele mit möglichst konkreten
-Szenarien, geordnet nach Prioritäten.
+Da Leaflet in Webprojekten verwendet wird, ist es nicht möglich sich domänenspezifisch festzulegen, ob das Gerät auf welchem 
+Leaflet nun verwendet wird ein Handy, ein Computer oder ein Tablet ist. Außerdem lässt sich nicht festlegen welches Betriebssystem 
+diese Geräte haben. Um die Zuverlässigkeit von Leaflet zu gewährleisten ist somit auch die Übertragbarkeit ein wichtiger Punkt für die 
+Entwicklung von Leaflet.
 
-## Stakeholder {#_stakeholder}
+## Stakeholder
 
-::: formalpara-title
-**Inhalt**
-:::
+Leaflet ist darauf ausgelegt, die Bedürfnisse und Wünsche von Entwicklern zu befriedigen. Nichts desto trotz definiert 
+Leaflet vier Stakeholder. Den Entwickler, den Nutzer, den Contributor und den Maintainer. Da Leaflet eine javascript Bibliothek für das Frontend
+ist wird die Funktionalität vor allem von Nutzern für optische bzw. visuelle Zwecke genutzt. 
+Nutzer sehen die Effekte von Leaflet vorallem durch einen Webbrowser während Entwickler Leaflet in ihren Projekten nutzen 
+damit sie gewünschte Effekte im Browser hervorrufen können.
+Contributor sind Entwickler die sich aktiv in die Entwicklung von Leaflet einbringen. Einer dieser Contributor wird als 
+Maintainer deklariert, dieser ist verantwortlich für Leaflet als ganzes.
 
-Expliziter Überblick über die Stakeholder des Systems -- über alle
-Personen, Rollen oder Organisationen --, die
+Die einzelnen Stakeholder nochmal aufgelistet:
 
--   die Architektur kennen sollten oder
-
--   von der Architektur überzeugt werden müssen,
-
--   mit der Architektur oder dem Code arbeiten (z.B. Schnittstellen
-    nutzen),
-
--   die Dokumentation der Architektur für ihre eigene Arbeit benötigen,
-
--   Entscheidungen über das System und dessen Entwicklung treffen.
-
-::: formalpara-title
-**Motivation**
-:::
-
-Sie sollten die Projektbeteiligten und -betroffenen kennen, sonst
-erleben Sie später im Entwicklungsprozess Überraschungen. Diese
-Stakeholder bestimmen unter anderem Umfang und Detaillierungsgrad der
-von Ihnen zu leistenden Arbeit und Ergebnisse.
-
-::: formalpara-title
-**Form**
-:::
-
-Tabelle mit Rollen- oder Personennamen, sowie deren Erwartungshaltung
-bezüglich der Architektur und deren Dokumentation.
-
-+-----------------+-----------------+-----------------------------------+
-| Rolle           | Kontakt         | Erwartungshaltung                 |
-+=================+=================+===================================+
-| *\<Rolle-1>*    | *\<Kontakt-1>*  | *\<Erwartung-1>*                  |
-+-----------------+-----------------+-----------------------------------+
-| *\<Rolle-2>*    | *\<Kontakt-2>*  | *\<Erwartung-2>*                  |
-+-----------------+-----------------+-----------------------------------+
+| Rolle | Kontakt | Erwartungshaltung |
+|-----------------------|-----------------------------------------------|-----------------------------------------|
+| Endnutzer | Hoffentlich unzählbar viele | Möglichst einfache, sinnvolle und performante Nutzung von Karten |
+| Entwickler | indirekt Trackbar über Einbindung der Dateien | Einfache Einbindung von Karten in diversere Webprojekte ohne diverse Abhängigkeiten|
+| Contributor | [Github Contributor-Liste](https://github.com/Leaflet/Leaflet/graphs/contributors) | Gute Nutzung des Projekts, sodass sich Weiterentwicklung lohnt |
+| Maintainer | [Github Maintainer](https://agafonkin.com) | Reibungsloser Ablauf der Weiterentwicklung und gelegentliches Eingreifen |
 
 # Randbedingungen {#section-architecture-constraints}
 
@@ -164,9 +128,7 @@ bezüglich der Architektur und deren Dokumentation.
 •	Beginn der Entwicklung am Anfang Juli 2022. Fertigstellung des Beitrags am Ende Juli 2022.
 
 
-
-
-# Kontextabgrenzung {#section-system-scope-and-context}
+# Kontextabgrenzung 
 
 ## Business Kontext
 
@@ -199,7 +161,7 @@ bezüglich der Architektur und deren Dokumentation.
 | *Leaflet Pulings databdase* | *Repo, wo alle Pulings gespeichert sind.* |
 
 
-# Lösungsstrategie {#section-solution-strategy}
+# Lösungsstrategie 
 
 ### Algemeine Ausblick 
 
@@ -576,8 +538,6 @@ Das Plugin sollte auf *NPM* (Node Package Modules Manager) mit spezifischen Meta
 
 Das Plugin wird dann von den Maintainers überprüft und der Liste der Leaflet-Plugins hinzugefügt, damit es öffentlich zugänglich wird.
 
-
-
 ### Parallellisierung/Threading:
 
 Leaflet arbeitet mit einer Single-Thread-Nutzung. Multi-Threading wird nicht unterstützt.
@@ -614,7 +574,6 @@ Es gibt keine Verwaltung von Benutzern oder Admins. Dennoch folgt die Verwaltung
 
 ### Disaster recovery: 
 Ein Rollback auf die alte Version, bis die Probleme mit der aktuellen Version behoben sind.
-
 
 >alle anderen nicht erwähnten Attribute von arc42 Querschnittliche Konzepte sind optional und entsprechen nicht der Projektidee von Leaflet JS.
 
@@ -814,6 +773,18 @@ und jeder seinen geschriebenen Code validieren kann.
 
 Im folgenden sind diverse erkannte Risiken, denen Leaflet ausgesetzt ist, aufgelistet. Diese sind nach Relevanz sortiert, sodass
 mit dem größten Risiko gestartet wird und mit dem kleinsten geendet wird.
+
+## Implementation von Kartenanbietern
+
+Ein großes Risiko von Leaflet ist, dass die Kartenbieter wie Google oder Openstreetmap ihre 
+Karten-API so anpassen, dass die Elemente welche von Leaflet geboten werden, direkt in der API 
+implementiert sind. Somit wäre Leaflet überflüssig und würde Funktionen nur doppelt implementieren,
+wahrscheinlich sogar langsamer als eine native Integration in eine Google-API. 
+
+#### Risikominderung
+
+Der Plugin-Support ermöglicht eine einfache Erweiterung des Projekts. Hierdurch sind neue Features einfacher
+zu implementieren, als darauf zu warten, dass diese in die API implementiert werden.
 
 ## Open - Source als Risiko
 
