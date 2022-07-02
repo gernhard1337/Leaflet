@@ -163,9 +163,7 @@ Die einzelnen Stakeholder nochmal aufgelistet:
 
 # Lösungsstrategie 
 
-## Algemeine Ausblick 
-
-### Leaflet Solution Strategy:
+## Leaflet Strategie:
 
 1.	Leaflet wurde als Open-Source-JavaScript-Bibliothek für mobilfreundliche interaktive Karten entwickelt.
 
@@ -182,7 +180,7 @@ Die einzelnen Stakeholder nochmal aufgelistet:
 *	Code Sicher durch backup
 
 
-### Unser Stratege:
+## Unsere Strategie:
 
 1.	Wir arbeiten in kleiner Gruppe aus 4 Entwickler, durch Reverse Engineering haben wir die Requirements herausgefunden. 
 2.	Wir versuchen möglichst die professionale Architektur für dies Projekt zu leisten.
