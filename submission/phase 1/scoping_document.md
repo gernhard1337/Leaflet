@@ -77,12 +77,15 @@ Leaflet is strongly aimed to satisfy the Developer's needs. Nonetheless, the Lib
 use Leaflet for their projects. Users will see effects from Leaflet through a Browser or any Project based on JavaScript. Users want Leaflet because it provides all the functions you would need on a map in your browser. Additionally, it is lightweight so a User will enjoy the library without even noticing that extra libraries were loaded.
 Developers will use Leaflet in their Projects because it provides an easy Interface to use Maps in projects and is also independent of the runtime since it is written in JavaScript so the developers don't have to care about System-Dependencies. Leaflet is a standalone Library so Leaflet will enhance the development process for developers.
 
+![EndUSer](./UseCase/Enduser.drawio.png)
+
 Enduser :
 Enduser is a natural or legal person who ultimately uses or is expected to use a product. End users usually do not have the technical understanding or skills of product developers. End users often do not know much about how the products or services they use were developed or how they work.
 In a literal sense, the term end user is used to distinguish the person who purchases and uses the good or service from the people involved in the design, development, and production phases.
 The end user can use maps in Leaflet without programming knowledge ,Simple, powerful and user-friendly.
 can show the end user the location of a place, village or city. They also help us show physical features of the earth or countries such as mountains, rivers, etc. They also show the political boundaries of states, nations or continents.
 
+![EndUSer](./UseCase/developer.drawio.png)
 Developer :
 A developer is an individual that builds and creates software and applications. He or she writes, debugs and executes the source code of a software application.
 A developer is also known as a software developer, computer programmer, programmer, software coder or software engineer.
