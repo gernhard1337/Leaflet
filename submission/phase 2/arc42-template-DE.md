@@ -163,11 +163,35 @@ Die einzelnen Stakeholder nochmal aufgelistet:
 
 # Lösungsstrategie 
 
-### Algemeine Ausblick 
+## Algemeine Ausblick 
 
-Wir arbeiten in kleiner Gruppe aus 4 Entwickler, durch Reverse Engineering haben wir die  Requirements herausgefunden. 
-Wir haben möglichst versucht, unsere Architektur auf den Funktionsanforderungen zu basieren und sie gut zu dokumentieren.
-In diesem Dokument haben wir präzisier und ausführlich erklärt, wie unsere gefolgte Politik aussieht.
+### Leaflet Solution Strategy:
+
+1.	Leaflet wurde als Open-Source-JavaScript-Bibliothek für mobilfreundliche interaktive Karten entwickelt.
+
+2.	Die Bibliothek nicht größer als 42 KB, um leichtes Gewicht zu garantieren.
+
+3.	Leaflet Architektur war nicht gut gebildet. Sie beschränkt sich nur auf einem Klassendiagramm, das sich auf Version 1.0.0 zurückführt. (von Volodymyr Agafonkin erzeugt). Aus diesem Grund hat die Leaflet Architektur Mangel an Prozessen, die sie verbessert.
+
+4.	Es existiert Leaflet Dokumentation, wo alle technischen Informationen zur Verfügung stehen. Die Informationen in Doku wurden ausführlich und gut beschrieben.
+
+5.	Einer Architekturstil wurde nicht klar in Doku erwähnt aber aufgrund der Bibliothek auf Repo sich befindet und Benetzter und Entwickler damit reagieren können, würde man sagen, dass Repository Stil verwendet wurde. 
+
+*	Komponenten können unabhängig sein.
+*	Änderungen, die von einer Komponente vorgenommen werden, können an alle Komponenten weitergegeben werden.
+*	Code Sicher durch backup
+
+
+### Unser Stratege:
+
+1.	Wir arbeiten in kleiner Gruppe aus 4 Entwickler, durch Reverse Engineering haben wir die Requirements herausgefunden. 
+2.	Wir versuchen möglichst die professionale Architektur für dies Projekt zu leisten.
+3.	Unsere Architektur wurde auf den Funktionsanforderungen basiert und gut dokumentiert.
+4.	Wir finden Repository Stil ist geeignet für dieses Projekt (wie vorher erwähnt)
+5.	Wir haben die Qualitätsattribute gut und präzise definieren.
+6.	Wir haben ausreichende Diagramme hinzugefügt, die das Benutzen der Architektur effizienter machen.
+
+
 
 
 | **Qualitätsziel** | **Lösungsansatz** |**Details** |
@@ -183,42 +207,6 @@ In diesem Dokument haben wir präzisier und ausführlich erklärt, wie unsere ge
 | *Modifiabilty* | *•	Durch CSS kann die Elemente ändern.* |*Qualitätsbaum -> Modifiabilty*|
 | *Maintainability* | *•	Open Source, so jeder an der Bearbeitung teilnehmen kann<br/> •	Gut dokumentiert.* |*Qualitätsbaum -> Reliability-> Maintainability*|
 | *Testability* | *•	Sollte ausreichende Testen ausgeführt werden* |*Qualitätsbaum -> Reliability-> Testability*|
-
-
-
--   Technologieentscheidungen
-
--   Entscheidungen über die Top-Level-Zerlegung des Systems,
-    beispielsweise die Verwendung gesamthaft prägender Entwurfs- oder
-    Architekturmuster,
-
--   Entscheidungen zur Erreichung der wichtigsten Qualitätsanforderungen
-    sowie
-
--   relevante organisatorische Entscheidungen, beispielsweise für
-    bestimmte Entwicklungsprozesse oder Delegation bestimmter Aufgaben
-    an andere Stakeholder.
-
-::: formalpara-title
-**Motivation**
-:::
-
-Diese wichtigen Entscheidungen bilden wesentliche „Eckpfeiler" der
-Architektur. Von ihnen hängen viele weitere Entscheidungen oder
-Implementierungsregeln ab.
-
-::: formalpara-title
-**Form**
-:::
-
-Fassen Sie die zentralen Entwurfsentscheidungen **kurz** zusammen.
-Motivieren Sie, ausgehend von Aufgabenstellung, Qualitätszielen und
-Randbedingungen, was Sie entschieden haben und warum Sie so entschieden
-haben. Vermeiden Sie redundante Beschreibungen und verweisen Sie eher
-auf weitere Ausführungen in Folgeabschnitten.
-
-Siehe [Lösungsstrategie](https://docs.arc42.org/section-4/) in der
-online-Dokumentation (auf Englisch!).
 
 
 <!--- ab hier Franziskas Part -->
