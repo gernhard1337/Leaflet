@@ -92,15 +92,15 @@ Die einzelnen Stakeholder nochmal aufgelistet:
 
 ### Leaflet muss sein:
 
-•	plattformunabhängig und auf allen wichtigsten Betriebssystemen und Browsern laufen.
+•	plattformunabhängig und auf allen wichtigsten Betriebssystemen und Browsern laufen (T1).
 
 •	Einheitliche Oberfläche.
 
 •	Entwicklung mit JavaScript. sollte auch in neueren Java-Versionen laufen, sofern verfügbar.
 
-•	intern und extern eingesetzt werden können (JS-Datei oder von einem CDN geladen).
+•	intern und extern eingesetzt werden können (JS-Datei oder von einem CDN geladen)(T6).
 
-•	eine minimale Codebasis haben.
+•	eine minimale Codebasis haben(T2).
 
 •	Das geschriebene Quellcode auskommentiert werden.
 
