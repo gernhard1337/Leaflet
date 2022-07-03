@@ -395,7 +395,7 @@ Aufbauend auf dem Baustein aus dem vorherigen Abschnitt können wir sehen, wie d
 | Baustein| Entsprechende Entität im Diagramm|
 | ------------ | ------------ |
 | UI  |  Knoten L.Layer und seine untergeordneten Knoten |
-|  Kern |  Knoten L.Map und seine untergeordneten Knoten|
+| Core |  Knoten L.Map und seine untergeordneten Knoten|
 | Util |  L.Util, L.Dom Util  und alle andere Knoten außer L.Class |
 
 
