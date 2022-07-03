@@ -590,7 +590,7 @@ Ein Rollback auf die alte Version, bis die Probleme mit der aktuellen Version be
 <a name="architekturentscheidungen"></a>
 # Architekturentscheidungen 
 
-Drei wichtige, weiter hervorzuhebende Entscheidungen die Leaflet betreffen wurden entschieden
+zwei wichtige, weiter hervorzuhebende Entscheidungen die Leaflet betreffen wurden entschieden
 und fanden bisher noch nicht ihre nötige Bergründung obwohl diese grundlegend sind. Daher findet dies
 hier statt.
 
@@ -613,10 +613,6 @@ eine Backend-basierte Lösung möglich gewesen. Die Backend-basierte Lösung fä
 da jede kleinste Interaktion eine neue Anfrage an Server mit entsprechender Antwort bedeuten würde und wir
 somit unser Ziel der Performance niemals einhalten könnten. TypeScript wurde nicht als Entwicklungssprache gewählt
 weil es erst 2012 veröffentlicht wurde, die Entwicklung an Leaflet jedoch schon 2011 began.
-
-## Verzicht auf jeglichen importierten Code aus anderen Projekten
-
-Hierdurch flogt blalbala beenden noch unbedingt. 
 
 <a name="qualittsanforderungen"></a>
 # Qualitätsanforderungen
@@ -858,6 +854,7 @@ Da Leaflet einen Support für Plugins anbietet ist dieses Risiko verhältnismä�
 kein Plugin für die benötigte Aufgabe existiert oder die Aufgabe standardmäßig in anderen Kartensoftware verfügbar ist
 und somit unbedingt in den Leaflet-Core muss jedoch durch die Komplexität nicht so einfach implementiert werden kann.
 <a name="glossar"></a>
+
 # Glossar
 
 Hier sind wesentliche, wichtige Begriffe aus fachlicher und technischer Sicht 
@@ -865,18 +862,18 @@ dokumentiert und erklärt. Hierbei werden vor allem die Sichten aller Stakeholde
 diese hier eine einfache Übersicht finden falls Begriffe unklar sind.
 
 
-| Term | Meaning |
+| Term | Bedeutung |
 |-----------------|--------------------|
-| JavaScript | The Programming Language Leaflet uses |
-| Stakeholder | Person or Group involved in the usage of Leaflet |
-| CDN | Content Delivery Network - deliver Code or Text fast from a Network of Servers |
-| Requirement(s) | Wishes and Needs for the project |
-| Vanilla JS | JavaScript out-of-the-box without any dependencies |
-| Mod / Plugin | Code that improves Leaflet without belonging to the Core of Leaflet |
-| Layer | a theme or overlay of the map |
-| popup | an information window that opens in the viewing frame of the map |
-| marker | a pin or an image that marks geographical locations on the map |
-| Tooltip | a window the same as a popup but for the locations |
-| Dependence | Libraries or Plugins from third-party providers |
-| End user | A person who interacts with the product with the intention of only using the product for his needs |
-| Developer | A person who interacts with the product with the intention of using the product for his needs and contributing to the development of the product |
+| JavaScript | Die Programmiersprache die Leaflet nutzt |
+| Stakeholder | Person oder Gruppe die mit Leaflet auf irgendeiner Art interagiert |
+| CDN | Content Delivery Network - Netzwerk von Servern die performant den Code ausliefern |
+| Requirement(s) | Wünsche und Anforderungen an das Projekt |
+| Vanilla JS | JavaScript ohne jegliche Abhängigkeiten |
+| Mod / Plugin | Code der Leaflet verbessert ohne direkt zum Leaflet-Kern zu gehören |
+| Layer | Ein Theme oder "Decke" für Leaflet |
+| popup | ein Hinweisfenster das auf verschiedene Art gesteuert werden kann |
+| marker | ein Pin oder Bild das Positionen auf einer Karte markiert |
+| Tooltip | Ein Fenster für Koordinaten |
+| Dependence | Abhängikeit von anderer Software |
+| End user | Der tatsächliche Nutzer der dann die Karte von Leaflet nutzt  |
+| Developer | Ein Entwickler der Leaflet in einem Projekt nutzt |
