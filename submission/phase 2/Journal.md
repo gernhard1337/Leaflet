@@ -25,22 +25,28 @@ den anderen Teammitgliedern überprüft und vereinzelt geändert.
 Zusammenfassung in einem Journal & abschließende Überprüfung.
 
 ## 06.06 - 15.06.
-Vorstellung
-Nachbearbeitung
+Vorstellung des scoping_documents und Besprechung von noch offenen Fragen & Fehlern. Hierbei wurde festgelegt was in der
+Nachbearbeitung alles enthalten sein muss. 
+Im Verlauf der vom 7.6 - 15.6 wurde dann an der Verbesserung gearbeitet
 
 ## 16.06. - 19.06.
 Part II
-Aufgabenverteilung
-Beginn der Berarbeitung
+
+Aufgabenverteilung der 12. Punkte von arc42. Hierbei hat jeder recht schnell seine Aufgabe bekommen und auch größtenteils
+jeder seine Wunschaufgaben. Daraufhin folgte die Bearbeitung von allen Teammitgliedern
 
 ## 20.06. - 26.06.
-Bearbeitung
-1. Version von Part II fertig
+Weiterarbeit von allen Teammitgliedern an den jeweiligen Aufgaben
 
 ## 27.06. - 3.06.
-Feedback
-Nachbearbeitung
-Finalisierung
+
+Am Montag den 27.6 folgte eine umfassende Diskussion in der Übung. Jedes Teammitglied war dabei anwesend und konnte 
+Feedback für seinen Teil mitnehmen. Da die Bearbeitungsteile überwiegend fertig waren, war die Kritik hier besonders wichtig
+da wir hierdurch hilfreiche Informationen für eine bessere Bearbeitung bekommen konnten.
+Bis zum 3.6 wurde dies dann Umgesetzt und bearbeitet.
+Am Nchmittag des 3.6 haben wir uns letztmals zusammengesetzt und in der Gruppe die Abgabe besprochen. Letzte Fehler wurden
+hierbei beseitigt und anschließend wurde unser Architekturdokument abgegeben.
+Eine Diskussion dieser folgt dann am 4.6
 
 
 
