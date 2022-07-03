@@ -7,9 +7,6 @@ da diese in der originalen Leaflet-Variante nicht vorhanden ist.
 # Gliederung 
 
 1. [Einführung und Ziele](#einfuhrung)
-   1. [Aufgabenstellung](#aufgabenstellung)
-   2. [Qualitätsziele](#qualitätsziele)
-   3. [Stakeholder](#stakeholder)
 2. [Randbedingungen](#randbedingungen)
 3. [Kontextabgrenzung](#kontextabgrenzung)
 4. [Lösungsstrategie](#lösungsstrategie)
