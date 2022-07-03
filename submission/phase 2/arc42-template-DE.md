@@ -939,11 +939,13 @@ diese hier eine einfache Übersicht finden falls Begriffe unklar sind.
 | End user | Der tatsächliche Nutzer der dann die Karte von Leaflet nutzt  |
 | Developer | Ein Entwickler der Leaflet in einem Projekt nutzt |
 | TOS | Terms of Service / Allgemeine Geschäfts und Nutzungsbedingungen |
-| Issue |  |
-| Bug |  |
-| Open-Source |  |
-| technische Schulden |  |
-| CSS |  |
-| HTML |  |
-| Deployment |  |
-
+| Issue | Ein Hinweis auf einen Fehler  |
+| Bug | Ein Fehler im Programm |
+| Open-Source | Ein öffentlich zugängliches Programm |
+| technische Schulden | Probleme und Risiken die in Zukunft auftreten können |
+| CSS | Eine Stilsprache für die Darstellung von HTML |
+| HTML | Eine Sprache um Webinhalte zu strukturieren |
+| Deployment | Inbetriebnahme eines Programms |
+| Contribution | Mitarbeit an einem Programm |
+| Rollback | Zurücksetzen eines Programms auf ältere Version |
+| NPM | Node-Paket-Manager ein Programm um Software zu verwalten |
