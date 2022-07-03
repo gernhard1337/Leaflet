@@ -476,7 +476,7 @@ Da alle Leaflet-Services öffentlich zugänglich sind und keine Authentifizierun
 Das Projekt enthält JUnit-Tests am Standardspeicherort jeder Komponente des Projekts. Zum Zeitpunkt des Schreibens decken diese Tests fast den gesamten geschriebenen Code ab. Tests müssen während des Builds ausgeführt werden und sollten nicht übersprungen werden.
 
 ### Migration:
-Das Projekt hat ein hohes Maß an Flexibilität, da es auf einfaches JS code basiert und für vielen Plattformen bzw. *Browsers* ausgeführt werden kann, was die Migration des Codes von einer Umgebung in eine andere ermöglicht.
+Das Projekt hat ein hohes Maß an Flexibilität, da es auf ein einfaches JS code basiert und für vielen Plattformen bzw. *Browsers* ausgeführt werden kann, was die Migration des Codes von einer Umgebung in eine andere ermöglicht.
 
 ### Codegenerierung:
 Der Quellcode des Projekts wird nicht durch die Architektur oder Metamodelle generiert. Es wird manuell von *Contributors* und Entwicklern erstellt.
