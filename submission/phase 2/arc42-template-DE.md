@@ -398,7 +398,7 @@ Hier kann ein *Layer* Pfad, Marker oder ein *Composite* sein.
 
 ## User Experience (UX) 
 
-Leaflet verwendet eine intuitive Benutzeroberfläche, um dem Benutzer eine erlernbare und vereinfachte Karte bereitzustellen.
+Leaflet verwendet eine intuitive Benutzeroberfläche, um dem Benutzer eine erlernbare und vereinfachte Karte bereitzustellen. Das Projekt basiert zusätzlich zu CSS3 und HTML auf einfachem js-Code und deshalb funktioniert die Bibliothek auf allen Plattformen, die diese Sprachen unterstützen.
 
 ### Internationalisierung
 
