@@ -590,9 +590,28 @@ Ein Rollback auf die alte Version, bis die Probleme mit der aktuellen Version be
 <a name="architekturentscheidungen"></a>
 # Architekturentscheidungen 
 
-zwei wichtige, weiter hervorzuhebende Entscheidungen die Leaflet betreffen wurden entschieden
+Drei wichtige, weiter hervorzuhebende Entscheidungen die Leaflet betreffen wurden entschieden
 und fanden bisher noch nicht ihre nötige Bergründung obwohl diese grundlegend sind. Daher findet dies
 hier statt.
+
+## Quellen der Karten
+
+Da Leaflet mit Karten arbeitet ist es wichtig zu betonen woher diese kommen. Es gab drei mögliche 
+Entscheidungen wie mit den Karten umgegangen wird: 
+1. Eigene Karten zur Verfügung stellen
+2. Einen Kartenanbieter (z.B. OpenStreeMap) als Partner nutzen
+3. Eine generalisierte Architektur die alle möglichen Karten unterstützt
+
+Es wurde sich hier für Option 3. entschieden. Dies war die richtige Entscheidung weil Option 
+1 zu viel Aufwand benötigen würde und der Aufwand in keinerlei Relation zum Nutzen stehen würde.
+Außerdem gibt es gute Anbieter von Kartendaten wie z.B. OpenStreetMap. 
+Gegen Option 2 wurde sich allerdings auch entschieden da Leaflet möglichst generalisierbar und unabhängig sein soll
+und man sich bei einem einzelnen Anbieter somit abhängig machen würde von ihm. Option 3 war dagegen 
+ideal da Leaflet so unabhängig bleibt und weltweit nutzbar wird, denn verschiedene Kartenanbieter haben
+verschiedene TOS und diese verbieten teilweise die Nutzung in verschiedenen Ländern. (z.B. Google Maps
+verbietet es andere Software über ihre Karten-API zu legen).
+Bedeutsam wird diese in der Layer Architektur von Leaflet. Als Basis-Layer fungiert die Karte
+und auf dieser werden alle anderen aufgelegt.
 
 ## Architektur für Plugin-Support
 
@@ -877,3 +896,5 @@ diese hier eine einfache Übersicht finden falls Begriffe unklar sind.
 | Dependence | Abhängikeit von anderer Software |
 | End user | Der tatsächliche Nutzer der dann die Karte von Leaflet nutzt  |
 | Developer | Ein Entwickler der Leaflet in einem Projekt nutzt |
+| TOS | Terms of Service / Allgemeine Geschäfts und Nutzungsbedingungen |
+
