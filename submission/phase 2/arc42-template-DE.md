@@ -402,7 +402,7 @@ Aufbauend auf dem Baustein aus dem vorherigen Abschnitt können wir sehen, wie d
 
 ## *Architektur-und Entwurfsmuster* 
 
-Im Blick auf das von Leaflet bereitgestellte Architekturdiagramm, wir finden, dass das Leaflet-Team entscheidet sich für die einfache Vererbung (include und extend) für alle Relationen der Projektbausteine in einem logischen Zusammenhäng (z. B. "hat eine" oder "enthält" ).
+Im Blick auf das von Leaflet bereitgestellte Architekturdiagramm, wir finden, dass das Leaflet-Team entscheidet sich für die einfache Vererbung (include und extend) für alle Relationen der Projektbausteine in einem logischen Zusammenhäng (z.B. "hat eine" oder "enthält").
 
 ### Strukturmuster
 
@@ -418,7 +418,7 @@ Hier kann ein *Layer* Pfad, Marker oder ein *Composite* sein.
 Leaflet folgt einem standardmäßigen Best-Practice-Designmuster für das Projektverzeichnis, wie jedes JS-Projekt:
 
     |-- leaflet
-    |--|--| src  -   JS source Ordner
+    |--|--| src   - JS source Ordner
     |--|--| dist  - JS, CSS, images
     |--|--| build - Produktionsversion von leaflet
     |--|--| spec  - tests
@@ -431,14 +431,14 @@ Leaflet folgt einem standardmäßigen Best-Practice-Designmuster für das Projek
 Ein weiteres Muster, das verwendet wird, um ein beliebiges Unterverzeichnis in „src“ zu strukturieren, besteht darin, eine „index.js“-Datei hinzuzufügen, die Importe/Exporte aller Dateien in diesem Verzeichnis enthält. zum Beispiel:
 
     |-- dom
-    |--|--| index - enthält nur Importe aller anderen Dateien
+    |--|--| index - enthält nur Importe/Exporte aller anderen Dateien
     |--|--| class
     |--|--| browser
     |--|--| events
     |--|--| Util
     |--|--| ..
 
-Der Inhalt einer typischen `index.js` im Projekt ist:
+Der Inhalt eines typischen `index.js`- Datei ist:
 
     import Browser from './Browser';
     export {Browser};
