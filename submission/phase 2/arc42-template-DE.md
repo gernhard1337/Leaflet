@@ -938,4 +938,8 @@ diese hier eine einfache Übersicht finden falls Begriffe unklar sind.
 | End user | Der tatsächliche Nutzer der dann die Karte von Leaflet nutzt  |
 | Developer | Ein Entwickler der Leaflet in einem Projekt nutzt |
 | TOS | Terms of Service / Allgemeine Geschäfts und Nutzungsbedingungen |
+| Issue |  |
+| Bug |  |
+| Open-Source |  |
+| technische Schulden |  |
 
