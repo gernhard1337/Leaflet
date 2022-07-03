@@ -102,8 +102,10 @@ Die einzelnen Stakeholder nochmal aufgelistet:
 | Contributor | [Github Contributor-Liste](https://github.com/Leaflet/Leaflet/graphs/contributors) | Gute Nutzung des Projekts, sodass sich Weiterentwicklung lohnt |
 | Maintainer | [Github Maintainer](https://agafonkin.com) | Reibungsloser Ablauf der Weiterentwicklung und gelegentliches Eingreifen |
 
+#### EndUser Usecase Diagram
 ![EndUSer](images/Enduser.drawio.png)
 
+#### Developer Usecase Diagram
 ![Developer](images/developer.drawio.png)
 
 <a name="randbedingungen"></a>
