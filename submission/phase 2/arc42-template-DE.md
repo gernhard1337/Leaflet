@@ -375,7 +375,7 @@ der Dokumentation von Leaflet (auf Englisch).
 
 Aufbauend auf dem Baustein aus dem vorherigen Abschnitt können wir sehen, wie die folgenden Entitäten in verschiedene Bausteine übersetzt werden:
 
-| Baustein| Entsprechende Entität im Diagramm
+| Baustein| Entsprechende Entität im Diagramm|
 | ------------ | ------------ |
 | UI  |  Knoten L.Layer und seine untergeordneten Knoten |
 |  Kern |  Knoten L.Map und seine untergeordneten Knoten|
