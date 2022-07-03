@@ -383,7 +383,7 @@ der online-Dokumentation (auf Englisch).
 
 ## Fachliche Konzepte
 
-Leaflet bietet Entwicklern ein natives ER-Modell für das gesamte Projekt in seiner Dokumentation:
+Leaflet bietet Entwicklern ein natives Klassendiagramm für das gesamte Projekt in der Dokumentation (etwa 60 JS-Klassen):
 
 ![Leaflet arch](images/leaflet-arc.png)
 
@@ -397,6 +397,7 @@ Aufbauend auf dem Baustein aus dem vorherigen Abschnitt können wir sehen, wie d
 | UI  |  Knoten L.Layer und seine untergeordneten Knoten |
 |  Kern |  Knoten L.Map und seine untergeordneten Knoten|
 | Util |  L.Util, L.Dom Util  und alle andere Knoten außer L.Class |
+
 
 
 ## *Architektur-und Entwurfsmuster* 
