@@ -292,7 +292,8 @@ Die Struktur folgt der Zerlegung, die in der Dokumentation genutzt wurde.
 
 # Laufzeitsicht
 
-![Laufzeitsicht](images/runtime.png)
+Aufgrund von sehr einfacher Implementierung nicht für Leaflet angemessen.
+(Beispiel (reinzoomen): Click-Event wird ausgelöst (Klick auf Zoom-Button '+') -> _zoomIn() Funktion wird ausgelöst -> Zoomlevel der Karte wird erhöht)
 
 # Verteilungssicht
 
