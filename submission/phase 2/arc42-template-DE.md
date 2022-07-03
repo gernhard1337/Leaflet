@@ -560,7 +560,7 @@ Die Hochverfügbarkeit ist der Schlüsselfaktor von Leaflet und dies hat folgend
 - Das Projekt lässt sich gut mit Plugins von Drittanbietern integrieren, wodurch es immer über die neuesten Trends auf dem Laufenden bleibt.
 - Die Popularität des Projekts verschafft *Leaflet* eine Armee gut ausgebildeter Betreuer und Benutzer Probleme, die schnell erkennen und darauf reagieren können, und dies ist der Grund für die Zuverlässigkeit von *Leaflet*.
 
-### Administration and Management:
+### Administration und Management:
 
 Es gibt keine Verwaltung von Benutzern oder Admins. Dennoch folgt die Verwaltung des Quellcodes und wer ihn ändern kann den Open-Source-Contribution Richtlinien von Leafletjs, wobei Maintainer überprüfen alle Pull-Requests und sie werden von den Hauptadministratoren von Leaflet eingebracht. Administratoren von Leaflet stehen dem Ersteller von *Leafletjs* am nächsten.
 
