@@ -942,4 +942,6 @@ diese hier eine einfache Übersicht finden falls Begriffe unklar sind.
 | Bug |  |
 | Open-Source |  |
 | technische Schulden |  |
+| CSS |  |
+| HTML |  |
 
