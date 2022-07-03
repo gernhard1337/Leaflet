@@ -222,19 +222,20 @@ online-Dokumentation (auf Englisch!).
 
 
 <!--- ab hier Franziskas Part -->
+
 # Bausteinsicht
 
 ## Ebene 1
 
-### Whitebox \<Leaflet>
+### Whitebox *Leaflet*
 
 ![Übersichtsdiagramm](images/ebene1_building_blocks.png)
 
 #### Begründung
 
 Es wurd eine funktionale Zerlegung zur Trennung der Verantwortlichkeiten gewählt:
-- Plugin steht stellvertretend für alle zu Leaflet kompatiblen Plugins
-- Aufteilung der Nutzer in Endtnutzer und Entwickler
+- Plugin steht stellvertretend für alle zu Leaflet kompatiblen Plugins.
+- Aufteilung der Nutzer in Endtnutzer und Entwickler.
 
 #### Enthaltene Bausteine
 
@@ -242,6 +243,7 @@ Es wurd eine funktionale Zerlegung zur Trennung der Verantwortlichkeiten gewähl
 |-----------------------|-----------------------------------------------|
 | *Leaflet Kern* | *Erstellung und Nutzung von Karten* |
 | *Plugin* | *Erweitert Leaflet um vom Entwickler ausgewählte Funktionalitäten* |
+| *UI Layers* | *stellt die graphischen Elemente von Leaflet dar* |
 
 #### Wichtige Schnittstellen
 
@@ -253,30 +255,40 @@ Es wurd eine funktionale Zerlegung zur Trennung der Verantwortlichkeiten gewähl
 
 #### Leaflet Kern (Blackbox)
 
-*\<Zweck/Verantwortung>*
+*\Zweck/Verantwortung*
 Leaflet Kern enthält die Kernfunktionen, Klassen und Methoden, die zur Erstellung und Nutzung von Karten benötigt werden.
 
 *\<Schnittstelle(n)>*
 | **Schnittstelle (Von-Bis)** | **Beschreibung** |
 |-----------------------|-----------------------------------------------|
-| ** | ** |
+| *Inline Implementierung -> all* | *Bereitstellung von Funktionen* |
+| *Plugins -> all* | * Erweitert Funktionen von Leaflet* |
 
 ## Ebene 2
 
-### Whitebox *\<Leaflet Kern>*
+### Whitebox *Leaflet Kern*
 
 ![Ebene2](images/ebene2_building_blocks.png)
 
 #### Begründung
 
-
+Die Struktur folgt der Zerlegung, die in der Dokumentation genutzt wurde.
+- Bündeln der Basisklassen.
+- Layer nach Eigenschaften trennen.
+- Funktionen zur Manipulation der Karte bündeln.
+- Steuerelemente bündeln.
+- Utility und DOM Utility wurden zusammengefasst.
+- UI Layers, Vector Layers, Raster Layers und Other Layers wurden zusammengefasst.
 
 #### Enthaltene Blackboxes
 
 | **Baustein** | **Beschreibung** |
 |-----------------------|-----------------------------------------------|
-| ** | ** |
-| ** | ** |
+| *Map* | *Funktionen und Methoden zu Erstellung und Manipulation von Karten* |
+| *Base Classes* | *Basisklassen, deren Grundstruktur von diversen anderen Klassen genutzt wird* |
+| *Basic Types* | *Grundlegende Strukturen, wie Koordinaten und Icons* |
+| *Controls* | *Funktionen, die zur Steuerung benötigt werden* |
+| *MISC* | *sonstige Funktionen o.ä. wie z.B. Events* |
 
 # Laufzeitsicht
 
