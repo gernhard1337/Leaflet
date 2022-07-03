@@ -366,18 +366,25 @@ der online-Dokumentation (auf Englisch).
 
 ## Fachliche Konzepte
 
-Die fachliche- oder Domänenkonzepte sind eine Reihe von Modellen und Konzepten, die in den Benutzerverwaltungsbausteinen und Schnittstellen der Authentifizierung in der Architektur eingehalten werden müssen.
-
-Alle Endbenutzer bzw. Entwickler von Leaflet JS brauchen sich nicht zu registrieren oder einzuloggen, um die verschiedene Services nutzen zu können. Das Projekt ist eine Open-Source-UI-Bibliothek für Karten und daher sind keine Bausteine zur Authentifikation oder Benutzerverwaltung benötigt. 
-
-## *Architektur-und Entwurfsmuster* 
-
-Im Blick auf das von Leaflet bereitgestellte Architekturdiagramm ..
+Leaflet bietet Entwicklern ein natives ER-Modell für das gesamte Projekt in seiner Dokumentation:
 
 ![Leaflet arch](images/leaflet-arc.png)
 
 Siehe [Leaflet Struktur](https://leafletjs.com/examples/extending/class-diagram.html) in
 der Dokumentation von Leaflet (auf Englisch).
+
+Aufbauend auf dem Baustein aus dem vorherigen Abschnitt können wir sehen, wie die folgenden Entitäten in verschiedene Bausteine übersetzt werden:
+
+| Baustein| Entsprechende Entität im Diagramm
+| ------------ | ------------ |
+| UI  |  Knoten L.Layer und seine untergeordneten Knoten |
+|  Kern |  Knoten L.Map und seine untergeordneten Knoten|
+| Util |  L.Util, L.Dom Util  und alle andere Knoten außer L.Class |
+
+
+## *Architektur-und Entwurfsmuster* 
+
+Im Blick auf das von Leaflet bereitgestellte Architekturdiagramm ..
 
 wir finden folgendes:
 -   Das Leaflet-Team entscheidet sich für die einfache Vererbung (include und extend) für alle Relationen der Projektbausteine in einem logischen Zusammenhäng (z. B. "hat eine" oder "enthält" ).
