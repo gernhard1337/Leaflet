@@ -384,9 +384,8 @@ Aufbauend auf dem Baustein aus dem vorherigen Abschnitt können wir sehen, wie d
 
 ## *Architektur-und Entwurfsmuster* 
 
-Im Blick auf das von Leaflet bereitgestellte Architekturdiagramm ..
+Im Blick auf das von Leaflet bereitgestellte Architekturdiagramm, wir finden Folgendes:
 
-wir finden folgendes:
 -   Das Leaflet-Team entscheidet sich für die einfache Vererbung (include und extend) für alle Relationen der Projektbausteine in einem logischen Zusammenhäng (z. B. "hat eine" oder "enthält" ).
 -   Da die Entwickler das Composite-Konzept noch nicht genutzt haben, schlagen wir vor, mehrere Composites in der Architektur für mehr Modularität hinzuzufügen.
 -   Zum Beispiel erben die Module Marker (L.Marker), Path (L.Path), Layer Group (L.LayerGroup) und andere von dem Muttermodul Layer (L.Layer). Da eine Ebene eine andere Ebene erben kann, die ein *Layers group* bildet (das Stapeln mehrerer *Layers* ist möglich), können wir stattdessen eine zusammengesetzte Vorlage (composite template) verwenden:
