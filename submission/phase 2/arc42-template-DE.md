@@ -1,7 +1,7 @@
 # Leaflet - Architekturdokumentation
 
 Dieses Dokument stellt eine vollständige Architekturdokumentation für Leaflet dar. 
-Zur Erstellung dieser Dokumentation wurden sich diverser Reverse-Engineering Technicken angewendet
+Zur Erstellung dieser Dokumentation wurden sich diverser Reverse-Engineering Techniken angewendet
 da diese in der originalen Leaflet-Variante nicht vorhanden ist. 
 
 # Gliederung 
@@ -47,11 +47,12 @@ lässt sich durch einen minimalen Code erzeugen:
 weitere simple Beispiele lassen sich [hier](https://leafletjs.com/examples.html) finden
 
 Eine exakte Auflistung aller Aufgaben die Leaflet erfüllen soll lässt sich [hier](https://github.com/gernhard1337/Leaflet/blob/SE-GA/submission/phase%201/scoping_document.md#requirements)  finden.
+
 <a name="qualitätsziele"></a>
 ## Qualitätsziele
 
-Da Leaflet eine Unterstüzung für diverse Webprojekte sein soll ergeben sich hierdurch einige besonders wichtige 
-Qualitäsziele. Eine Einhaltung dieser ist inhärent wichtig und darf unter keinen Umständen vernachlässigt werden. 
+Da Leaflet eine Unterstützung für diverse Webprojekte sein soll ergeben sich hierdurch einige besonders wichtige 
+Qualitätsziele. Eine Einhaltung dieser ist inhärent wichtig und darf unter keinen Umständen vernachlässigt werden. 
 Diese Ziele sind vor allem: Zuverlässigkeit, Leistungseffizienz, Betreibbarkeit und Übertragbarkeit. 
 Es ist wichtig hier diese Ziele näher zu erklären, da spätere Entscheidungen in der Architektur und Umsetzung immer 
 zugunsten dieser Ziele zu fällen sind. 
@@ -66,15 +67,15 @@ zuverlässig funktionieren. Dieses Vertrauen will und muss Leaflet bestätigen k
 #### Leistungseffizienz
 
 Leaflet wird vorrangig in Webprojekten verwandt. Um unnötigen Netzwerktraffic zu vermeiden, soll Leaflet effizient 
-arbeiten, um rücksicht auf andere zu nehmen, die dieses Netzwerk auch nutzen wollen. Außerdem sind heutzutage Seitenladezeiten
-wichtiger Bestandteil der User-Experience und der SEO-Optimierung (bevorzugung von schnellen Ladezeiten). Damit Leaflet kein Klotz
+arbeiten, um Rücksicht auf andere zu nehmen, die dieses Netzwerk auch nutzen wollen. Außerdem sind heutzutage Seitenladezeiten
+wichtiger Bestandteil der User-Experience und der SEO-Optimierung (Bevorzugung von schnellen Ladezeiten). Damit Leaflet kein Klotz
 ist der Webprojekte verlangsamt soll auf eine äußerst hohe Leistungseffizienz wert gelegt werden.
 
 #### Betreibbarkeit
 
 Webprojekte haben immer kürzere Deployment-Zeiten und müssen auf schnelle Art und Weise entwickelt werden. Damit diese rasante Entwicklung weitergehen
 kann, soll Leaflet sicherstellen, dass es leicht zu erlernen ist und die gewünschten Funktionen bietet.
-Ein Entwickler wird hierfür dankbar sein, weil er dadurch ohne großen Aufwand eine vielzahl neuer Funktionen in sein Projekt bringen kann.
+Ein Entwickler wird hierfür dankbar sein, weil er dadurch ohne großen Aufwand eine Vielzahl neuer Funktionen in sein Projekt bringen kann.
 
 #### Übertragbarkeit
 
@@ -82,13 +83,14 @@ Da Leaflet in Webprojekten verwendet wird, ist es nicht möglich sich domänensp
 Leaflet nun verwendet wird ein Handy, ein Computer oder ein Tablet ist. Außerdem lässt sich nicht festlegen welches Betriebssystem 
 diese Geräte haben. Um die Zuverlässigkeit von Leaflet zu gewährleisten ist somit auch die Übertragbarkeit ein wichtiger Punkt für die 
 Entwicklung von Leaflet.
+
 <a name="stakeholder"></a>
 ## Stakeholder
 
 Leaflet ist darauf ausgelegt, die Bedürfnisse und Wünsche von Entwicklern zu befriedigen. Nichts desto trotz definiert 
-Leaflet vier Stakeholder. Den Entwickler, den Nutzer, den Contributor und den Maintainer. Da Leaflet eine javascript Bibliothek für das Frontend
+Leaflet vier Stakeholder. Den Entwickler, den Nutzer, den Contributor und den Maintainer. Da Leaflet eine JavaScript Bibliothek für das Frontend
 ist wird die Funktionalität vor allem von Nutzern für optische bzw. visuelle Zwecke genutzt. 
-Nutzer sehen die Effekte von Leaflet vorallem durch einen Webbrowser während Entwickler Leaflet in ihren Projekten nutzen 
+Nutzer sehen die Effekte von Leaflet vor allem durch einen Webbrowser während Entwickler Leaflet in ihren Projekten nutzen 
 damit sie gewünschte Effekte im Browser hervorrufen können.
 Contributor sind Entwickler die sich aktiv in die Entwicklung von Leaflet einbringen. Einer dieser Contributor wird als 
 Maintainer deklariert, dieser ist verantwortlich für Leaflet als ganzes.
@@ -98,12 +100,12 @@ Die einzelnen Stakeholder nochmal aufgelistet:
 | Rolle | Kontakt | Erwartungshaltung |
 |-----------------------|-----------------------------------------------|-----------------------------------------|
 | Endnutzer | Hoffentlich unzählbar viele | Möglichst einfache, sinnvolle und performante Nutzung von Karten |
-| Entwickler | indirekt Trackbar über Einbindung der Dateien | Einfache Einbindung von Karten in diversere Webprojekte ohne diverse Abhängigkeiten|
-| Contributor | [Github Contributor-Liste](https://github.com/Leaflet/Leaflet/graphs/contributors) | Gute Nutzung des Projekts, sodass sich Weiterentwicklung lohnt |
-| Maintainer | [Github Maintainer](https://agafonkin.com) | Reibungsloser Ablauf der Weiterentwicklung und gelegentliches Eingreifen |
+| Entwickler | indirekt trackbar über Einbindung der Dateien | Einfache Einbindung von Karten in diversere Webprojekte ohne diverse Abhängigkeiten|
+| Contributor | [GitHub Contributor-Liste](https://github.com/Leaflet/Leaflet/graphs/contributors) | Gute Nutzung des Projekts, sodass sich Weiterentwicklung lohnt |
+| Maintainer | [GitHub Maintainer](https://agafonkin.com) | Reibungsloser Ablauf der Weiterentwicklung und gelegentliches Eingreifen |
 
 #### EndUser Usecase Diagram
-![EndUSer](images/Enduser.drawio.png)
+![EndUser](images/Enduser.drawio.png)
 
 #### Developer Usecase Diagram
 ![Developer](images/developer.drawio.png)
@@ -134,10 +136,10 @@ Die einzelnen Stakeholder nochmal aufgelistet:
 
 | Bedingungen | Verfolgung |
 |------------------------------------------------------------------|----|
-|Die Beiträge aus den Leaflet issues sein.|QB1|
-|Nach der team-entscheidung wird ausgewähltes issues bearbeitet.|QB2|
-|Die Entscheidung von der Anzahl der Entwickler für jeden Beitrag, durch team -Meeting getroffen.|QB3|
-|Die Bearbeitungszeit, vom team gesetzt.|QB4|
+|Die Beiträge aus den Leaflet Issues sein.|QB1|
+|Nach der team-entscheidung wird ausgewähltes Issues bearbeitet.|QB2|
+|Die Entscheidung von der Anzahl der Entwickler für jeden Beitrag, durch Team-Meeting getroffen.|QB3|
+|Die Bearbeitungszeit, vom Team gesetzt.|QB4|
 |für Jeden Beitrag entsprechende Dokumentation – Berichte erstellen.|QB5|
 |Der Quellcode der Lösung, oder zumindest Teile davon, werden als Open Source zur Verfügung gestellt.|QB6|
 |Beginn der Entwicklung am Anfang Juli 2022. Fertigstellung des Beitrags am Ende Juli 2022.|QB7|
@@ -149,16 +151,16 @@ Die einzelnen Stakeholder nochmal aufgelistet:
 
 ![Business_Context_Diagramm](images/BusinessContextDiagramm.png)
 
-| **Nachbaren** | **Beschreibung** |
+| **Nachbarn** | **Beschreibung** |
 |-----------------------|-----------------------------------------------|
 | *Enduser* | *ist eine natürliche oder juristische Person, die Leaflet map letztendlich benutzt.* |
 | *Developer* | *,die Leaflet für ihre Projekte verwenden werden* |
 | *Leaflet API* | *JavaScript library* |
-| *Github* | *ist ein Anbieter von Internet-Hosting für Softwareentwicklung und Versionskontrolle mit Git.* |
+| *GitHub* | *ist ein Anbieter von Internet-Hosting für Softwareentwicklung und Versionskontrolle mit Git.* |
 | *Social media* | *sind digitale Medien bzw. Plattformen wie Facebook* |
 | *Government* | *government  website. Wie data.gov* |
-| *Image hosting service* | *ist ein kommerzieller Onlinedienst mit Community-Elementen, der es Benutzern erlaubt, digitale und digitalisierte Bilder zu laden und zu teieln, wie 500px und Flickr* |
-| *e-commerce* | *Internethandel, Onlinehandel Website für den Kauf und Verkauf von Waren. wie etsy* |
+| *Image hosting service* | *ist ein kommerzieller Onlinedienst mit Community-Elementen, der es Benutzern erlaubt, digitale und digitalisierte Bilder zu laden und zu teilen, wie 500px und Flickr* |
+| *e-commerce* | *Internethandel, Onlinehandel Website für den Kauf und Verkauf von Waren. wie Etsy* |
 
 
 ## Technischer Kontext
@@ -170,15 +172,15 @@ Die einzelnen Stakeholder nochmal aufgelistet:
 | *Enduser* | *ist eine natürliche oder juristische Person, die Leaflet map letztendlich benutzt.* |
 | *Developer* | *,die Leaflet für ihre Projekte verwenden werden* |
 | *Mobile* | *mobilephone* |
-| *Tablet/ipad* | *ist ein tragbarer, flacher Computer in besonders leichter Ausführung mit einem Touchscreen* |
-| *Computer** | *Hier werden alle Computersorte gemeint, wie Desktop, laptop, server ……* |
-| *Leaflet API server* | *Wo Quellecode gespeichert ist.* |
+| *Tablet/iPad* | *ist ein tragbarer, flacher Computer in besonders leichter Ausführung mit einem Touchscreen* |
+| *Computer** | *Hier werden alle Computersorte gemeint, wie Desktop, Laptop, Server ……* |
+| *Leaflet API Server* | *Wo Quellecode gespeichert ist.* |
 | *Leaflet Pulings databdase* | *Repo, wo alle Pulings gespeichert sind.* |
 
 <a name="lösungsstrategie"></a>
 # Lösungsstrategie 
 
-### Leaflet hat keine klare Architektur. Aus diesem Grund wurde  Strategie in Zwei Teile gebaut. Die erste Stratgie wurde aus der verfügbaren Dokumentation geschlossen. Die zweite Strategie wurde von uns gesetzt.  
+### Leaflet hat keine klare Architektur. Aus diesem Grund wurde  Strategie in Zwei Teile gebaut. Die erste Strategie wurde aus der verfügbaren Dokumentation geschlossen. Die zweite Strategie wurde von uns gesetzt.  
 
 ## Leaflet Strategie:
 
@@ -194,7 +196,7 @@ Die einzelnen Stakeholder nochmal aufgelistet:
 
 *	Komponenten können unabhängig sein.
 *	Änderungen, die von einer Komponente vorgenommen werden, können an alle Komponenten weitergegeben werden.
-*	Code Sicher durch backup
+*	Code Sicher durch Backup
 
 ## Unsere Strategie:
 
@@ -237,9 +239,9 @@ Die einzelnen Stakeholder nochmal aufgelistet:
 
 #### Begründung
 
-Es wurd eine funktionale Zerlegung zur Trennung der Verantwortlichkeiten gewählt:
+Es wurde eine funktionale Zerlegung zur Trennung der Verantwortlichkeiten gewählt:
 - Plugin steht stellvertretend für alle zu Leaflet kompatiblen Plugins.
-- Aufteilung der Nutzer in Endtnutzer und Entwickler.
+- Aufteilung der Nutzer in Endnutzer und Entwickler.
 
 #### Enthaltene Bausteine
 
@@ -309,7 +311,7 @@ Aufgrund von sehr einfacher Implementierung nicht für Leaflet angemessen.
 
 | **Knoten / Artefakt** | **Beschreibung** |
 |-----------------------|-----------------------------------------------|
-| *Leaflet Paket* | *kompilierte Version von Github* |
+| *Leaflet Paket* | *kompilierte Version von GitHub* |
 | *Leaflet Entwicklung* | *hier findet die Entwicklung von Leaflet statt* |
 | *CDN* | *stellt Leaflet via UNPKG zur Verfügung* |
 | *Computer / Server des Leaflet Entwicklers* | *Einbindung von Leaflet in eigene Software / Webseite* |
@@ -360,7 +362,7 @@ Wir können wir sehen, wie die folgenden Subbäume in verschiedenen Teile des Sy
 | Util |  L.Util, L.Dom Util  und alle andere Knoten außer L.Class |
 
 
-## *Architektur-und Entwurfsmuster* 
+## *Architektur- und Entwurfsmuster* 
 
 ### Projektverzeichnis  
 
@@ -493,7 +495,7 @@ Konfiguration der verschiedenen Animationsoptionen:
 
 ## Unter-der-Haube 
 
-Der Leaflet-Verbesserungsprozess beginnt mit der Erstellung von Issue-Ticks von den Endnutzern bzw. Entwickler an die maintainers.
+Der Leaflet-Verbesserungsprozess beginnt mit der Erstellung von Issue-Ticks von den Endnutzern bzw. Entwickler an die Maintainers.
 
 ### Ausnahme-/Fehlerbehandlung:
 
@@ -501,7 +503,7 @@ Die Fehlerbehandlung bei inkonsistenten Daten (in Bezug auf die Einschränkung d
 
 ### Sitzungsbehandlung:
 
-Leaflet.JS bietet nur eine zustandslose öffentliche API, es gibt keine Sitzungsbehandlung. Leaflet allerdings ermöglicht Siztungen erinfach zu erstellen und behandlen.
+Leaflet.JS bietet nur eine zustandslose öffentliche API, es gibt keine Sitzungsbehandlung. Leaflet allerdings ermöglicht Sitzungen einfach zu erstellen und behandeln.
 
 ### Plugin Konzept und Development:
 
@@ -520,7 +522,7 @@ Jedes Leaflet-Plugin sollte die folgende Architektur haben, um sich gut in die A
     |--|--| package.json
 
 
-Für Leaflet wird eine zusätzliche Plugin-API erstellt. Der Zugriff auf Elemente mit einem Plugin kann so einfach sein wie das Aufrufen einer Leaflet-Klasse z.b. `L.marker` mit den benutzerdefinierten Funktionen und Optionen des Plugins:
+Für Leaflet wird eine zusätzliche Plugin-API erstellt. Der Zugriff auf Elemente mit einem Plugin kann so einfach sein wie das Aufrufen einer Leaflet-Klasse z.B. `L.marker` mit den benutzerdefinierten Funktionen und Optionen des Plugins:
 
     marker.myPlugin('bla', {
     	optionOne: 'foo',
@@ -556,7 +558,7 @@ Normalerweise wird ein *Batch* erstellt, um viele Probleme und Fehlerbehebungen 
 - Die Community oder die Admins melden eine Gruppe von Problemen mit unterschiedlichen Prioritäten und schlagen den Betreuern Lösungen vor.
 - Die alte Version des Projekts wird als Backup gespeichert.
 - Die neue Version der Bibliothek wird automatisch auf *NPM* veröffentlicht dank eines *CRON JOB*  mit *Git*.
-- Das neue Release mit seinem Bericht wird auf der Website sowie auf github dokumentiert.
+- Das neue Release mit seinem Bericht wird auf der Website sowie auf GitHub dokumentiert.
 
 Die Entwickler erhalten dann den neuen Batch, indem sie den Befehl `npm update` oder `npm upgrade` in ihren Projekten ausführen.
 
@@ -585,7 +587,7 @@ Ein Rollback auf die alte Version, bis die Probleme mit der aktuellen Version be
 # Architekturentscheidungen 
 
 Drei wichtige, weiter hervorzuhebende Entscheidungen die Leaflet betreffen wurden entschieden
-und fanden bisher noch nicht ihre nötige Bergründung obwohl diese grundlegend sind. Daher findet dies
+und fanden bisher noch nicht ihre nötige Begründung obwohl diese grundlegend sind. Daher findet dies
 hier statt.
 
 ## Quellen der Karten
@@ -593,7 +595,7 @@ hier statt.
 Da Leaflet mit Karten arbeitet ist es wichtig zu betonen woher diese kommen. Es gab drei mögliche 
 Entscheidungen wie mit den Karten umgegangen wird: 
 1. Eigene Karten zur Verfügung stellen
-2. Einen Kartenanbieter (z.B. OpenStreeMap) als Partner nutzen
+2. Einen Kartenanbieter (z.B. OpenStreetMap) als Partner nutzen
 3. Eine generalisierte Architektur die alle möglichen Karten unterstützt
 
 Es wurde sich hier für Option 3. entschieden. Dies war die richtige Entscheidung weil Option 
@@ -620,14 +622,14 @@ hinzugefügt werden können in den Plugins.
 Grundlegend für Entwurfsentscheidungen ist unter anderem auch die Programmiersprache. Hier wurde sich ganz 
 bewusst für JavaScript entschieden. Wobei es hierbei gar keine richtige Entscheidung war sondern schon
 fast zwingend nötig ist. Leaflet soll nämlich für eine dynamische Interaktion mit Karten im Frontend von 
-Webbrowsern dienen und die hierfür am weitesten verbreitete Untersützung bietet JavaScript also war es 
+Webbrowsern dienen und die hierfür am weitesten verbreitete Unterstützung bietet JavaScript also war es 
 eine schon fast zwingende Entscheidung für diese Sprache. Alternativ wäre TypeScript im Frontend oder 
 eine Backend-basierte Lösung möglich gewesen. Die Backend-basierte Lösung fällt jedoch sofort weg, 
 da jede kleinste Interaktion eine neue Anfrage an Server mit entsprechender Antwort bedeuten würde und wir
 somit unser Ziel der Performance niemals einhalten könnten. TypeScript wurde nicht als Entwicklungssprache gewählt
-weil es erst 2012 veröffentlicht wurde, die Entwicklung an Leaflet jedoch schon 2011 began.
+weil es erst 2012 veröffentlicht wurde, die Entwicklung an Leaflet jedoch schon 2011 begann.
 
-<a name="qualittsanforderungen"></a>
+<a name="qualitätsanforderungen"></a>
 # Qualitätsanforderungen
 
 ### Inhalt
@@ -644,7 +646,7 @@ um dann im weiteren die einzelnen herausgearbeiteten Aspekte näher zu definiere
 Der Qualitätsbaum für Leaflet besteht aus 2 Schichten. Hierbei sind ausgehend von der Wurzel 5 verschiedene 
 Qualitätsaspekte definiert. Einige dieser Qualitätsaspekte definieren weitere, speziellere Qualitätskriterien welche 
 nochmals genauer definiert sind. Alle Kriterien bekommen eine Tabelle mit Qualitätsszenarios. Hierdurch soll sichergestellt
-werden, dass die Qualitätsaspekte nachprüfbar und an reale Kriterien gebunden sind. Da Leaflet eine Bilbiothek für 
+werden, dass die Qualitätsaspekte nachprüfbar und an reale Kriterien gebunden sind. Da Leaflet eine Bibliothek für 
 Entwickler ist, kann es vorkommen, dass sich Qualitätsszenarien in verschiedenen Kategorien doppeln da verschiedene 
 Sichten ähnliches verlangen aber eine leicht andere Formulierung haben.
 
@@ -668,7 +670,7 @@ möglichst klein sein soll. Leaflet kann erweitert werden, dies soll jedoch den 
 |-----------------|--------------------|
 | P1 | Die komplette Core-Bibliothek soll nicht mehr als 50kb umfassen |
 | P2 | In der Core-Bibliothek sind nur notwendige Funktionen implementiert (Notwendigkeit definiert in Bausteinsicht) |
-| P3 | Die Core-Bibliothek soll keine Abhängigkeiten von anderer Software haben (keine imports von außerhalb) |
+| P3 | Die Core-Bibliothek soll keine Abhängigkeiten von anderer Software haben (keine Imports von außerhalb) |
 
 ##### feature Completeness
 
@@ -696,7 +698,7 @@ Strukturen, insbesondere der Architektur, informiert.
 ### Usability
 
 Damit Leaflet seinen Zweck erfüllt müssen die wichtigsten, grundlegenden Funktionen, die eine Kartensoftware haben 
-muss implementiert sein. Welche Funktionen als wichtig und grundlegen zählen wurden vorher schon festgelegt (hinweis wo festgelegt einfügen)
+muss implementiert sein. Welche Funktionen als wichtig und grundlegen zählen wurden vorher schon festgelegt (Hinweis wo festgelegt einfügen)
 Hier sollen jetzt genauere Szenarien folgen welche die Usability überprüfbar machen.
 
 | ID | Szenario |
@@ -709,7 +711,7 @@ Hier sollen jetzt genauere Szenarien folgen welche die Usability überprüfbar m
 | U6 | Die Funktionsweise von Leaflet unterscheidet sich nicht zwischen verschiedenen Kartenanbietern |
 
 #### Responsive
-Da Leaflet eine Javascript Bibliothek ist, kann davon ausgegangen werden, dass sie sowohl auf mobilen als auch 
+Da Leaflet eine JavaScript Bibliothek ist, kann davon ausgegangen werden, dass sie sowohl auf mobilen als auch 
 Desktop Geräten benutzt wird. Damit die User Experience durchgängig konstant gut ist, muss Leaflet responsiv 
 sein und sich an diverse Oberflächen anpassen.
 
@@ -719,7 +721,7 @@ sein und sich an diverse Oberflächen anpassen.
 
 #### Dependability
 Wie in **Responsive** schon erläutert ist Leaflet auf diversen Geräten/Oberflächen genutzt. Da verschiedene Geräte
-nicht nur unterschiedliche optische Darstellungen haben sondern auch andere technische Gegegebenheiten muss genau darauf
+nicht nur unterschiedliche optische Darstellungen haben sondern auch andere technische Gegebenheiten muss genau darauf
 geachtet werden, dass Leaflet unabhängig vom System lauffähig ist. Hier sei insbesondere darauf geachtet, dass Unterschiede
 zwischen verschiedenen Browsern beachtet werden und alles Browser nutzbar sind.
 
@@ -727,7 +729,7 @@ zwischen verschiedenen Browsern beachtet werden und alles Browser nutzbar sind.
 |-----------------|--------------------|
 | U8 | Ein Nutzer kann unabhängig vom Browser Leaflet nutzen  |
 | U9 | Als zwingend funktionsfähige Browser sind Firefox, Chrome, Opera, Safari und Edge deklariert |
-| U10 | Die Funktionsweise von Leaflet muss in allen Browsern gleich sein (HTML-Elemente müssen immer von Browsern aus U8 unterstüzt sein)  |
+| U10 | Die Funktionsweise von Leaflet muss in allen Browsern gleich sein (HTML-Elemente müssen immer von Browsern aus U8 unterstützt sein)  |
 
 
 #### Compatibility
@@ -751,7 +753,7 @@ Elemente veränderbar ist.
 
 | ID | Szenario |
 |-----------------|--------------------|
-| U15 | (ähnlich U7) Leaflet unterstüzt CSS |
+| U15 | (ähnlich U7) Leaflet unterstützt CSS |
 | U16 | Leaflet liefert standardmäßige Themes mit für einen schnellen Einstieg in das Design |
 | U17 | Elemente von Leaflet lassen sich eigene Klassennamen geben damit diese per CSS veränderbar sind (keine festen Klassennamen in Elementen) |
 
@@ -796,7 +798,7 @@ mit dem größten Risiko gestartet wird und mit dem kleinsten geendet wird.
 
 ## Implementation von Kartenanbietern
 
-Ein großes Risiko von Leaflet ist, dass die Kartenbieter wie Google oder Openstreetmap ihre 
+Ein großes Risiko von Leaflet ist, dass die Kartenbieter wie Google oder OpenStreetMap ihre 
 Karten-API so anpassen, dass die Elemente welche von Leaflet geboten werden, direkt in der API 
 implementiert sind. Somit wäre Leaflet überflüssig und würde Funktionen nur doppelt implementieren,
 wahrscheinlich sogar langsamer als eine native Integration in eine Google-API. 
@@ -836,7 +838,7 @@ dokumentiert ist. Dieser Funktionsumfang ist dann so optimal wie möglich zu imp
 
 ## Offene Issues / Bugs
 
-Die Weiterentwicklung von Leaflet basiert hauptsächlich auf Issues und Requests im Github. Einerseits werden dort 
+Die Weiterentwicklung von Leaflet basiert hauptsächlich auf Issues und Requests im GitHub. Einerseits werden dort 
 Bugs gemeldet sowie neue Features angefragt. Für diese Weiterentwicklung müssen sich Entwickler verantwortlich fühlen und 
 diese Tickets dann bearbeiten. Hierbei besteht das Risiko, dass unangenehme Tickets liegen bleiben und somit Bugs bestehen bleiben obwohl 
 sie bekannt sind
@@ -888,7 +890,7 @@ diese hier eine einfache Übersicht finden falls Begriffe unklar sind.
 | popup | ein Hinweisfenster das auf verschiedene Art gesteuert werden kann |
 | marker | ein Pin oder Bild das Positionen auf einer Karte markiert |
 | Tooltip | Ein Fenster für Koordinaten |
-| Dependence | Abhängikeit von anderer Software |
+| Dependence | Abhängigkeit von anderer Software |
 | End user | Der tatsächliche Nutzer der dann die Karte von Leaflet nutzt  |
 | Developer | Ein Entwickler der Leaflet in einem Projekt nutzt |
 | TOS | Terms of Service / Allgemeine Geschäfts und Nutzungsbedingungen |
