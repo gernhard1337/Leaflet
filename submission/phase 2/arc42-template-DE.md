@@ -290,8 +290,11 @@ Leaflet Kern enthält die Kernfunktionen, Klassen und Methoden, die zur Erstellu
 
 | **Knoten / Artefakt** | **Beschreibung** |
 |-----------------------|-----------------------------------------------|
-| ** | ** |
-| ** | ** |
+| *Leaflet Paket* | *kompilierte Version von Github* |
+| *Leaflet Entwicklung* | *hier findet die Entwicklung von Leaflet statt* |
+| *CDN* | *stellt Leaflet via UNPKG zur Verfügung* |
+| *Computer / Server des Leaflet Entwicklers* | *Einbindung von Leaflet in eigene Software / Webseite* |
+| *Computer des Leaflet Endnutzers* | *Nutzung von Leaflet via Browser* |
 
 <!--- ab hier Toms Part -->
 # Querschnittliche Konzepte
