@@ -4,11 +4,30 @@ Dieses Dokument stellt eine vollständige Architekturdokumentation für Leaflet 
 Zur Erstellung dieser Dokumentation wurden sich diverser Reverse-Engineering Technicken angewendet
 da diese in der originalen Leaflet-Variante nicht vorhanden ist. 
 
+# Gliederung 
+
+1. [Einführung und Ziele](#einführung)
+   1. [Aufgabenstellung](#aufgabenstellung)
+   2. [Qualitätsziele](#qualitätsziele)
+   3. [Stakeholder](#stakeholder)
+2. d
+3. d
+4. d
+5. d
+6. d
+7. d
+8. d
+9. d
+10. d
+11. d
+12. d
+
+<a name="einführung"></a>
 # Einführung und Ziele
 
 Leaflet soll Entwicklern dabei helfen umfangreiche Funktionen in Karten zu implementieren und diese
 vor allem in verschiedenen Skalierungen immer zuverlässig darzustellen.
-
+<a name="aufgabenstellung"></a>
 ## Aufgabenstellung 
 
 Leaflet soll es einem Entwickler einfacher machen, Karten in einer interaktiven Art und Weise, zu implementieren.
@@ -31,7 +50,7 @@ lässt sich durch einen minimalen Code erzeugen:
 weitere simple Beispiele lassen sich [hier](https://leafletjs.com/examples.html) finden
 
 Eine exakte Auflistung aller Aufgaben die Leaflet erfüllen soll lässt sich [hier](https://github.com/gernhard1337/Leaflet/blob/SE-GA/submission/phase%201/scoping_document.md#requirements)  finden.
-
+<a name="qualitätsziele"></a>
 ## Qualitätsziele
 
 Da Leaflet eine Unterstüzung für diverse Webprojekte sein soll ergeben sich hierdurch einige besonders wichtige 
@@ -66,7 +85,7 @@ Da Leaflet in Webprojekten verwendet wird, ist es nicht möglich sich domänensp
 Leaflet nun verwendet wird ein Handy, ein Computer oder ein Tablet ist. Außerdem lässt sich nicht festlegen welches Betriebssystem 
 diese Geräte haben. Um die Zuverlässigkeit von Leaflet zu gewährleisten ist somit auch die Übertragbarkeit ein wichtiger Punkt für die 
 Entwicklung von Leaflet.
-
+<a name="stakeholder"></a>
 ## Stakeholder
 
 Leaflet ist darauf ausgelegt, die Bedürfnisse und Wünsche von Entwicklern zu befriedigen. Nichts desto trotz definiert 
@@ -86,7 +105,7 @@ Die einzelnen Stakeholder nochmal aufgelistet:
 | Contributor | [Github Contributor-Liste](https://github.com/Leaflet/Leaflet/graphs/contributors) | Gute Nutzung des Projekts, sodass sich Weiterentwicklung lohnt |
 | Maintainer | [Github Maintainer](https://agafonkin.com) | Reibungsloser Ablauf der Weiterentwicklung und gelegentliches Eingreifen |
 
-# Randbedingungen {#section-architecture-constraints}
+# Randbedingungen 
 
 ## Technical constraints
 
