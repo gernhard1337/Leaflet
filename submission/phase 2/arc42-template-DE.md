@@ -15,7 +15,7 @@ da diese in der originalen Leaflet-Variante nicht vorhanden ist.
 7. [Verteilungssicht](#verteilungssicht)
 8. [Querschnittliche Konzepte](#querschnittlichekonzepte)
 9. [Architekturentscheidungen](#architekturentscheidungen)
-10. [Qualitätsanforderungen](#qualittsanforderungen)
+10. [Qualitätsanforderungen](#qualitätsanforderungen)
 11. [Risiken und technische Schulden](#risiken-und-technische-schulden)
 12. [Glossar](#glossar)
 
