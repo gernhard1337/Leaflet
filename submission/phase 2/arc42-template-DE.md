@@ -400,7 +400,6 @@ Wir können wir sehen, wie die folgenden Subbäume in verschiedenen Teile des Sy
 | Util |  L.Util, L.Dom Util  und alle andere Knoten außer L.Class |
 
 
-
 ## *Architektur-und Entwurfsmuster* 
 
 ### Projektverzeichnis  
@@ -542,11 +541,7 @@ Die Fehlerbehandlung bei inkonsistenten Daten (in Bezug auf die Einschränkung d
 
 ### Sitzungsbehandlung:
 
-Leaflet.JS bietet nur eine zustandslose öffentliche API, es gibt keine Sitzungsbehandlung.
-
-### Kommunikation/Integration:
-
-Die Kommunikation zwischen den Endbenutzern, Entwicklern und Betreuern findet hauptsächlich im Issues bereich und in den Community-Kanälen statt.
+Leaflet.JS bietet nur eine zustandslose öffentliche API, es gibt keine Sitzungsbehandlung. Leaflet allerdings ermöglicht Siztungen erinfach zu erstellen und behandlen.
 
 ### Plugin Konzept und Development:
 
@@ -589,13 +584,10 @@ Das Plugin sollte auf *NPM* (Node Package Modules Manager) mit spezifischen Meta
 
 Das Plugin wird dann von den Maintainers überprüft und der Liste der Leaflet-Plugins hinzugefügt, damit es öffentlich zugänglich wird.
 
-### Parallellisierung/Threading:
-
-Leaflet arbeitet mit einer Single-Thread-Nutzung. Multi-Threading wird nicht unterstützt.
-
 ### Geschäftsregeln:
 
-Da es sich um ein Open-Source-Projekt handelt, entspricht dieses Konzept dem contribution Richtlinien sowie die Gebrauchsanweisung in der Dokumentationen.
+Leaflet definiert Servicebedingungen für die kommerzielle Nutzung, die das Unternehmen dazu zwingen, das Leaflet-Projekt in seiner Richtlinie anzuerkennen. Weiteres siehe [FAQ](https://github.com/Leaflet/Leaflet/blob/main/FAQ.md "term of service").
+Für den normalen Eigengebrauch entspricht dieses Konzept den Beitragsrichtlinien sowie den Gebrauchshinweisen in der Dokumentation.
 
 ### Batch & Reporting:
 
