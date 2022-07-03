@@ -430,7 +430,7 @@ Leaflet folgt einem standardmäßigen Best-Practice-Designmuster für das Projek
 
 Ein weiteres Muster, das verwendet wird, um ein beliebiges Unterverzeichnis in „src“ zu strukturieren, besteht darin, eine „index.js“-Datei hinzuzufügen, die Importe/Exporte aller Dateien in diesem Verzeichnis enthält. zum Beispiel:
 
-  |-- dom
+    |-- dom
     |--|--| index - enthält nur Importe aller anderen Dateien
     |--|--| class
     |--|--| browser
