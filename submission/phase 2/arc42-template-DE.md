@@ -243,20 +243,6 @@ Bei der Nutzung von Leaflet steht die API im Vordergrund, dadurch ist es nahelie
 | *layer* | *Bereitstellung von Funktionen, die die Darstellung der Karte und Zusatzinformationen auf verschiedenen Ebenen gewährleistet* |
 | *map* | *Erstellung und Manipulation der Karte* |
 
-### \blackbox (optional)
-
-*\<Zweck/Verantwortung>*
-
-*\<Schnittstelle(n)>*
-
-*\<(Optional) Qualitäts-/Leistungsmerkmale>*
-
-*\<(Optional) Ablageort/Datei(en)>*
-
-*\<(Optional) Erfüllte Anforderungen>*
-
-*\<(optional) Offene Punkte/Probleme/Risiken>*
-
 ## Ebene 2
 
 ### Whitebox *\<control>*
