@@ -900,7 +900,7 @@ dass außenstehende den Code von bestimmten Features und Plugins verstehen.
 Neue Plugins müssen bevor der Pull-Request akzeptiert wird eine Dokumentation ihres Codes schreiben. Andernfalls wird der Request nicht akzeptiert. 
 Damit der Code in einem einheitlichen Stil ist wird ein allgemeiner Stil festgelegt. 
 
-## Keine Drittsoftware im Core
+## Keine Abhängigkeiten im Core
 
 Die Entscheidung keine Abhängigkeiten von anderen Projekten einzubauen ist aus Performance-Sicht sinnvoll.
 Sie kann jedoch problematisch werden, denn sollten sich im Lebenslauf von Leaflet die Anforderungen so ändern, dass
