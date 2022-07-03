@@ -296,10 +296,10 @@ Leaflet Kern enthält die Kernfunktionen, Klassen und Methoden, die zur Erstellu
 | *Computer / Server des Leaflet Entwicklers* | *Einbindung von Leaflet in eigene Software / Webseite* |
 | *Computer des Leaflet Endnutzers* | *Nutzung von Leaflet via Browser* |
 
-Die vie Knoten, die in der Verteilung gezeigt werden sind über das Internet miteinander verbunden.
+Die vier Knoten, die in der Verteilung gezeigt werden sind über das Internet miteinander verbunden.
 
 Leaflet:
-1. wird zu einem Paket gebündelt,
+1. wird zu einem Paket gebündelt und auf UNPKG zur Verfügung gestellt,
 2. a) kann direkt oder via npm heruntergeladen werden und lokal genutzt werden,
 2. b) oder über das CDN global,
 3. kann vom Endnutzer, z.B. über einen Browser, der auf die Webseite des Entwicklers zugreift, verwendet werden
