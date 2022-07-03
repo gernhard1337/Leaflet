@@ -109,40 +109,32 @@ Die einzelnen Stakeholder nochmal aufgelistet:
 
 ### Leaflet muss sein:
 
-•	plattformunabhängig und auf allen wichtigsten Betriebssystemen und Browsern laufen (T1).
-
-•	Einheitliche Oberfläche.
-
-•	Entwicklung mit JavaScript. sollte auch in neueren Java-Versionen laufen, sofern verfügbar.
-
-•	intern und extern eingesetzt werden können (JS-Datei oder von einem CDN geladen)(T6).
-
-•	eine minimale Codebasis haben(T2).
-
-•	Das geschriebene Quellcode auskommentiert werden.
-
-•	Nach jedem Beitrag gut getestet.
-
-•	Handelt es sich um Drittsoftware (z. B. ein grafisches Frontend), sollte diese idealerweise frei verfügbar und kostenlos sein.
+| Bedingungen | Verfolgung |
+|------------------------------------------------------------------|----|
+| plattformunabhängig und auf allen wichtigsten Betriebssystemen und Browsern laufen | T1 |
+| Einheitliche Oberfläche. |
+| Entwicklung mit JavaScript. sollte auch in neueren Java-Versionen laufen, sofern verfügbar| 
+| intern und extern eingesetzt werden können (JS-Datei oder von einem CDN geladen) | T6 |
+| eine minimale Codebasis haben | T2 |
+| Das geschriebene Quellcode auskommentiert werden |
+| Nach jedem Beitrag gut getestet |
+| Handelt es sich um Drittsoftware (z. B. ein grafisches Frontend), sollte diese idealerweise frei verfügbar und kostenlos sein. |
 
 
-## Organizational constraints
+
+## Organisatorische Bedingungen
 
 ### Es muss:
 
-•	Die Beiträge aus den Leaflet issues sein.
-
-•	Nach der team-entscheidung wird ausgewähltes issues bearbeitet.
-
-•	Die Entscheidung von der Anzahl der Entwickler für jeden Beitrag, durch team -Meeting getroffen.  
-
-•	Die Bearbeitungszeit, vom team gesetzt.  
-
-•	für Jeden Beitrag entsprechende Dokumentation – Berichte erstellen.
-
-•	Der Quellcode der Lösung, oder zumindest Teile davon, werden als Open Source zur Verfügung gestellt.
-
-•	Beginn der Entwicklung am Anfang Juli 2022. Fertigstellung des Beitrags am Ende Juli 2022.
+| Bedingungen | Verfolgung |
+|------------------------------------------------------------------|----|
+|Die Beiträge aus den Leaflet issues sein.|QB1|
+|Nach der team-entscheidung wird ausgewähltes issues bearbeitet.|QB2|
+|Die Entscheidung von der Anzahl der Entwickler für jeden Beitrag, durch team -Meeting getroffen.|QB3|
+|Die Bearbeitungszeit, vom team gesetzt.|QB4|
+|für Jeden Beitrag entsprechende Dokumentation – Berichte erstellen.|QB5|
+|Der Quellcode der Lösung, oder zumindest Teile davon, werden als Open Source zur Verfügung gestellt.|QB6|
+|Beginn der Entwicklung am Anfang Juli 2022. Fertigstellung des Beitrags am Ende Juli 2022.|QB7|
 
 <a name="kontextabgrenzung"></a>
 # Kontextabgrenzung 
@@ -180,6 +172,8 @@ Die einzelnen Stakeholder nochmal aufgelistet:
 <a name="lösungsstrategie"></a>
 # Lösungsstrategie 
 
+### Leaflet hat keine klare Architektur. Aus diesem Grund wurde  Strategie in Zwei Teile gebaut. Die erste Stratgie wurde aus der verfügbaren Dokumentation geschlossen. Die zweite Strategie wurde von uns gesetzt.  
+
 ## Leaflet Strategie:
 
 1.	Leaflet wurde als Open-Source-JavaScript-Bibliothek für mobilfreundliche interaktive Karten entwickelt.
@@ -196,7 +190,6 @@ Die einzelnen Stakeholder nochmal aufgelistet:
 *	Änderungen, die von einer Komponente vorgenommen werden, können an alle Komponenten weitergegeben werden.
 *	Code Sicher durch backup
 
-
 ## Unsere Strategie:
 
 1.	Wir arbeiten in kleiner Gruppe aus 4 Entwickler, durch Reverse Engineering haben wir die Requirements herausgefunden. 
@@ -204,10 +197,9 @@ Die einzelnen Stakeholder nochmal aufgelistet:
 3.	Unsere Architektur wurde auf den Funktionsanforderungen basiert und gut dokumentiert.
 4.	Wir finden Repository Stil ist geeignet für dieses Projekt (wie vorher erwähnt)
 5.	Wir haben die Qualitätsattribute gut und präzise definieren.
-6.	Wir haben ausreichende Diagramme hinzugefügt, die das Benutzen der Architektur effizienter machen.
-
-
-
+6.	Wir haben ausreichende Diagramme hinzugefügt, die das Benutzen der Architektur effizienter machen.</br>
+</br>
+</br>
 
 | **Qualitätsziel** | **Lösungsansatz** |**Details** |
 |-----------------------|-----------------------------------------------|---------------------------|
