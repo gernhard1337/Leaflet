@@ -402,18 +402,7 @@ Aufbauend auf dem Baustein aus dem vorherigen Abschnitt können wir sehen, wie d
 
 ## *Architektur-und Entwurfsmuster* 
 
-Im Blick auf das von Leaflet bereitgestellte Architekturdiagramm, wir finden, dass das Leaflet-Team entscheidet sich für die einfache Vererbung (include und extend) für alle Relationen der Projektbausteine in einem logischen Zusammenhäng (z.B. "hat eine" oder "enthält").
-
-### Strukturmuster
-
-Da die Entwickler das Composite-Konzept noch nicht genutzt haben, schlagen wir vor, mehrere Composites in der Architektur für mehr Modularität hinzuzufügen. Zum Beispiel erben die Module Marker (L.Marker), Path (L.Path), Layer Group (L.LayerGroup) und andere von dem Muttermodul Layer (L.Layer). Da eine Ebene eine andere Ebene erben kann, die ein *Layers group* bildet (das Stapeln mehrerer *Layers* ist möglich), können wir stattdessen eine zusammengesetzte Vorlage (composite template) verwenden:
-
-![Leaflet arch](images/7-design-imporvments.png)
-
-Hier kann ein *Layer* Pfad, Marker oder ein *Composite* sein.
-
-
-### Design patterns 
+### Projektverzeichnis  
 
 Leaflet folgt einem standardmäßigen Best-Practice-Designmuster für das Projektverzeichnis, wie jedes JS-Projekt:
 
@@ -454,6 +443,16 @@ Der Inhalt eines typischen `index.js`- Datei ist:
 
 
 Die Projektmodularität ist ebenfalls logisch und leicht zu erkennen, wobei jede Klasse ein Modul darstellt, insbesondere für Schlüsselbausteine wie *Controller*, *Handler*, *Layer*, *Zoom* oder die Module für die geometrischen Formen.
+
+### Architektur
+
+Im Blick auf das von Leaflet bereitgestellte Architekturdiagramm, wir finden, dass das Leaflet-Team entscheidet sich für die einfache Vererbung (include und extend) für alle Relationen der Projektbausteine in einem logischen Zusammenhäng (z.B. "hat eine" oder "enthält"). 
+
+Da die Entwickler das Composite-Konzept noch nicht genutzt haben, schlagen wir vor, mehrere Composites in der Architektur für mehr Modularität hinzuzufügen. Zum Beispiel erben die Module Marker (L.Marker), Path (L.Path), Layer Group (L.LayerGroup) und andere von dem Muttermodul Layer (L.Layer). Da eine Ebene eine andere Ebene erben kann, die ein *Layers group* bildet (das Stapeln mehrerer *Layers* ist möglich), können wir stattdessen eine zusammengesetzte Vorlage (composite template) verwenden:
+
+![Leaflet arch](images/7-design-imporvments.png)
+
+Hier kann ein *Layer* Pfad, Marker oder ein *Composite* sein.
 
 ## User Experience (UX) 
 
