@@ -417,26 +417,26 @@ Hier kann ein *Layer* Pfad, Marker oder ein *Composite* sein.
 
 Leaflet folgt einem standardmäßigen Best-Practice-Designmuster für das Projektverzeichnis, wie jedes JS-Projekt:
 
-|-- leaflet
-|--|--| src  -  JS source Ordner
-|--|--| dist  - JS, CSS, images
-|--|--| build - Produktionsversion von leaflet
-|--|--| spec  - tests
-|--|--| README.md
-|--|--| LICENSE
-|--|--| package.json
+    |-- leaflet
+    |--|--| src  -   JS source Ordner
+    |--|--| dist  - JS, CSS, images
+    |--|--| build - Produktionsversion von leaflet
+    |--|--| spec  - tests
+    |--|--| README.md
+    |--|--| LICENSE
+    |--|--| package.json
 
 > Hinweis: Das externe Plugin muss die gleiche Projektstruktur haben.
 
 Ein weiteres Muster, das verwendet wird, um ein beliebiges Unterverzeichnis in „src“ zu strukturieren, besteht darin, eine „index.js“-Datei hinzuzufügen, die Importe/Exporte aller Dateien in diesem Verzeichnis enthält. zum Beispiel:
 
-|-- dom
-|--|--| index - enthält nur Importe aller anderen Dateien
-|--|--| class
-|--|--| browser
-|--|--| events
-|--|--| Util
-|--|--| ..
+  |-- dom
+    |--|--| index - enthält nur Importe aller anderen Dateien
+    |--|--| class
+    |--|--| browser
+    |--|--| events
+    |--|--| Util
+    |--|--| ..
 
 Der Inhalt einer typischen `index.js` im Projekt ist:
 
