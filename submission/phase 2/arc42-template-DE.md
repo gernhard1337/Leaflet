@@ -6,7 +6,7 @@ da diese in der originalen Leaflet-Variante nicht vorhanden ist.
 
 # Gliederung 
 
-1. [Einführung und Ziele](#einführung)
+1. [Einführung und Ziele](#einfuhrung)
    1. [Aufgabenstellung](#aufgabenstellung)
    2. [Qualitätsziele](#qualitätsziele)
    3. [Stakeholder](#stakeholder)
@@ -16,13 +16,13 @@ da diese in der originalen Leaflet-Variante nicht vorhanden ist.
 5. [Bausteinsicht](#bausteinsicht)
 6. [Laufzeitsicht](#laufzeitsicht)
 7. [Verteilungssicht](#verteilungssicht)
-8. [Querschnittliche Konzepte](#querschnittliche-konzepte)
+8. [Querschnittliche Konzepte](#querschnittlichekonzepte)
 9. [Architekturentscheidungen](#architekturentscheidungen)
 10. [Qualitätsanforderungen](#qualittsanforderungen)
 11. [Risiken und technische Schulden](#risiken-und-technische-schulden)
 12. [Glossar](#glossar)
 
-<a name="einführung"></a>
+<a name="einfuhrung"></a>
 # Einführung und Ziele
 
 Leaflet soll Entwicklern dabei helfen umfangreiche Funktionen in Karten zu implementieren und diese
@@ -365,7 +365,7 @@ Da es sich bei Leaflet um eine Bibliothek handelt, deren implementierung inline 
 
 Als Bibliothek vermeidet es Leaflet Anforderungen an Soft- und Hardware zu stellen. Leaflet unterstützt durch die Verwendung von HTML5 und CSS3 die meisten Desktop- und Mobil-Browser. Demenstprechend strebt Leaflet danach, auf möglichst jedem System zu funktionieren. Kurz, Leaflet läuft auf jeder Hardware, die Javasript unterstützt.
 
-<a name="querschnittliche-konzepte"></a>
+<a name="querschnittlichekonzepte"></a>
 # Querschnittliche Konzepte
 
 In diesem Abschnitt handelt es sich um prinzipielle Regelungen und Lösungsansätze, die beim Aufbau der Bausteine beachtet werden müssen, um die konzeptionelle Integrität der Architektur und die Qualität des Systems zu garantieren. Die Lösungsansätze sind:
@@ -621,7 +621,7 @@ weil es erst 2012 veröffentlicht wurde, die Entwicklung an Leaflet jedoch schon
 
 Hierdurch flogt blalbala beenden noch unbedingt. 
 
-<a name="qualitätsanforderungen"></a>
+<a name="qualittsanforderungen"></a>
 # Qualitätsanforderungen
 
 ### Inhalt
