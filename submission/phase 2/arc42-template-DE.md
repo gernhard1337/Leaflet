@@ -390,9 +390,9 @@ Leaflet bietet Entwicklern ein natives Klassendiagramm für das gesamte Projekt 
 Siehe [Leaflet Struktur](https://leafletjs.com/examples/extending/class-diagram.html) in
 der Dokumentation von Leaflet (auf Englisch).
 
-Aufbauend auf dem Baustein aus dem vorherigen Abschnitt können wir sehen, wie die folgenden Subbäume in verschiedenen Bausteinen übersetzt werden:
+Wir können wir sehen, wie die folgenden Subbäume in verschiedenen Teile des Systems übersetzt werden:
 
-| Baustein| Entsprechende Entität im Diagramm|
+| Nodes| Beschreibung|
 | ------------ | ------------ |
 | UI  |  Knoten L.Layer und seine untergeordneten Knoten |
 | Core |  Knoten L.Map und seine untergeordneten Knoten|
