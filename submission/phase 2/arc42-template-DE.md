@@ -109,7 +109,7 @@ Die einzelnen Stakeholder nochmal aufgelistet:
 <a name="randbedingungen"></a>
 # Randbedingungen 
 
-## Technical constraints
+## Technische Bedingungen
 
 ### Leaflet muss sein:
 
