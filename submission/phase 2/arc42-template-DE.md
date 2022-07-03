@@ -10,17 +10,17 @@ da diese in der originalen Leaflet-Variante nicht vorhanden ist.
    1. [Aufgabenstellung](#aufgabenstellung)
    2. [Qualitätsziele](#qualitätsziele)
    3. [Stakeholder](#stakeholder)
-2. d
-3. d
-4. d
-5. d
-6. d
-7. d
-8. d
-9. d
-10. d
-11. d
-12. d
+2. [Randbedingungen](#randbedingungen)
+3. [Kontextabgrenzung](#kontextabgrenzung)
+4. [Lösungsstrategie](#lösungsstrategie)
+5. [Bausteinsicht](#bausteinsicht)
+6. [Laufzeitsicht](#laufzeitsicht)
+7. [Verteilungssicht](#verteilungssicht)
+8. [Querschnittliche Konzepte](#querschnittliche-konzepte)
+9. [Architekturentscheidungen](#architekturentscheidungen)
+10. [Qualitätsanforderungen](#qualittsanforderungen)
+11. [Risiken und technische Schulden](#risiken-und-technische-schulden)
+12. [Glossar](#glossar)
 
 <a name="einführung"></a>
 # Einführung und Ziele
@@ -104,7 +104,7 @@ Die einzelnen Stakeholder nochmal aufgelistet:
 | Entwickler | indirekt Trackbar über Einbindung der Dateien | Einfache Einbindung von Karten in diversere Webprojekte ohne diverse Abhängigkeiten|
 | Contributor | [Github Contributor-Liste](https://github.com/Leaflet/Leaflet/graphs/contributors) | Gute Nutzung des Projekts, sodass sich Weiterentwicklung lohnt |
 | Maintainer | [Github Maintainer](https://agafonkin.com) | Reibungsloser Ablauf der Weiterentwicklung und gelegentliches Eingreifen |
-
+<a name="randbedingungen"></a>
 # Randbedingungen 
 
 ## Technical constraints
@@ -146,7 +146,7 @@ Die einzelnen Stakeholder nochmal aufgelistet:
 
 •	Beginn der Entwicklung am Anfang Juli 2022. Fertigstellung des Beitrags am Ende Juli 2022.
 
-
+<a name="kontextabgrenzung"></a>
 # Kontextabgrenzung 
 
 ## Business Kontext
@@ -179,7 +179,7 @@ Die einzelnen Stakeholder nochmal aufgelistet:
 | *Leaflet API server* | *Wo Quellecode gespeichert ist.* |
 | *Leaflet Pulings databdase* | *Repo, wo alle Pulings gespeichert sind.* |
 
-
+<a name="lösungsstrategie"></a>
 # Lösungsstrategie 
 
 ## Leaflet Strategie:
@@ -227,6 +227,7 @@ Die einzelnen Stakeholder nochmal aufgelistet:
 
 
 <!--- ab hier Franziskas Part -->
+<a name="bausteinsicht"></a>
 # Bausteinsicht
 
 ## Whitebox Gesamtsystem
@@ -353,7 +354,7 @@ Bei der Nutzung von Leaflet steht die API im Vordergrund, dadurch ist es nahelie
 |-----------------------|-----------------------------------------------|
 | *handler* | *Handhabt Umgang mit Eingaben* |
 | *map* | *Erstellen und manipulieren der Karte* |
-
+<a name="laufzeitsicht"></a>
 # Laufzeitsicht
 
 Da es sich bei Leaflet um eine Bibliothek handelt, deren implementierung inline erfolgt, gibt es keine Laufzeitansicht. Zumindest keine in erwähnenswerter Komplexität.
@@ -364,7 +365,7 @@ Da es sich bei Leaflet um eine Bibliothek handelt, deren implementierung inline 
 
 Als Bibliothek vermeidet es Leaflet Anforderungen an Soft- und Hardware zu stellen. Leaflet unterstützt durch die Verwendung von HTML5 und CSS3 die meisten Desktop- und Mobil-Browser. Demenstprechend strebt Leaflet danach, auf möglichst jedem System zu funktionieren. Kurz, Leaflet läuft auf jeder Hardware, die Javasript unterstützt.
 
-<!--- ab hier Toms Part -->
+<a name="querschnittliche-konzepte"></a>
 # Querschnittliche Konzepte
 
 In diesem Abschnitt handelt es sich um prinzipielle Regelungen und Lösungsansätze, die beim Aufbau der Bausteine beachtet werden müssen, um die konzeptionelle Integrität der Architektur und die Qualität des Systems zu garantieren. Die Lösungsansätze sind:
@@ -589,6 +590,7 @@ Ein Rollback auf die alte Version, bis die Probleme mit der aktuellen Version be
 >alle anderen nicht erwähnten Attribute von arc42 Querschnittliche Konzepte sind optional und entsprechen nicht der Projektidee von Leaflet JS.
 
 <!-- Toms Part -->
+<a name="architekturentscheidungen"></a>
 # Architekturentscheidungen 
 
 Drei wichtige, weiter hervorzuhebende Entscheidungen die Leaflet betreffen wurden entschieden
@@ -619,7 +621,7 @@ weil es erst 2012 veröffentlicht wurde, die Entwicklung an Leaflet jedoch schon
 
 Hierdurch flogt blalbala beenden noch unbedingt. 
 
-
+<a name="qualitätsanforderungen"></a>
 # Qualitätsanforderungen
 
 ### Inhalt
@@ -779,7 +781,7 @@ und jeder seinen geschriebenen Code validieren kann.
 | R7 | Ein Entwickler hat ein neues Plugin entwickelt, dieses bereitet jedoch noch Probleme. Er findet diverse Skripte um Funktionen zu testen und so den Fehler zu lokalisieren |
 | R8 | Ein Entwickler möchte sein fertiges Plugin veröffentlichen, er muss hierfür eine Reihe von Test-Skripten erfolgreich absolvieren |
 | R9 | Ein Entwickler möchte sein fertiges Plugin veröffentlichen, er muss hierfür eine Dokumentation zur Verfügung stellen |
-
+<a name="riskien-und-technische-schulden"></a>
 # Risiken und technische Schulden
 
 Im folgenden sind diverse erkannte Risiken, denen Leaflet ausgesetzt ist, aufgelistet. Diese sind nach Relevanz sortiert, sodass
@@ -858,7 +860,7 @@ bereits existiert (in externen Bibliotheken), jedoch nicht benutzt werden kann.
 Da Leaflet einen Support für Plugins anbietet ist dieses Risiko verhältnismäßig klein. Problematisch wird es wenn
 kein Plugin für die benötigte Aufgabe existiert oder die Aufgabe standardmäßig in anderen Kartensoftware verfügbar ist
 und somit unbedingt in den Leaflet-Core muss jedoch durch die Komplexität nicht so einfach implementiert werden kann.
-
+<a name="glossar"></a>
 # Glossar
 
 Hier sind wesentliche, wichtige Begriffe aus fachlicher und technischer Sicht 
