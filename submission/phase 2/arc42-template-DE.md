@@ -944,4 +944,5 @@ diese hier eine einfache Übersicht finden falls Begriffe unklar sind.
 | technische Schulden |  |
 | CSS |  |
 | HTML |  |
+| Deployment |  |
 
