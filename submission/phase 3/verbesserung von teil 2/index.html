@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Leaflet debug page</title>
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+		integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+		crossorigin="" />
+	<script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+		integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+		crossorigin=""></script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<style>
+		#map {
+			width: 800px;
+			height: 400px;
+		}
+
+		button {
+			min-width: 3em;
+			text-align: center;
+		}
+
+		main table {
+			width: 100%;
+		}
+
+		main table,
+		main th,
+		main td {
+			border: 1px solid black;
+			border-collapse: collapse;
+		}
+
+		body {
+			font-size: 18;
+			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+		}
+
+		main {
+			margin: 50px;
+		}
+	</style>
+</head>
+
+<body>
+
+
+	<main>
+		<span>Issue: <a href="https://github.com/Leaflet/Leaflet/issues/4239">#4239</a></span>
+		<br />
+		<span>Contributor:<a href="https://github.com/BadrAlzein">Badr Aldin Z </a></span>
+		<br />
+		<span>Date: 15.07.2022</span>
+		<h2>Tutorials on key functions of leaflet:</h2>
+		<div>
+
+			<h3>I- setView</h3>
+			<h4>Short descreption:</h4>
+			<p>the function sets the viewing window of the map to a diffrent position with diffrent zoom level. Here you
+				dont expect any animation to the position change but you can expect animation to the </p>
+			<p>
+				<strong>Parameters</strong> <br />The function 'setView' takes 3 arguemnts:
+			</p>
+			<table style="width:100%">
+				<tr>
+					<th>Parameter</th>
+					<th>Type</th>
+					<th>Descreption</th>
+				</tr>
+				<tr>
+					<td>center</td>
+					<td>[int,int]</td>
+					<td>the new [Lat,Lng] to where the map should navigate to.</td>
+				</tr>
+				<tr>
+					<td>zoom</td>
+					<td>int</td>
+					<td>the initial zoom after navigation.</td>
+				</tr>
+				<tr>
+					<td>options</td>
+					<td>Map options</td>
+					<td>Overloading the new map with additional options.</td>
+				</tr>
+			</table>
+			<br />
+			<p>
+				<strong>The Algorithm</strong>:
+				<br />
+				The function checks first if the given zoom value is in the range of max and min zooming ability of the
+				map. Then
+				sets the given options to the options of the map. At the end, the function extend the map by allowing an
+				animation
+				effect for changing the zoom.
+
+			</p>
+			<p>
+				<strong>Calling the function & example usage:</strong>
+				<br />
+				After a user input or after a timeout function, you can call the function setView(newCenter, new
+				zoom,options) for example setView([2,3],2).
+			</p>
+		</div>
+		<hr />
+		<div>
+
+			<h3>II- flyTo</h3>
+			<h4>Short descreption:</h4>
+			<p>Sometimes there is a need to change the position live after loading the map. The function changes the
+				position of
+				the map center from the initial center (initialized using the map function) to a given position, with
+				optionally
+				a new zoom level. This is function is diffrent from setView by simulating the flying or navigating
+				affect ftom old to new center (performing a smooth pan-zoom animation)</p>
+
+			<p>
+				<strong>Parameters</strong> <br />The function 'flyto' takes 3 arguemnts:
+			</p>
+			<table style="width:100%">
+				<tr>
+					<th>Parameter</th>
+					<th>Type</th>
+					<th>Descreption</th>
+				</tr>
+				<tr>
+					<td>targetCenter</td>
+					<td>[int,int]</td>
+					<td>the new [Lat,Lng] to where the map should navigate to.</td>
+				</tr>
+				<tr>
+					<td>targetZoom</td>
+					<td>int</td>
+					<td>the initial zoom after navigation.</td>
+				</tr>
+				<tr>
+					<td>options</td>
+					<td>Map options</td>
+					<td>Overloading the new map with additional options.</td>
+				</tr>
+			</table>
+			<br />
+			<p>
+				<strong>The Algorithm</strong>:
+				<br />
+				The function takes the new center (target center) and use the function setView to reinitialize the map
+				center.
+				in order to get the effect of flying from one position to another, the function first calculates where
+				is the new
+				position in relevant to the old position and in which direction the animation should start. After this
+				the animation
+				parameters are set like duration, start point, end point, delay etc. and the end the animation frame
+				starts with the
+				old position and ends with the new one.
+			</p>
+			<p>
+				<strong>Calling the function & example usage:</strong>
+				<br />
+				After a user input or after a timeout function, you can call the function flyTo(newCenter, new
+				zoom) for example flyTo([2,3],2).
+			</p>
+
+			setZoom, fitBounds
+		</div>
+		<hr />
+		<div>
+
+			<h3>III- setZoom</h3>
+			<h4>Short descreption:</h4>
+			<p>Changes the current or initialize zoom level with smooth animation.</p>
+			<p>
+				<strong>Parameters</strong> <br />The function 'setZoom' takes 2 arguemnts:
+			</p>
+			<table style="width:100%">
+				<tr>
+					<th>Parameter</th>
+					<th>Type</th>
+					<th>Descreption</th>
+				</tr>
+				<tr>
+					<td>zoom</td>
+					<td>int</td>
+					<td>the initial zoom after navigation.</td>
+				</tr>
+				<tr>
+					<td>options</td>
+					<td>zoom options</td>
+					<td>Overwriting the zoom options with additional options.</td>
+				</tr>
+			</table>
+			<br />
+			<p>
+				<strong>The Algorithm</strong>:
+				<br />
+				The function waits until the map is loaded, then it calls the function setView with the current center
+				but with the
+				different zoom level and zoom options.
+
+			</p>
+			<p>
+				<strong>Calling the function & example usage:</strong>
+				<br />
+				After initializing the map or firing a change in map center by a user input or an event,
+				you can call the function setZoom(zoom,options) for example setView(12.8).
+			</p>
+		</div>
+		<hr />
+		<div>
+
+			<h3>IV- fitBounds</h3>
+			<h4>Short descreption:</h4>
+			<p>this method sets a map view that contains the given geographical bounds with the maximum zoom level
+				possible. </p>
+			<p>
+				<strong>Parameters</strong> <br />The function 'fitBounds' takes 2 arguemnts:
+			</p>
+			<table style="width:100%">
+				<tr>
+					<th>Parameter</th>
+					<th>Type</th>
+					<th>Descreption</th>
+				</tr>
+				<tr>
+					<td>bounds</td>
+					<td>[[int,int]]</td>
+					<td>a list of [Lat,Lng] defining the boundaries of the map.</td>
+				</tr>
+
+				<tr>
+					<td>options</td>
+					<td>bounds options</td>
+					<td>adding additional options.</td>
+				</tr>
+			</table>
+			<br />
+			<p>
+				<strong>The Algorithm</strong>:
+				<br />
+				The function checks first if the bounds are valid. By calling the function "_getBoundsCenterZoom"
+				with the input
+				"bounds" we can finde out the center point of the geographical position to that bounds as well as the
+				maximum zoom degree.
+				At the end the
+				function overwrites the current view
+				center and zoom with the return center and zoom values of the function call "_getBoundsCenterZoom".
+
+			</p>
+			<p>
+				<strong>Calling the function & example usage:</strong>
+				<br />
+				After a user input or after a timeout function, you can call the function fitbounds(bounds, options) for
+				example fitbounds([
+				[40.70, -4.19],
+				[40.12, -3.31]
+				]).
+			</p>
+		</div>
+	</main>
+
+	<div style="margin: 50px;">
+		<div id="map"></div>
+		<br />
+		<div style="z-index: 500;">
+			<div><button id="dc">Waschington D.C.</button> | flyTo</div>
+			<div><button id="sf">San francisco</button> | setView duration 5 sec</div>
+			<div><button id="trd">Tronheim</button> | flyTo duration 20 sec</div>
+			<div><button id="lnd">London</button> | fractional zoom</div>
+			<div><button id="kyiv">Kiev</button> | setView, fract. zoom</div>
+			<div><button id="mad">Madrid</button> | fitBounds</div>
+			<div><button id="stop">stop</button></div>
+			<div style="opacity: 0;"><button id="nul">NUL</button></div>
+			<table>
+				<tr>
+					<td>on movestart</td>
+					<td id='movestart'></td>
+				</tr>
+				<tr>
+					<td>on zoomstart</td>
+					<td id='zoomstart'></td>
+				</tr>
+				<tr>
+					<td>on move</td>
+					<td id='move'></td>
+				</tr>
+				<tr>
+					<td>on moveend</td>
+					<td id='moveend'></td>
+				</tr>
+				<tr>
+					<td>on zoomend</td>
+					<td id='zoomend'></td>
+				</tr>
+				<tr>
+					<td>on grid load</td>
+					<td id='load'></td>
+				</tr>
+		</div>
+		<script>
+			var kyiv = [50.5, 30.5],
+				lnd = [51.51, -0.12],
+				sf = [37.77, -122.42],
+				dc = [38.91, -77.04],
+				trd = [63.41, 10.41],
+				madBounds = [
+					[40.70, -4.19],
+					[40.12, -3.31]
+				],
+				mad = [40.40, -3.7];
+
+			var map = L.map('map', {
+				zoomSnap: 0.25
+			}).setView(dc, 14);
+
+			var positron = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
+				attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a>'
+			}).addTo(map);
+
+			var path = new L.Polyline([kyiv, trd, lnd, mad, dc, sf]).addTo(map);
+
+			var marker1 = L.marker(kyiv).addTo(map),
+				marker2 = L.marker(lnd).addTo(map),
+				marker3 = L.marker(dc).addTo(map),
+				marker4 = L.marker(sf).addTo(map),
+				marker5 = L.marker(trd).addTo(map),
+				marker6 = L.marker(mad).addTo(map);
+
+			var nullIslandKitten = L.imageOverlay('http://placekitten.com/300/400?image=6', [
+				[-0.2, -0.15],
+				[0.2, 0.15]
+			]).addTo(map);
+
+			document.getElementById('dc').onclick = function () {
+				map.flyTo(dc, 4);
+			};
+			document.getElementById('sf').onclick = function () {
+				map.setView(sf, 10, {
+					duration: 5,
+					animate: true
+				});
+			};
+			document.getElementById('trd').onclick = function () {
+				map.flyTo(trd, 10, {
+					duration: 20
+				});
+			};
+			document.getElementById('lnd').onclick = function () {
+				map.flyTo(lnd, 9.25);
+			};
+			document.getElementById('kyiv').onclick = function () {
+				map.setView(kyiv, 9.25);
+			};
+			document.getElementById('nul').onclick = function () {
+				map.flyTo([0, 0], 10);
+			};
+			document.getElementById('mad').onclick = function () {
+				map.fitBounds(madBounds);
+			};
+			document.getElementById('stop').onclick = function () {
+				map.stop();
+			};
+
+			function logEvent(e) {
+				console.log(e.type);
+			}
+
+			function attachMoveEvent(name) {
+				map.on(name, function () {
+					document.getElementById(name).innerHTML = map.getCenter() + ' z' + map.getZoom();
+				});
+			}
+
+			attachMoveEvent('movestart');
+			attachMoveEvent('zoomstart');
+			attachMoveEvent('move');
+			attachMoveEvent('moveend');
+			attachMoveEvent('zoomend');
+
+			positron.on('load', function () {
+				document.getElementById('load').innerHTML = map.getCenter() + ' z' + map.getZoom();
+			});
+		</script>
+	</div>
+
+</body>
+
+
+</html>
